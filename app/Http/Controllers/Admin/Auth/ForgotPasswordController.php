@@ -33,7 +33,7 @@ class ForgotPasswordController extends Controller
         $admin = admin::where('email',$request->email)->first();
         if ($admin){
             $admin->notify(new AdminResetPasswordNotification($token));
-            return redirect()->back()->with('success', 'تم الإرسال للبريد الإلكتروني');
+            return redirect()->back()->with('success', trans('trans.Email has been sent'));
         }
         return redirect()->back()->withErrors([__('حدث خطأ ما')]);
     }

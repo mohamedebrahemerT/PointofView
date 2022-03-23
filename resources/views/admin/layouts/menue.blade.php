@@ -37,6 +37,33 @@
                     </li>
                      @endif
 
+                       @php
+    $Setting= App\Models\Setting::orderBy('id','desc')->first();
+@endphp
+
+                      @if(admin()->user()->role("news_show"))
+           @if($Setting->Blogstatus == 1)
+                    <li class="nav-item {{  request()->routeIs('news.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/news" class="nav-link ">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="title"> {{trans('trans.news')}}</span>
+                        </a>
+                    </li>
+                     @endif
+
+                      @if(admin()->user()->role("OurValues_show"))
+     
+                    <li class="nav-item {{  request()->routeIs('OurValues.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/OurValues" class="nav-link ">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="title"> {{trans('trans.OurValues')}}</span>
+                        </a>
+                    </li>
+                     @endif
+                
+
+                     
+
                 @if(admin()->user()->role("users_show"))
                     <li class="nav-item {{  request()->routeIs('users.*') ? 'active' : '' }}">
                         <a href="{{url('/')}}/users" class="nav-link ">
@@ -76,19 +103,7 @@
                     </li>
                      @endif
 
-                     @php
-    $Setting= App\Models\Setting::orderBy('id','desc')->first();
-@endphp
-
-                      @if(admin()->user()->role("news_show"))
-           @if($Setting->Blogstatus == 1)
-                    <li class="nav-item {{  request()->routeIs('news.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/news" class="nav-link ">
-                            <i class="icon-social-dribbble"></i>
-                            <span class="title"> {{trans('trans.news')}}</span>
-                        </a>
-                    </li>
-                     @endif
+                   
                     
 
                      @endif

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
 Project Name: Share And Win
@@ -12,7 +13,7 @@ Author: Ibrahim Alanany
 
 <head>
     <meta charset="utf-8" />
-    <title>{{trans('trans.title')}}</title>
+    <title>{{trans('trans.title_site')}}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="" name="description" />
@@ -84,7 +85,7 @@ Author: Ibrahim Alanany
 </head>
 <!-- END HEAD -->
 
-<body class=" login">
+<body class=" login"    @if(app()->getLocale() == 'en')style="direction: ltr;text-align: left;"  @endif>
 <!-- BEGIN LOGO -->
 <div class="logo" style="margin-top: 20px!important;">
      @php
@@ -100,28 +101,30 @@ Author: Ibrahim Alanany
     <!-- BEGIN LOGIN FORM -->
     <form class="login-form" action="{{@url('/admin/password/reset')}}" method="post">
         @csrf
-        <h3 class="form-title font-green" style="color: #33509e !important;">إستعادة كلمة المرور</h3>
+        <h3 class="form-title font-green" style="color: #33509e !important;">
+
+        Restore password </h3>
         <div class="alert alert-danger display-hide">
             <button class="close" data-close="alert"></button>
-            <span> كلمة المرور الجديدة </span>
+            <span> new password</span>
         </div>
         <input type="hidden" name="token" value="{{$data->token}}"/>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">ادخل كلمة المرور الجديدة</label>
-            <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="كلمة المرور الجديدة" name="password" />
+            <label class="control-label visible-ie8 visible-ie9">Enter the new password</label>
+            <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="new password" name="password" />
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">ادخل تأكيد كلمة المرور الجديدة</label>
-            <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="تأكيد كلمة المرور" name="password_confirmation" />
+            <label class="control-label visible-ie8 visible-ie9">Enter Confirm New Password</label>
+            <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="confirm password" name="password_confirmation" />
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn green uppercase" style="background-color: #237bf6!important;">تغيير</button>
+            <button type="submit" class="btn green uppercase" style="background-color: #237bf6!important;">ok</button>
         </div>
     </form>
     <!-- END LOGIN FORM -->
 
 </div>
-<div class="copyright"> © 2020 جميع الحقوق محفوظة </div>
+<div class="copyright"> © 2022 All rights reserved</div>
 <!--[if lt IE 9]>
 <script src="{{url('/')}}/assets/global/plugins/respond.min.js"></script>
 <script src="{{url('/')}}/assets/global/plugins/excanvas.min.js"></script>

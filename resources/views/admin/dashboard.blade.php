@@ -140,53 +140,9 @@
             </div>
         </div>
     </div>
-    <h1 class="page-title">{{trans('trans.orders')}}
-        <small>آخر 10 طلبات </small>
-    </h1>
+   
+ 
 
-    <div class="row">
-        <div class="col-lg-12 col-md-12col-sm-12 col-xs-12">
-
-
-            <table class="table table-striped table-bordered table-hover table-checkable order-column">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th> {{trans('trans.user_id')}}  </th>
-                    <th>القسم</th>
-                    <th>الكورس</th>
-                </tr>
-                </thead>
-                <tbody>
-                @php
-                    $UserCourses=App\Models\UserCourses::get();
-                @endphp
-                @foreach($UserCourses as $Course)
-
-                    <tr class="odd gradeX">
-                        <td>{{ $loop->iteration }}</td>
-                        <td>
-                            @if($Course->user_id != null)
-                                {{$Course->user->first_name}}    {{$Course->user->last_name}}
-                            @endif
-                        </td>
-                        <td>
-                            {{$Course->course->department->title}}
-                        </td>
-                        <td>
-                            {{$Course->course->title}}
-                        </td>
-                    </tr>
-
-
-
-                @endforeach
-                </tbody>
-            </table>
-        </div>
-
-
-    </div>
     </div>
 
 

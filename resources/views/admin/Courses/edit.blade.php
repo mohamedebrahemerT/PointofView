@@ -115,73 +115,7 @@
                
           </div>
 
-          <div class="form-group">
-                               <label class="control-label">{{trans('trans.what_you_will_learn')}}</label>
-                               <textarea  type="text" 
-                                class="form-control what_you_will_learn"    name="what_you_will_learn" required="">
-{!!$Course->what_you_will_learn!!} 
-                                 </textarea>
-               
-          </div>
-
-          
-
-                     <div class="form-group">
-                               <label class="control-label">{{trans('trans.price')}}</label>
-              <input type="number" placeholder="{{trans('trans.price')}}" class="form-control"  value="{{$Course->price}}"   name="price"  required="" /> 
-          </div>
-
-
-  <div class="form-group">
-                               <label class="control-label">{{trans('trans.lang')}}</label>
-              <input type="text" placeholder="{{trans('trans.lang')}}" class="form-control"    name="lang" value="{{$Course->lang}}"   required=""/> 
-          </div>
-
-          <div class="form-group">
-                               <label class="control-label">{{trans('trans.duration')}}</label>
-              <input type="number" placeholder="{{trans('trans.duration')}}" class="form-control"    name="duration" value="{{$Course->duration}}"   required="" /> 
-          </div>
-
-              
- 
-                   
-
-
-  <div class="form-group">
-                               <label class="control-label">{{trans('trans.certificate')}}</label>
-
-                <select name="certificate" class="form-control" required="">
-                   
-                    <option value="1"  @if($Course->certificate == 1) selected @endif>
-                    {{trans('trans.yes')}}              
-                    </option>
-
-                     <option value="0" @if($Course->certificate == 0) selected @endif>
-                    {{trans('trans.no')}}              
-                    </option>
-                   
-                    
-                </select>
-          </div>
-
-
-
-            <div class="form-group">
-                               <label class="control-label">{{trans('trans.registered_users_count_status')}}</label>
-
-                <select name="registered_users_count_status" class="form-control" required="">
-                   
-                    <option value="1"  @if($Course->registered_users_count_status == 1) selected @endif>
-                    {{trans('trans.yes')}}              
-                    </option>
-
-                     <option value="0" @if($Course->registered_users_count_status == 0) selected @endif>
-                    {{trans('trans.no')}}              
-                    </option>
-                   
-                    
-                </select>
-          </div>
+         
 
          
   

@@ -57,6 +57,7 @@
                                         <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                                             <thead>
                                                 <tr>
+                                                    <th> {{trans('trans.id')}}  </th>
                                                     
                                                     <th> {{trans('trans.title')}}  </th>
                                                    
@@ -71,6 +72,11 @@
 
                                             	@foreach($Department as $Dep)
                                                 <tr class="odd gradeX">
+
+                                                        <td>
+                                                          {{$Dep->id}} 
+                                                      
+                                                       </td>
                                                      
                                                     <td>
                                                           {{$Dep->title}} 

@@ -43,6 +43,12 @@ Route::get('ACourses/{id}/destroy', 'CoursesController@destroy');
 Route::resource('news', 'newsController');
 Route::get('news/{id}/destroy', 'newsController@destroy');
 
+Route::resource('OurValues', 'OurValuesController');
+Route::get('OurValues/{id}/destroy', 'OurValuesController@destroy');
+
+
+
+
 Route::resource('Certificate', 'CertificatesController');
 Route::get('Certificate/{id}/destroy', 'CertificatesController@destroy');
 

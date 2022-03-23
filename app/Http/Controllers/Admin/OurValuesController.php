@@ -5,23 +5,24 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Course;
+use App\Models\OurValues;
+use App\Models\Setting;
 
-class CoursesController extends Controller
+class OurValuesController extends Controller
 {
 
        public function __construct() {
            
-        $this->middleware('AdminRole:Courses_show', [
+        $this->middleware('AdminRole:OurValues_show', [
             'only' => ['index', 'show'],
         ]);
-        $this->middleware('AdminRole:Courses_add', [
+        $this->middleware('AdminRole:OurValues_add', [
             'only' => ['create', 'store'],
         ]);
-        $this->middleware('AdminRole:Courses_edit', [
+        $this->middleware('AdminRole:OurValues_edit', [
             'only' => ['edit', 'update'],
         ]);
-        $this->middleware('AdminRole:Courses_delete', [
+        $this->middleware('AdminRole:OurValues_delete', [
             'only' => ['destroy', 'multi_delete'],
         ]);
         
@@ -33,8 +34,9 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        $Courses = Course::get();
-        return view('admin.Courses.index', compact('Courses'));
+         
+        $OurValuess = OurValues::get();
+        return view('admin.OurValuess.index', compact('OurValuess'));
     }
 
     /**
@@ -45,7 +47,7 @@ class CoursesController extends Controller
     public function create()
     {
         //
-        return view('admin.Courses.create');
+        return view('admin.OurValuess.create');
 
     }
 
@@ -59,17 +61,16 @@ class CoursesController extends Controller
     {
 
 
-           
+
 
  
         //
         //return Request();
         $data = $this->validate(\request(),
             [
-                 
-                'department_id' => 'required',
-                'title' => 'required',
-                'desc' => 'required',
+                'title' => 'sometimes|nullable',
+                'desc' => 'sometimes|nullable',
+                'url' => 'sometimes|nullable',
                 'img' => 'required',
 
 
@@ -78,14 +79,14 @@ class CoursesController extends Controller
         if ($request->img) {
 
             $imageName = time() . '.' . $request->img->extension();
-            $request->img->move(public_path('/Courses'), $imageName);
-            $data['img'] = 'Courses/'.$imageName;
+            $request->img->move(public_path('/OurValues'), $imageName);
+            $data['img'] = 'OurValues/'.$imageName;
         }
 
-        $Course = Course::create($data);
+        $OurValues = OurValues::create($data);
 
         session()->flash('success', trans('trans.createSuccess'));
-        return redirect('/ACourses');
+        return redirect('/OurValues');
     }
 
     /**
@@ -97,9 +98,9 @@ class CoursesController extends Controller
     public function show($id)
     {
         //
-        $Course = Course::where('id', $id)->first();
+        $OurValues = OurValues::where('id', $id)->first();
 
-        return view('admin.Courses.show', compact('Course'));
+        return view('admin.OurValuess.show', compact('OurValues'));
 
 
     }
@@ -113,8 +114,8 @@ class CoursesController extends Controller
     public function edit($id)
     {
         //
-        $Course = Course::where('id', $id)->first();
-        return view('admin.Courses.edit', compact('Course'));
+        $OurValues = OurValues::where('id', $id)->first();
+        return view('admin.OurValuess.edit', compact('OurValues'));
 
     }
 
@@ -130,25 +131,24 @@ class CoursesController extends Controller
         //
         //return request();
 
-       $data = $this->validate(\request(),
+        $data = $this->validate(\request(),
             [
-                 
-                'department_id' => 'required',
-                'title' => 'required',
-                'desc' => 'required',
-                
+                'title' => 'sometimes|nullable',
+                'desc' => 'sometimes|nullable',
+                'url' => 'sometimes|nullable',
+                'img' => 'sometimes|nullable',
+
 
             ]);
-
 
         if ($request->img) {
 
             $imageName = time() . '.' . $request->img->extension();
-           $request->img->move(public_path('/Courses'), $imageName);
-            $data['img'] = 'Courses/'.$imageName;
+           $request->img->move(public_path('/OurValues'), $imageName);
+            $data['img'] = 'OurValues/'.$imageName;
         }
 
-        $Course = Course::where('id', $request->id)->update($data);
+        $OurValues = OurValues::where('id', $request->id)->update($data);
 
 
         session()->flash('success', trans('trans.updatSuccess'));
@@ -164,9 +164,9 @@ class CoursesController extends Controller
     public function destroy($id)
     {
         //
-        $Course = Course::where('id', $id)->first();
-        $Course->delete();
+        $OurValues = OurValues::where('id', $id)->first();
+        $OurValues->delete();
         session()->flash('danger', trans('trans.deleteSuccess'));
-        return redirect('/ACourses');
+        return redirect('/OurValues');
     }
 }

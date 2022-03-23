@@ -163,6 +163,7 @@ class AdminController extends Controller
 
         public function viwlogin ()
         {
+          
           if (Auth::guard('admin')->check())
            {
               auth('companies')->logout();
@@ -174,12 +175,11 @@ class AdminController extends Controller
               
           }
             
-             $lang = 'ar';
-        if(Session::has('lang')) {
-            $lang = Session::get('lang');
-        }
+               $lang = 'en';
         app()->setLocale($lang);
         Session::put('lang', $lang);
+
+       
              return view('admin.login.viwlogin');
         }
 

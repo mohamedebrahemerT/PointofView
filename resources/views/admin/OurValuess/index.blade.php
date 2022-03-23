@@ -18,7 +18,7 @@
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="{{url('/')}}/ACourses">{{trans('trans.Courses')}}</a>
+                <a href="{{url('/')}}/OurValues">{{trans('trans.OurValues')}}</a>
                 <i class="fa fa-circle"></i>
             </li>
 
@@ -35,7 +35,7 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> {{trans('trans.Courses')}}</span>
+                        <span class="caption-subject bold uppercase"> {{trans('trans.OurValues')}}</span>
                     </div>
 
                 </div>
@@ -44,7 +44,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="btn-group">
-                                    <a href="{{url('/')}}/ACourses/create" id="sample_editable_1_new"
+                                    <a href="{{url('/')}}/OurValues/create" id="sample_editable_1_new"
                                        class="btn sbold green"> {{trans('trans.Add New')}}
                                         <i class="fa fa-plus"></i>
                                     </a>
@@ -58,10 +58,10 @@
                         <thead>
                         <tr>
                              
-           <th>#</th>
+
+                            <th> # </th>
                             <th> {{trans('trans.title')}}  </th>
                             <th> {{trans('trans.img')}}  </th>
-                            <th> {{trans('trans.department')}}  </th>
 
 
                            
@@ -72,22 +72,17 @@
                         </thead>
                         <tbody>
 
-                        @foreach($Courses as $Course)
+                        @foreach($OurValuess as $OurValue)
                             <tr class="odd gradeX">
-                                <td>
-                                      {{$Course->id}}
-                                  </td>
-                                  <td>
-                                      {{$Course->title}}
-                                  </td>
+                            <th> {{$OurValue->id}} </th>
+                            <th> {{$OurValue->title}} </th>
+                                
                                 <td>
 
-                                    <img src="{{url('/')}}/{{$Course->img}}" style="width:50px;height: 50px;">
+                                    <img src="{{url('/')}}/{{$OurValue->img}}" style="width:50px;height: 50px;">
                                 </td>
 
-                                  <td>
-                                      {{$Course->department->title}}
-                                  </td>
+                                 
 
 
                                 <td>
@@ -99,19 +94,19 @@
                                         <ul class="dropdown-menu pull-left" role="menu">
 
                                             <li>
-                                                <a href="{{url('/')}}/ACourses/{{$Course->id}}">
+                                                <a href="{{url('/')}}/OurValuess/{{$OurValue->id}}">
                                                     <i class="icon-tag"></i>
                                                     {{trans('trans.show details')}}
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{url('/')}}/ACourses/{{$Course->id}}/edit">
+                                                <a href="{{url('/')}}/OurValuess/{{$OurValue->id}}/edit">
                                                     <i class="icon-docs"></i>
                                                     {{trans('trans.edit')}}
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{url('/')}}/ACourses/{{$Course->id}}/destroy">
+                                                <a href="{{url('/')}}/OurValuess/{{$OurValue->id}}/destroy">
                                                     <i class="icon-tag"></i>
                                                     {{trans('trans.delete')}}
                                                 </a>

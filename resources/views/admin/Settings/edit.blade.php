@@ -13,7 +13,7 @@
 
                 CKEDITOR.replace( 'about_desc' , {
 
-        language: 'ar',
+        language: 'en',
 
 });
 
@@ -21,7 +21,7 @@
         
                 CKEDITOR.replace( 'What_Makes_Us_unique_desc' , {
 
-        language: 'ar',
+        language: 'en',
 
 });
 

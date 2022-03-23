@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         //
-        $lang='ar';
+        $lang='en';
           \Session::put('lang', $lang);
         \App::setLocale($lang);
     }

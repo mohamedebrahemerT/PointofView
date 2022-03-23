@@ -4,7 +4,7 @@
                 <div class="page-header-inner ">
                     <!-- BEGIN LOGO -->
                     <div class="page-logo" style="text-align: center;">
-                        <span style="margin-top: 10px;color: white;text-align: center; font-size:25px; font-weight: bolder;"> مؤسسة الغد أجمل  </span>
+                        <span style="margin-top: 10px;color: white;text-align: center; font-size:25px; font-weight: bolder;"> Point of View </span>
 {{--                        <div class="menu-toggler sidebar-toggler">--}}
 {{--                            <span></span>--}}
 {{--                        </div>--}}

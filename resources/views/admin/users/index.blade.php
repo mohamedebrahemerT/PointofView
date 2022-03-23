@@ -101,12 +101,7 @@
                                                     {{trans('trans.show details')}}
                                                                 </a>
                                                                 </li>
-                                                                <li>
-                                             <a href="{{url('/')}}/users/userscourses/{{$user->id}}">
-                                                                        <i class="icon-tag"></i>
-                                     {{trans('trans.userscourses')}}
-                                                                         </a>
-                                                                </li>
+                                                                
                                                                 
                                                                
                                                                 
