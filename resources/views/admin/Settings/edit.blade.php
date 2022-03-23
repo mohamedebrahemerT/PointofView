@@ -82,7 +82,7 @@
 
 
   <div class="form-group">
-                                    <label class="control-label">إسم الموقع</label>
+                                    <label class="control-label">Web site name</label>
                                     <input type="text" placeholder="{{trans('trans.name')}}" class="form-control"
                                            value="{{$Settings->name}}" name="name" required=""/>
                                 </div>
@@ -99,7 +99,7 @@
           </div>
 
                                   <div class="form-group">
-                               <label class="control-label">لوجو الموقع العلوي</label>
+                               <label class="control-label">top site logo</label>
 
 <input type="file" placeholder="{{trans('trans.logo')}}" class="form-control" name="logo" /> 
 
@@ -231,7 +231,7 @@
 
 
                                   <div class="form-group">
-                               <label class="control-label"> هل تريد تفعيل المدونة  ؟</label>
+                               <label class="control-label"> Do you want to activate the blog?</label>
 
                 <select name="Blogstatus" class="form-control" required="">
                    

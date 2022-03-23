@@ -18,7 +18,7 @@
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="{{url('/')}}/OurValues">{{trans('trans.OurValues')}}</a>
+                <a href="{{url('/')}}/values">{{trans('trans.values')}}</a>
                 <i class="fa fa-circle"></i>
             </li>
 
@@ -44,7 +44,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="btn-group">
-                                    <a href="{{url('/')}}/OurValues/create" id="sample_editable_1_new"
+                                    <a href="{{url('/')}}/values/create" id="sample_editable_1_new"
                                        class="btn sbold green"> {{trans('trans.Add New')}}
                                         <i class="fa fa-plus"></i>
                                     </a>
@@ -94,19 +94,19 @@
                                         <ul class="dropdown-menu pull-left" role="menu">
 
                                             <li>
-                                                <a href="{{url('/')}}/OurValuess/{{$OurValue->id}}">
+                                                <a href="{{url('/')}}/values/{{$OurValue->id}}">
                                                     <i class="icon-tag"></i>
                                                     {{trans('trans.show details')}}
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{url('/')}}/OurValuess/{{$OurValue->id}}/edit">
+                                                <a href="{{url('/')}}/values/{{$OurValue->id}}/edit">
                                                     <i class="icon-docs"></i>
                                                     {{trans('trans.edit')}}
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{url('/')}}/OurValuess/{{$OurValue->id}}/destroy">
+                                                <a href="{{url('/')}}/values/{{$OurValue->id}}/destroy">
                                                     <i class="icon-tag"></i>
                                                     {{trans('trans.delete')}}
                                                 </a>

@@ -17,7 +17,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/news">{{trans('trans.news')}}</a>
+                                    <a href="{{url('/')}}/values">{{trans('trans.values')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -42,7 +42,7 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/blogs/{{$blog->id}}" method="POST" enctype="multipart/form-data">
+                  <form role="form" action="{{url('/')}}/values/{{$OurValues->id}}" method="POST" enctype="multipart/form-data">
  					@csrf
  					{{ method_field('PATCH') }}
 
@@ -53,7 +53,9 @@
                     <div class="portlet blue-hoki box">
                         <div class="portlet-title">
                             <div class="caption">
-                                <i class="fa fa-cogs"></i> معلومات  المدونة
+                                <i class="fa fa-cogs"></i> 
+Our Values
+
  </div>
                                 <div class="actions">
                                     
@@ -62,12 +64,12 @@
                                 <div class="portlet-body">
                                     <div class="row static-info">
                                         <div class="col-md-5 name">  {{trans('trans.title')}} : </div>
-                                        <div class="col-md-7 value">{{$blog->title}}</div>
+                                        <div class="col-md-7 value">{{$OurValues->title}}</div>
                                     </div>
                                     <div class="row static-info">
                                         <div class="col-md-5 name">  {{trans('trans.desc')}}</div>
                                         <div class="col-md-7 value"> 
-{!!$blog->desc!!}
+{!!$OurValues->desc!!}
                                         </div>
                                     </div>
                                     
@@ -76,7 +78,7 @@
                                         <div class="col-md-5 name"> {{trans('trans.img')}} </div>
                                         <div class="col-md-7 value"> 
 
-                                              <img src="{{url('/')}}/{{$blog->img}}"  style="width:100px;height:100px">
+                                              <img src="{{url('/')}}/{{$OurValues->img}}"  style="width:100px;height:100px">
 
 
                                         </div>

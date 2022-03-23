@@ -13,16 +13,16 @@ class OurValuesController extends Controller
 
        public function __construct() {
            
-        $this->middleware('AdminRole:OurValues_show', [
+        $this->middleware('AdminRole:values_show', [
             'only' => ['index', 'show'],
         ]);
-        $this->middleware('AdminRole:OurValues_add', [
+        $this->middleware('AdminRole:values_add', [
             'only' => ['create', 'store'],
         ]);
-        $this->middleware('AdminRole:OurValues_edit', [
+        $this->middleware('AdminRole:values_edit', [
             'only' => ['edit', 'update'],
         ]);
-        $this->middleware('AdminRole:OurValues_delete', [
+        $this->middleware('AdminRole:values_delete', [
             'only' => ['destroy', 'multi_delete'],
         ]);
         
@@ -65,7 +65,7 @@ class OurValuesController extends Controller
 
  
         //
-        //return Request();
+      //  return Request();
         $data = $this->validate(\request(),
             [
                 'title' => 'sometimes|nullable',
@@ -86,7 +86,7 @@ class OurValuesController extends Controller
         $OurValues = OurValues::create($data);
 
         session()->flash('success', trans('trans.createSuccess'));
-        return redirect('/OurValues');
+        return redirect('/values');
     }
 
     /**
@@ -167,6 +167,6 @@ class OurValuesController extends Controller
         $OurValues = OurValues::where('id', $id)->first();
         $OurValues->delete();
         session()->flash('danger', trans('trans.deleteSuccess'));
-        return redirect('/OurValues');
+        return redirect('/values');
     }
 }

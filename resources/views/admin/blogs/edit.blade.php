@@ -12,7 +12,7 @@
 
                 CKEDITOR.replace( 'desc' , {
 
-        language: 'ar',
+        language: 'en',
 
 });
  

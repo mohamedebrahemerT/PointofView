@@ -51,39 +51,28 @@
                     </li>
                      @endif
 
-                      @if(admin()->user()->role("OurValues_show"))
+                      @if(admin()->user()->role("values_show"))
      
-                    <li class="nav-item {{  request()->routeIs('OurValues.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/OurValues" class="nav-link ">
+                    <li class="nav-item {{  request()->routeIs('values.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/values" class="nav-link ">
                             <i class="icon-social-dribbble"></i>
-                            <span class="title"> {{trans('trans.OurValues')}}</span>
+                            <span class="title"> {{trans('trans.values')}}</span>
+                        </a>
+                    </li>
+                     @endif
+
+                     @if(admin()->user()->role("developmentcycle_show"))
+     
+                    <li class="nav-item {{  request()->routeIs('development_cycle.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/development_cycle" class="nav-link ">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="title"> {{trans('trans.developmentcycle')}}</span>
                         </a>
                     </li>
                      @endif
                 
 
-                     
-
-                @if(admin()->user()->role("users_show"))
-                    <li class="nav-item {{  request()->routeIs('users.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/users" class="nav-link ">
-                            <i class="icon-user"></i>
-                            <span class="title"> {{trans('trans.users')}}</span>
-                        </a>
-                    </li>
-                     @endif
-
- 
- 
-
-                @if(admin()->user()->role("Sliders_show"))
-                    <li class="nav-item {{  request()->routeIs('Sliders.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/Sliders" class="nav-link ">
-                            <i class="icon-social-dribbble"></i>
-                            <span class="title"> {{trans('trans.Sliders')}}</span>
-                        </a>
-                    </li>
-                     @endif
+           
 
                      @if(admin()->user()->role("Department_show"))
                     <li class="nav-item {{  request()->routeIs('Departments.*') ? 'active' : '' }}">
@@ -108,35 +97,67 @@
 
                      @endif
 
-                     @if(admin()->user()->role("Certificate_show"))
-                    <li class="nav-item {{  request()->routeIs('Certificate.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/Certificate" class="nav-link ">
-                            <i class="icon-social-dribbble"></i>
-                            <span class="title"> {{trans('trans.Certificate')}}</span>
+                  
+
+            @if(admin()->user()->role("Fieldworkadministration_show"))
+                    <li class="nav-item {{  request()->routeIs('Fieldwork_administration.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/Fieldwork_administration" class="nav-link ">
+                            <i class="icon-user"></i>
+                            <span class="title"> {{trans('trans.Fieldworkadministration')}}</span>
                         </a>
                     </li>
                      @endif
 
-                      @if(admin()->user()->role("UserCourses_show"))
-                    <li class="nav-item {{  request()->routeIs('UserCourses.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/UserCourses" class="nav-link ">
-                            <i class="icon-social-dribbble"></i>
-                            <span class="title"> {{trans('trans.UserCourses')}}</span>
+                     @if(admin()->user()->role("Resourcescapabilities_show"))
+                    <li class="nav-item {{  request()->routeIs('Resources_capabilities.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/Resources_capabilities" class="nav-link ">
+                            <i class="icon-user"></i>
+                            <span class="title"> {{trans('trans.Resourcescapabilities')}}</span>
                         </a>
                     </li>
                      @endif
 
-                      @if(admin()->user()->role("UserCourses_show"))
-                    <li class="nav-item {{  request()->routeIs('UserCoursescertificate.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/UserCoursescertificate" class="nav-link ">
-                            <i class="icon-social-dribbble"></i>
-                            <span class="title"> {{trans('trans.Certificate requests')}}</span>
+                      @if(admin()->user()->role("Quality_show"))
+                    <li class="nav-item {{  request()->routeIs('quality_control.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/quality_control" class="nav-link ">
+                            <i class="icon-user"></i>
+                            <span class="title"> {{trans('trans.Quality')}}</span>
+                        </a>
+                    </li>
+                     @endif
+
+                      @if(admin()->user()->role("SectorsOFexpertise_show"))
+                    <li class="nav-item {{  request()->routeIs('Sectors_OF_expertise.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/Sectors_OF_expertise" class="nav-link ">
+                            <i class="icon-user"></i>
+                            <span class="title"> {{trans('trans.SectorsOFexpertise')}}</span>
                         </a>
                     </li>
                      @endif
 
                      
+            
 
+                @if(admin()->user()->role("users_show"))
+                    <li class="nav-item {{  request()->routeIs('users.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/users" class="nav-link ">
+                            <i class="icon-user"></i>
+                            <span class="title"> {{trans('trans.users')}}</span>
+                        </a>
+                    </li>
+                     @endif
+
+ 
+ 
+
+                @if(admin()->user()->role("Sliders_show"))
+                    <li class="nav-item {{  request()->routeIs('Sliders.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/Sliders" class="nav-link ">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="title"> {{trans('trans.Sliders')}}</span>
+                        </a>
+                    </li>
+                     @endif
          
 
                       @if(admin()->user()->role("ContactUs_show"))

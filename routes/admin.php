@@ -43,11 +43,27 @@ Route::get('ACourses/{id}/destroy', 'CoursesController@destroy');
 Route::resource('news', 'newsController');
 Route::get('news/{id}/destroy', 'newsController@destroy');
 
-Route::resource('OurValues', 'OurValuesController');
-Route::get('OurValues/{id}/destroy', 'OurValuesController@destroy');
+Route::resource('values', 'OurValuesController');
+Route::get('values/{id}/destroy', 'OurValuesController@destroy');
 
 
+Route::resource('development_cycle', 'developmentcycleController');
+Route::get('development_cycle/{id}/destroy', 'developmentcycleController@destroy');
 
+Route::resource('Fieldwork_administration', 'FieldworkadministrationController');
+Route::get('Fieldwork_administration/{id}/destroy', 'FieldworkadministrationController@destroy');
+
+
+ Route::resource('Resources_capabilities', 'ResourcescapabilitiesController');
+Route::get('Resources_capabilities/{id}/destroy', 'ResourcescapabilitiesController@destroy');
+
+
+Route::resource('quality_control', 'QualityController');
+Route::get('quality_control/{id}/destroy', 'QualityController@destroy');
+
+
+ Route::resource('Sectors_OF_expertise', 'SectorsOFexpertiseController');
+Route::get('Sectors_OF_expertise/{id}/destroy', 'SectorsOFexpertiseController@destroy');
 
 Route::resource('Certificate', 'CertificatesController');
 Route::get('Certificate/{id}/destroy', 'CertificatesController@destroy');

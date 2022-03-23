@@ -12,7 +12,7 @@
 
                 CKEDITOR.replace( 'desc' , {
 
-        language: 'ar',
+        language: 'en',
 
 });
  
@@ -30,7 +30,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/news">{{trans('trans.news')}}</a>
+                                    <a href="{{url('/')}}/values">{{trans('trans.values')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -55,15 +55,15 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/OurValues/{{$blog->id}}" method="POST" enctype="multipart/form-data">
+                  <form role="form" action="{{url('/')}}/values/{{$OurValues->id}}" method="POST" enctype="multipart/form-data">
  					@csrf
  					{{ method_field('PATCH') }}
 
- 					<input type="hidden" name="id" value="{{$blog->id}}">
+ 					<input type="hidden" name="id" value="{{$OurValues->id}}">
 
  <div class="form-group">
                                <label class="control-label">{{trans('trans.title')}}</label>
-              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"  value="{{$blog->title}}"  /> 
+              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"  value="{{$OurValues->title}}"  /> 
           </div>
 
           <div class="form-group">
@@ -72,7 +72,7 @@
 
               <textarea type="text" 
                                 class="form-control desc"    name="desc"> 
-                            {{$blog->desc}}</textarea> 
+                            {{$OurValues->desc}}</textarea> 
           </div>
 
  
@@ -82,10 +82,10 @@
           <div class="form-group">
                                <label class="control-label">{{trans('trans.img')}}</label>
 
-<input type="file" placeholder="{{trans('trans.blog')}}" class="form-control" name="img" /> 
+<input type="file" placeholder="{{trans('trans.OurValues')}}" class="form-control" name="img" /> 
 
                                <br>
-              <img src="{{url('/')}}/{{$blog->img}}"  style="width:200px;height:200px">
+              <img src="{{url('/')}}/{{$OurValues->img}}"  style="width:200px;height:200px">
           </div>
 
           <div class="form-group">
