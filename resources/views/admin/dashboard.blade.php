@@ -26,16 +26,111 @@
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <div class="row">
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-red-haze">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\OurValues::count()}}">{{App\Models\OurValues::count()}}</span>
+                        </h3>
+                        <small>
+
+Our Values
+
+</small>
+                    </div>
+                     <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+               <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-red-haze">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\developmentcycle::count()}}">{{App\Models\developmentcycle::count()}}</span>
+                        </h3>
+                        <small>
+development cycle
+</small>
+                    </div>
+                     <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-blue-sharp">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\Department::count()}}">{{App\Models\Department::count()}}</span>
+                        </h3>
+                        <small>{{trans('trans.Department')}}</small>
+                    </div>
+                      <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+               <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
                         <h3 class="font-green-sharp">
                             <span data-counter="counterup"
-                                  data-value="{{App\Models\User::count()}}">{{App\Models\User::count()}}</span>
+                                  data-value="{{App\Models\Fieldworkadministration::count()}}">{{App\Models\Fieldworkadministration::count()}}</span>
 
                         </h3>
-                        <small>{{trans('trans.users')}}</small>
+                        <small> Fieldwork </small>
                     </div>
                     <div class="icon">
                         <i class="icon-pie-chart"></i>
@@ -55,74 +150,20 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="dashboard-stat2 ">
-                <div class="display">
-                    <div class="number">
-                        <h3 class="font-red-haze">
-                            <span data-counter="counterup"
-                                  data-value="{{App\Models\Course::count()}}">{{App\Models\Course::count()}}</span>
-                        </h3>
-                        <small>{{trans('trans.courses')}}</small>
-                    </div>
-                    <div class="icon">
-                        <i class="icon-like"></i>
-                    </div>
-                </div>
-                <div class="progress-info">
-                    <div class="progress">
-                                            <span style="width: 85%;"
-                                                  class="progress-bar progress-bar-success red-haze">
-                                                <span class="sr-only"> </span>
-                                            </span>
-                    </div>
-                    <div class="status">
-                        <div class="status-title"></div>
-                        <div class="status-number"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="dashboard-stat2 ">
-                <div class="display">
-                    <div class="number">
-                        <h3 class="font-blue-sharp">
-                            <span data-counter="counterup"
-                                  data-value="{{App\Models\Department::count()}}">{{App\Models\Department::count()}}</span>
-                        </h3>
-                        <small>{{trans('trans.Department')}}</small>
-                    </div>
-                    <div class="icon">
-                        <i class="icon-basket"></i>
-                    </div>
-                </div>
-                <div class="progress-info">
-                    <div class="progress">
-                                            <span style="width: 45%;"
-                                                  class="progress-bar progress-bar-success blue-sharp">
-                                                <span class="sr-only"> </span>
-                                            </span>
-                    </div>
-                    <div class="status">
-                        <div class="status-title"></div>
-                        <div class="status-number"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+    
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
                         <h3 class="font-purple-soft">
                             <span data-counter="counterup"
-                                  data-value="{{App\Models\UserCourses::count()}}">{{App\Models\UserCourses::count()}}</span>
+                                  data-value="{{App\Models\Resourcescapabilities::count()}}">{{App\Models\Resourcescapabilities::count()}}</span>
                         </h3>
-                        <small>{{trans('trans.UserCourses')}}</small>
+                        <small>Resources Capabilities</small>
                     </div>
-                    <div class="icon">
-                        <i class="icon-user"></i>
+                     <div class="icon">
+                        <i class="icon-pie-chart"></i>
                     </div>
                 </div>
                 <div class="progress-info">
@@ -139,6 +180,157 @@
                 </div>
             </div>
         </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\Quality::count()}}">{{App\Models\Quality::count()}}</span>
+
+                        </h3>
+                        <small> Quality </small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\SectorsOFexpertise::count()}}">{{App\Models\SectorsOFexpertise::count()}}</span>
+
+                        </h3>
+                        <small> Sectors OF expertise </small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\Slider::count()}}">{{App\Models\Slider::count()}}</span>
+
+                        </h3>
+                        <small> Sliders </small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\User::count()}}">{{App\Models\User::count()}}</span>
+
+                        </h3>
+                        <small> Users </small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup"
+                                  data-value="{{App\Models\User::count()}}">{{App\Models\User::count()}}</span>
+
+                        </h3>
+                        <small> Users </small>
+                    </div>
+                    <div class="icon">
+                        <i class="icon-pie-chart"></i>
+                    </div>
+                </div>
+                <div class="progress-info">
+                    <div class="progress">
+                                            <span style="width: 76%;"
+                                                  class="progress-bar progress-bar-success green-sharp">
+                                                <span class="sr-only"> </span>
+                                            </span>
+                    </div>
+                    <div class="status">
+                        <div class="status-title"></div>
+                        <div class="status-number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
    
  

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace' => 'Forentend'], function () {
 
-
+/*
 Route::get('/','homeController@index');
 Route::get('/aboutus','homeController@aboutus');
 //Route::get('/blog','homeController@blog');
@@ -83,4 +83,6 @@ Route::get('/logout','homeController@logout');
     Route::get('my-form','homeController@myform');
 
 Route::post('my-form','homeController@myformPost')->name('my.form');
+
+*/
 });
