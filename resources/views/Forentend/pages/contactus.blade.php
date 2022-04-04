@@ -4,76 +4,97 @@
  @push('js')
  @endpush
      
-    <section class="page-header profile-header">
-        <div class="page-header_wrapper">
-            <div class="container">
-                <div class="page-header_content">
-                    <h1 class="page-header_title">تواصل معنا</h1>
+    <div class="relative">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.4370166970784!2d31.351750385457102!3d30.11030598185832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815de8c360e1f%3A0xbfa80d0523b622d4!2zOSDYp9mE2YjYp9ix2K_ZitiMINin2YTZhdi32KfYsdiMINmC2LPZhSDYp9mE2YbYstmH2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e0!3m2!1sar!2seg!4v1648993054839!5m2!1sar!2seg" width="1920" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   
+  <div class="absolute">
+       <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Contact Us</li>
+                </ol>
+  </div>
+</div>
+
+<hr class="breadcrumbhr" >
+
+
+
+       <div class="container">
+         <div class="row">
+
+                 <div class="col-md-6">
+                  
+
+                    <h5 class="py-4">Contact Us</h5>
+
+            <hr style="border: 1px solid #fab117;
+width: 80px;
+height: 2px;
+background-color: #fab117;
+text-align: left;
+margin-left: 0%;
+margin-top: -4%;">
+
+                    <p style="color: #505050">Many Desktop Publishing Packages And Web Page Editors Now Use 
+Lorem Ipsum As Their Default Model Text</p>
+
+ <div class="contact-details5" style="float: left;">
+            <ul>
+              <li>
+                <i class="fas fa-phone fa-rotate-90" style="color:#fab117"></i>  
+
+            +201060908130 </li>
+        <li><i class="fa fa-envelope" style="color:#fab117"></i> 
+
+        info@pov.com  </li>
+   <li><i class="fas fa-map-marker-alt" style="color:#fab117">
+       
+   </i> zamalak - cairo - egypt </li>
+
+      
+
+            </ul>
+          </div>
                 </div>
-            </div>
-        </div>
 
-    </section>
-
-    <section class="page py-0">
-        <section class="contact pt-100 pb-100" id="contact">
-            <div class="container">
-
-                <div class="row text-center">
-                    <div class="col-md-8">
-
-
-
-
-
- 
-
-                        <form action="{{url('/')}}/contact-form" class="contact-form"  method="post">
-                            @csrf
-                            <div class="row">
-                                <div class="col-xl-6 form-group">
-       <input type="text" class="form-control" placeholder="الاسم" name="name" required="">
-                                </div>
-                                <div class="col-xl-6 form-group">
-                                    <input type="email" class="form-control" placeholder="البريد الالكترونى"  name="email" required="email">
-                                </div>
-                                <div class="col-xl-6 form-group">
-                                    <input type="text" class="form-control" placeholder="العنوان" name="address" required="">
-                                </div>
-                                <div class="col-xl-6 form-group">
-                     <input type="number" class="form-control" placeholder="رقم الجوال" name="phone" required="number" min="8"  >
-                                </div>
-                                <div class="col-xl-12 form-group">
-                                    <textarea placeholder="محتوى الرسالة" cols="30" rows="10"
-                                        class="form-control" name="content" required=""></textarea>
-                                    <div class="buttons"> <a href="#"> <button
-                                                class="btn-hover color-10">أرسل</button></a></div>
-                                </div>
+                <div class="col-md-6">
+                  <div class="Rectangle-115">
+                  
+                        <h3>get in touch</h3>
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <input type="text" placeholder="Full Name" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block"></p>
                             </div>
-                        </form>
-                    </div>
-                      @php
-              $Setting= App\Models\Setting::orderBy('id','desc')->first();
-             @endphp
-                    <div class="col-md-4">
-                        <div class="single-contact">
-                            <i class="fa fa-map-marker"></i>
-                            <h5>العنوان</h5>
-                            <p>{{$Setting->address}}</p>
                         </div>
-                        <div class="single-contact phone">
-                            <i class="fa fa-phone"></i>
-                            <h5>رقم الهاتف</h5>
-                            <p>{{$Setting->phone}}</p>
+                       
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <input type="email" placeholder="Email Address" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                            </div>
                         </div>
-                        <div class="single-contact mail">
-                            <i class="fa fa-envelope"></i>
-                            <h5>البريد الالكترونى</h5>
-                            <p>{{$Setting->email}}</p>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <textarea rows="5" cols="100" placeholder="Message" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                            </div>
                         </div>
-                    </div>
+                        <div id="success"></div>
+                        <!-- For success/fail messages -->
+                        <button type="submit" class="btn btn-primary" id="sendMessageButton" style="background-color: #000;">Send Message</button>
+                    </form>
+                  </div>
                 </div>
+               
+
             </div>
-        </section>
-    </section>
+    </div>
+
+<br>
+<br>
+
+    
+    
 @endsection

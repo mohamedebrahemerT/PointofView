@@ -363,4 +363,9 @@ if (!function_exists('store')) {
     }
 }
 
-
+if (!function_exists('Settings')) {
+    function Settings()
+    {
+       return    $Settings = App\Models\Setting::first();
+    }
+}

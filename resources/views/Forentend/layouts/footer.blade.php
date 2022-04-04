@@ -1,125 +1,94 @@
-@php
-    $Setting= App\Models\Setting::orderBy('id','desc')->first();
-@endphp
-<!--start footer-->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="footer_block">
-                    <img src="{{url('/')}}/{{$Setting->logo_footer}}" alt="">
-                    <div class="social_footer">
-                        <a href="{{$Setting->facebook_link}}"><i class="fab fa-facebook"></i></a>
-                        <a href="{{$Setting->twitter_link}}"><i class="fab fa-twitter"></i></a>
-
-                        <a href="{{$Setting->linkedin_link}}"><i class="fab fa-linkedin"></i></a>
-
-     <a href="{{$Setting->Whatsapp_link}}"><i class="fab fa-whatsapp"></i></a>
-     <a href="{{$Setting->insta_link}}"><i class="fab fa-instagram"></i></a>
-     <a href="{{$Setting->snapchat_link}}"><i class="fab fa-snapchat"></i></a>
+ 
 
 
-                    </div>
-                    <div class="contact">
-                        <div>
-                            <i class="fa fa-phone"></i>
-                            <span>{{$Setting->phone}}</span>
-                        </div>
-                        <div>
-                            <i class="fa fa-envelope"></i>
-                            <span> {{$Setting->email}}</span>
-                        </div>
+  
 
+    
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">About Us</h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <ul class="footer-social">
+                        <li><a class="facebook hb-xs-margin" href="#"><span class="hb hb-xs spin hb-facebook"><i class="fab fa-facebook-f"></i></span></a></li>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="footer_block">
-                    <h4 class="title">الدورات</h4>
-                    @php
-                        $Departments= App\Models\Department::get();
-                    @endphp
-                    <ul class="list-unstyled">
-                        @foreach($Departments as $Department)
+                    
 
-                            <li><a href="{{url('/')}}/Department/{{$Department->id}}">
-                                    {{$Department->title}}
-                                </a></li>
-                        @endforeach
+                        <li><a class="instagram hb-xs-margin" href="#"><span class="hb hb-xs spin hb-instagram"><i class="fab fa-linkedin-in"></i></span></a></li>
 
+                    
                     </ul>
+                </div>  
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>home</a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> about us </a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> contact us  </a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> scope of research </a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> Methodologies </a></li>
+                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> Services </a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="footer_block">
-                    <h4 class="title">أشترك فى القائمة البريدية</h4>
-                    <p>اشترك في النشرة الإخبارية لدينا لتلقي آخر الأخبار
-                        والتحديثات حول العروض الخاصة وخصومات الخدمة.</p>
-
-
-                    <form action="{{url('/')}}/subs" class="form-inline" method="post">
-                        @csrf
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="البريد الالكترونى" name="email" required>
-                        </div>
-                        <button type="submit" class="btn syan_b px-3 text-white">ارسال</button>
-                    </form>
+                <div class="col-lg-3 col-md-6 col-sm-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                    <!--headin5_amrc ends here-->
+                    <ul class="footer_ul2_amrc">
+                        <li>
+                            <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                            <p>Lorem Ipsum is simply dummy...<a href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                            <p>Lorem Ipsum is simply dummy...<a href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                            <p>Lorem Ipsum is simply dummy...<a href="#">https://www.lipsum.com/</a></p>
+                        </li>
+                    </ul>
+                    <!--footer_ul2_amrc ends here-->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 ">
+                    <div class="news-box">
+                        <h5 class="headin5_amrc col_white_amrc pt2">Newsletter</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                        <form action="#">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Search for..." type="text">
+                                <span class="input-group-btn">
+                                  <button class="btn btn-secondary" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center mt-5">
-            <div class="text-center text-mute">
-                <p class="copyrights">{{$Setting->copy_right}}</p>
-                <p class="copyrights"> <span style="color:#fff">powered by </span>   <br>
-             <a href="http://www.masteredcode.com">
-                     <img src="{{url('/')}}/img/master-code.png" class="img-fluid" style="width: 150px;height: 150px;"> 
-                     </a>
-                 </p>
-            </div>
+        <div class="container">
+             
+
+            <p>© 2022 Point of View. - Hosted with <span style="color: #e25555;">♥</span> in <a href="https://www.ps-tech.net">PST Egypt</a></p>
         </div>
-    </div>
-</footer>
-<!--end footer-->
-
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js">
-</script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="{{url('/')}}/Forentend/js/custome.js"></script>
-@stack('js')
-
-<script src="{{url('/')}}/Forentend/js/toastr.min.js" type="text/javascript"></script>
-<script>
-    $(document).ready(function () {
-        toastr.options = {
-            "progressBar": true,
-            "positionClass": "toast-bottom-left",
-        };
-    });
-</script>
-
-@if(session()->has('success') || session()->has('error') || session()->has('errors'))
-    <script>
-        $(document).ready(function () {
-            @if(session()->has('success'))
-            toastr.success("{{session()->get('success')}}");
-            @elseif(session()->has('error'))
-            toastr.error("{{session()->get('error')}}");
-            @else
-            @foreach($errors->all() as $session_error)
-            toastr.error("{{$session_error}}");
-            @endforeach
-            @endif
-        });
-    </script>
-    @endif
-    </body>
-
-    </html>
+    </footer>
+    
+</div>
+      
+<!-- Bootstrap core JavaScript -->
+<script src="{{url('/')}}/Forentend/vendor/jquery/jquery.min.js"></script>
+<script src="{{url('/')}}/Forentend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{url('/')}}/Forentend/js/imagesloaded.pkgd.min.js"></script>
+<script src="{{url('/')}}/Forentend/js/isotope.pkgd.min.js"></script>
+<script src="{{url('/')}}/Forentend/js/filter.js"></script>
+<script src="{{url('/')}}/Forentend/js/jquery.appear.js"></script>
+<script src="{{url('/')}}/Forentend/js/owl.carousel.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="{{url('/')}}/Forentend/js/script.js"></script>
+</body>
+</html>

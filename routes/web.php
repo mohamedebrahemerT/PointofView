@@ -14,12 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace' => 'Forentend'], function () {
 
-/*
+
 Route::get('/','homeController@index');
 Route::get('/aboutus','homeController@aboutus');
-//Route::get('/blog','homeController@blog');
+Route::get('/Services','Servicescontroller@index');
 Route::get('/contactus','homeController@contactus');
-Route::get('/Department/{id}','homeController@getcourses');
+
+
+
+//Route::get('/blog','homeController@blog');
+Route::get('/Services/{id}','homeController@Services');
+/*
+
 //Route::get('/blog/{id}','homeController@getblog');
 Route::get('/course/{id}','homeController@getcourse');
 Route::get('/coursemore/{id}','homeController@coursemore');
