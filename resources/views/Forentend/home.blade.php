@@ -12,22 +12,22 @@
                <!-- Slide One - Set the background image for this slide in the line below -->
                <div class="carousel-item active" style="background-image: url('{{url('/')}}/Forentend/images/slider-01.jpg')">
                   <div class="carousel-caption d-none d-md-block">
-                     <h3>Welcome to Zonebiz</h3>
-                     <p>A Great Theme For Business Consulting</p>
+                     <h3>Welcome to POV </h3>
+                     <p> Point of View  For research Consulting</p>
                   </div>
                </div>
                <!-- Slide Two - Set the background image for this slide in the line below -->
                <div class="carousel-item" style="background-image: url('{{url('/')}}/Forentend/images/slider-02.jpg')">
                   <div class="carousel-caption d-none d-md-block">
-                     <h3>Best Consulting Services.</h3>
-                     <p>A Great Theme For Business Consulting</p>
+                     <h3>Best research Services.</h3>
+                     <p> Point of View  For research Consulting</p>
                   </div>
                </div>
                <!-- Slide Three - Set the background image for this slide in the line below -->
                <div class="carousel-item" style="background-image: url('{{url('/')}}/Forentend/images/slider-03.jpg')">
                   <div class="carousel-caption d-none d-md-block">
-                     <h3>Welcome to Zonebiz</h3>
-                     <p>A Great Theme For Business Consulting</p>
+                     <h3>Welcome to POV</h3>
+                     <p> Point of View  For research Consulting</p>
                   </div>
                </div>
             </div>
