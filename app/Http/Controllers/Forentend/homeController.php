@@ -22,20 +22,35 @@ use Illuminate\Support\Facades\DB;
 use App\Notifications\UserResetPasswordNotification;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Slider;
+use App\Models\OurValues;
+use App\Models\OurTeam;
+ 
+      
 
 class homeController extends Controller
 {
     //
     public function index()
     {
-        return view('Forentend.home');
+          $Sliders = Slider::take(5)->get();
+         $Aboutus = blog::where('id',1)->first();
+          $Departments = Department::take(4)->get();
+          $OurValues = OurValues::take(10)->get();
+         $OurTeams  = OurTeam::inRandomOrder()->take(2)->get();
+
+        return view('Forentend.home',
+            compact(
+                'Sliders',
+                'Aboutus',
+                'Departments',
+                'OurValues',
+                'OurTeams'
+            )
+        );
     }
 
-    public function aboutus()
-    {
-        $Setting = Setting::orderBy('id', 'desc')->first();
-        return view('Forentend.pages.aboutus', compact('Setting'));
-    }
+   
 
     public function blog()
     {
@@ -110,8 +125,8 @@ class homeController extends Controller
         $data = $this->validate(request(), [
             'name' => ['required', 'string', 'max:255'],
             'email' => 'required|email',
-            'phone' => 'required',
-            'address' => 'required',
+            'phone' => 'sometimes|nullable',
+            'address' =>'sometimes|nullable',
             'content' => 'required',
 
 
@@ -119,13 +134,13 @@ class homeController extends Controller
             'name' => trans('trans.name'),
             'email' => trans('trans.email'),
             'phone' => trans('trans.phone'),
-            'address' => trans('trans.CompanyName'),
+            'address' => trans('trans.address'),
             'content' => trans('trans.subject'),
 
 
         ]);
         ContactUs::create($data);
-        session()->flash('success', trans('trans.Message sent successfully'));
+        session()->flash('success', 'The message has been sent successfully and the relevant department will respond to you as soon as possible.');
 
 
         return redirect()->back();
@@ -202,7 +217,7 @@ class homeController extends Controller
 
 
         subscription::firstOrCreate($data);
-        session()->flash('success', 'تم الاشتراك بنجاح ');
+        session()->flash('success', 'Subscribed successfully');
 
 
         return redirect()->back();

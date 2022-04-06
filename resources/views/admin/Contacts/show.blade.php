@@ -16,7 +16,7 @@
 
                 CKEDITOR.replace( 'reply' , {
 
-        language: 'ar',
+        language: 'en',
 
 });
 

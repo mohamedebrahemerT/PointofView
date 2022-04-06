@@ -20,7 +20,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/Department">{{trans('trans.Department')}}</a>
+                                    <a href="{{url('/')}}/department">{{trans('trans.Department')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -46,7 +46,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="btn-group">
-                 <a id="sample_editable_1_new" class="btn sbold green" href="{{url('/')}}/Departments/create"> {{trans('trans.Add New')}}
+                 <a id="sample_editable_1_new" class="btn sbold green" href="{{url('/')}}/department/create"> {{trans('trans.Add New')}}
                                                             <i class="fa fa-plus"></i>
                                                         </a>
                                                     </div>
@@ -92,20 +92,20 @@
 
                                                                   
                                                                 <li>
-                     <a href="{{url('/')}}/Departments/{{$Dep->id}}/edit">
+                     <a href="{{url('/')}}/department/{{$Dep->id}}/edit">
                                                                         <i class="icon-docs"></i> 
                                                     {{trans('trans.edit')}}
                                                                 </a>
                                                                 </li>
 
                                                                   <li>
-                     <a href="{{url('/')}}/Departments/{{$Dep->id}}">
+                     <a href="{{url('/')}}/department/{{$Dep->id}}">
                                                                         <i class="icon-docs"></i> 
                                                     {{trans('trans.show')}}
                                                                 </a>
                                                                 </li>
                                                                 <li>
-                                              <a href="{{url('/')}}/Departments/{{$Dep->id}}/destroy">
+                                              <a href="{{url('/')}}/department/{{$Dep->id}}/destroy">
                                                                         <i class="icon-tag"></i>
                                      {{trans('trans.delete')}}
                                                                          </a>

@@ -69,7 +69,7 @@ class SlidersController extends Controller
                 'title' => 'sometimes|nullable',
                 'desc' => 'sometimes|nullable',
                 'url' => 'sometimes|nullable',
-                'img' => 'required|dimensions:max_width=1920,max_height=700',
+                'img' => 'required|dimensions:max_width=1920,max_height=1080',
 
 
             ]);
@@ -134,7 +134,7 @@ class SlidersController extends Controller
                 'title' => 'sometimes|nullable',
                 'desc' => 'sometimes|nullable',
                 'url' => 'sometimes|nullable',
-                'img' => 'sometimes|nullable|dimensions:max_width=1920,max_height=700',
+                'img' => 'sometimes|nullable|dimensions:max_width=1920,max_height=1080',
 
 
             ]);

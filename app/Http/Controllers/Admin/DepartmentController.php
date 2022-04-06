@@ -75,22 +75,28 @@ class DepartmentController extends Controller
         //
         $data = $this->validate(\request(),
             [
-                'title' => 'required',
+                  'title' => 'required',
+                 'desc' => 'sometimes|nullable',
+                'img' => 'required',
              
                 
                  
             ]);
 
+           if ($request->img) {
+
+            $imageName = time() . '.' . $request->img->extension();
+            $request->img->move(public_path('/Departments'), $imageName);
+            $data['img'] = 'Departments/'.$imageName;
+        }
+
                    
 
         $Department=Department::create($data);
         session()->flash('success', trans('trans.createSuccess'));
+ 
 
-        
-             
-
-
-        return   redirect('/Departments');
+        return   redirect('/department');
     }
 
     /**
@@ -137,11 +143,17 @@ class DepartmentController extends Controller
          $data = $this->validate(\request(),
             [
                 'title' => 'required',
+                'desc' => 'sometimes|nullable',
                  
                  
             ]);
 
-                   
+                    if ($request->img) 
+                    {
+            $imageName = time() . '.' . $request->img->extension();
+           $request->img->move(public_path('/Departments'), $imageName);
+            $data['img'] = 'Departments/'.$imageName;
+                 } 
  
            Department::where('id',$request->id)->update($data);
 
@@ -163,6 +175,6 @@ class DepartmentController extends Controller
           $Department=Department::where('id',$id)->first();
                   $Department->delete();
               session()->flash('danger', trans('trans.deleteSuccess'));
-        return   redirect('/Departments');
+        return   redirect('/department');
     }
 }

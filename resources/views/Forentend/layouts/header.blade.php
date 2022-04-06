@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>   Point of View </title>
+  <title>   {{Settings()->name}}  </title>
   <!-- Bootstrap core CSS -->
   <link href="{{url('/')}}/Forentend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Fontawesome CSS -->
@@ -38,6 +38,34 @@
   
 }
   </style>
+
+
+   <style>
+.loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #ffffffcf;
+        }
+        .loader img{
+            position: relative;
+            left: 40%;
+            top: 40%;
+        }
+</style>
+
+<script>
+    window.onload = function() 
+    {
+        //display loader on page load 
+        $('.loader').fadeOut();
+    }
+
+</script>
 </head>
 <body>
 <div class="wrapper-main">
+<div class="loader" ><img src="{{Settings()->logo_footer}}"></div>

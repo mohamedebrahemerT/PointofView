@@ -16,26 +16,52 @@ Route::group(['namespace' => 'Forentend'], function () {
 
 
 Route::get('/','homeController@index');
-Route::get('/aboutus','homeController@aboutus');
+Route::get('/aboutus','aboutusController@aboutus');
+
+Route::get('/team','pagesController@team');
+Route::get('/Values','pagesController@OurValues');
+Route::get('/Values/{id}','pagesController@singleValues');
+
+Route::get('/devcycle','pagesController@devcycle');
+Route::get('/devcycle/{id}','pagesController@singledevcycle');
+
+
+Route::get('/Fieldadministration','pagesController@Fieldadministration');
+Route::get('/Fieldadministration/{id}','pagesController@singleFieldadministration');
+
+Route::get('/Rescapabilities','pagesController@Rescapabilities');
+Route::get('/Rescapabilities/{id}','pagesController@singleRescapabilities');
+
+Route::get('/Qualitycontrol','pagesController@Qualitycontrol');
+Route::get('/Qualitycontrol/{id}','pagesController@singleQualitycontrol');
+
+
 Route::get('/Services','Servicescontroller@index');
+Route::get('/childScopeofresearch/{id}','Servicescontroller@childScopeofresearch');
+Route::get('/Services/{id}','Servicescontroller@Service');
+
+Route::get('/Gallery','Gallerycontroller@index');
+Route::get('/Carreer','Carreercontroller@index');
 Route::get('/contactus','homeController@contactus');
+Route::post('/subs','homeController@subscriptions');
+Route::post('/contact-form','homeController@contactform');
 
 
 
 //Route::get('/blog','homeController@blog');
-Route::get('/Services/{id}','homeController@Services');
+
 /*
 
 //Route::get('/blog/{id}','homeController@getblog');
 Route::get('/course/{id}','homeController@getcourse');
 Route::get('/coursemore/{id}','homeController@coursemore');
 
-Route::post('/contact-form','homeController@contactform');
+
 Route::get('/login','homeController@login');
 Route::post('/login','homeController@post_login');
 Route::post('/register','homeController@register');
 Route::get('/search','homeController@search');
-Route::post('/subs','homeController@subscriptions');
+
 Route::get('/home','homeController@home');
 Route::post('/update_user','homeController@update_user');
 Route::get('/registercourse/{id}','homeController@registercourse');

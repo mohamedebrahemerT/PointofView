@@ -5,6 +5,10 @@ return [
 	
 	"dashboard" => [ 'read'],
 	"news" => ['create', 'read', 'update', 'delete'],
+	"carreer" => ['create', 'read', 'update', 'delete'],
+	
+	"ourteam" => ['create', 'read', 'update', 'delete'],
+	
 	"values" => ['create', 'read', 'update', 'delete'],
 	"developmentcycle" => ['create', 'read', 'update', 'delete'],
 	"Fieldworkadministration" => ['create', 'read', 'update', 'delete'],
@@ -20,7 +24,7 @@ return [
 	
 		
 	"ContactUs" => ['create', 'read', 'update'],
-	"subscriptions" => ['create', 'read', 'update'],
+	"subscriptions" => ['create', 'read', 'update', 'delete'],
 	"AdminNotifications" => ['create', 'read', 'update', 'delete'],
 	"admins" => ['create', 'read', 'update', 'delete'],
 	"AdminGroup" => ['create', 'read', 'update', 'delete'],

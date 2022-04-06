@@ -9,7 +9,7 @@
 
             CKEDITOR.replace('desc', {
 
-                language: 'ar',
+                language: 'en',
 
             });
 
@@ -59,27 +59,27 @@
 
                                 <input type="hidden" name="id" value="{{$Slider->id}}">
 
-{{--                                <div class="form-group">--}}
-{{--                                    <label class="control-label">{{trans('trans.title')}}</label>--}}
-{{--                                    <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"--}}
-{{--                                           name="title" value="{{$Slider->title}}"/>--}}
-{{--                                </div>--}}
+                               <div class="form-group">
+                                   <label class="control-label">{{trans('trans.title')}}</label>
+                                   <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"
+                                          name="title" value="{{$Slider->title}}"/>
+                               </div>
 
-{{--                                <div class="form-group">--}}
-{{--                                    <label class="control-label">{{trans('trans.desc')}}</label>--}}
-
-
-{{--                                    <textarea type="text"--}}
-{{--                                              class="form-control desc" name="desc"> --}}
-{{--                            {{$Slider->desc}}</textarea>--}}
-{{--                                </div>--}}
+                               <div class="form-group">
+                                   <label class="control-label">{{trans('trans.desc')}}</label>
 
 
-{{--                                <div class="form-group">--}}
-{{--                                    <label class="control-label">{{trans('trans.url')}}</label>--}}
-{{--                                    <input type="text" placeholder="{{trans('trans.url')}}" class="form-control"--}}
-{{--                                           value="{{$Slider->url}}" name="url"/>--}}
-{{--                                </div>--}}
+                                   <textarea type="text"
+                                             class="form-control desc" name="desc"> 
+                           {{$Slider->desc}}</textarea>
+                               </div>
+
+
+                               <div class="form-group">
+                                   <label class="control-label">{{trans('trans.url')}}</label>
+                                   <input type="text" placeholder="{{trans('trans.url')}}" class="form-control"
+                                          value="{{$Slider->url}}" name="url"/> 
+                               </div> 
 
 
                                 <div class="form-group">

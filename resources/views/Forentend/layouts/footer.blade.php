@@ -10,15 +10,26 @@
         <div class="container bottom_border">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">About Us</h5>
+                    <h5 class="headin5_amrc col_white_amrc pt2">
+                       {{ Aboutus()->title}}
+                
+                </h5>
                     <!--headin5_amrc-->
-                    <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p class="mb10">
+                          
+
+                {!! Str::limit(Aboutus()->desc, 120) !!}
+  <a href="{{url('/')}}/aboutus">
+                <span class="card-header"> read more </span>
+                </a>
+                    </p>
+                  
                     <ul class="footer-social">
-                        <li><a class="facebook hb-xs-margin" href="#"><span class="hb hb-xs spin hb-facebook"><i class="fab fa-facebook-f"></i></span></a></li>
+                        <li><a class="facebook hb-xs-margin" href="{{Settings()->facebook_link}}" target="_blank"><span class="hb hb-xs spin hb-facebook"><i class="fab fa-facebook-f"></i></span></a></li>
 
                     
 
-                        <li><a class="instagram hb-xs-margin" href="#"><span class="hb hb-xs spin hb-instagram"><i class="fab fa-linkedin-in"></i></span></a></li>
+                        <li><a class="instagram hb-xs-margin" href="{{Settings()->linkedin_link}}" target="_blank"><span class="hb hb-xs spin hb-instagram"><i class="fab fa-linkedin-in"></i></span></a></li>
 
                     
                     </ul>
@@ -27,12 +38,13 @@
                     <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
                     <!--headin5_amrc-->
                     <ul class="footer_ul_amrc">
-                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i>home</a></li>
-                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> about us </a></li>
-                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> contact us  </a></li>
-                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> scope of research </a></li>
-                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> Methodologies </a></li>
-                        <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i> Services </a></li>
+                        <li><a href="{{url('/')}}/"><i class="fas fa-long-arrow-alt-right"></i>home</a></li>
+                        <li><a href="{{url('/')}}/aboutus"><i class="fas fa-long-arrow-alt-right"></i> about us </a></li>
+                      
+                        <li><a href="{{url('/')}}/Services"><i class="fas fa-long-arrow-alt-right"></i> scope of research </a></li>
+                        <li><a href="{{url('/')}}/team"><i class="fas fa-long-arrow-alt-right"></i> Our Team </a></li>
+                        <li><a href="{{url('/')}}/Gallery"><i class="fas fa-long-arrow-alt-right"></i> Gallery </a></li>
+                          <li><a href="{{url('/')}}/contactus"><i class="fas fa-long-arrow-alt-right"></i> contact us  </a></li>
                     </ul>
                     <!--footer_ul_amrc ends here-->
                 </div>
@@ -58,12 +70,16 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 ">
                     <div class="news-box">
                         <h5 class="headin5_amrc col_white_amrc pt2">Newsletter</h5>
-                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                        <form action="#">
+                        <p>
+                            Subscribe to our newsletter to receive the latest news and updates about special offers and service discounts.
+                        </p>
+                        <form action="{{url('/')}}/subs"  method="post">
+                        @csrf
+
                             <div class="input-group">
-                                <input class="form-control" placeholder="Search for..." type="text">
+                                <input class="form-control" placeholder="email here..." type="text" name="email">
                                 <span class="input-group-btn">
-                                  <button class="btn btn-secondary" type="button">Go!</button>
+                                  <button class="btn btn-secondary" type="submit">Go!</button>
                                 </span>
                             </div>
                         </form>
@@ -74,7 +90,7 @@
         <div class="container">
              
 
-            <p>© 2022 Point of View. - Hosted with <span style="color: #e25555;">♥</span> in <a href="https://www.ps-tech.net">PST Egypt</a></p>
+            <p>© {{date('Y')}} Point of View. - Hosted with <span style="color: #e25555;">♥</span> in <a href="https://www.ps-tech.net">PST Egypt</a></p>
         </div>
     </footer>
     

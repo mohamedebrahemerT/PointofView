@@ -6,6 +6,24 @@
 
   
  
+@push('js')
+            <script>
+ 
+                
+
+                CKEDITOR.replace( 'desc' , {
+
+        language: 'en',
+
+});
+ 
+
+            </script>
+ 
+
+            
+                      @endpush
+  
 
 
                         <!-- END THEME PANEL -->
@@ -17,7 +35,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/Departments">{{trans('trans.Department')}}</a>
+                                    <a href="{{url('/')}}/department">{{trans('trans.Department')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -42,16 +60,31 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/Departments" method="POST" enctype="multipart/form-data">
+                  <form role="form" action="{{url('/')}}/department" method="POST" enctype="multipart/form-data">
                     @csrf
-                   
- 
-
-
+                    
                      <div class="form-group">
                                <label class="control-label">{{trans('trans.title')}}</label>
               <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"  required=""/> 
           </div>
+
+            <div class="form-group">
+                               <label class="control-label">{{trans('trans.desc')}}</label>
+                               <textarea type="text" 
+                                class="form-control desc"    name="desc"required=""> </textarea>
+               
+          </div>
+
+     
+              
+
+                <div class="form-group">
+                               <label class="control-label">{{trans('trans.img')}}</label>
+              <input type="file" placeholder="{{trans('trans.img')}}" class="form-control"    name="img"  required=""/> 
+          </div> 
+                     
+
+
 
         
                  

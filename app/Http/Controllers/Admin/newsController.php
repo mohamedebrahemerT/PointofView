@@ -34,11 +34,7 @@ class newsController extends Controller
      */
     public function index()
     {
-        $Settings = Setting::first();
-         if ($Settings->Blogstatus == 0)
-          {
-             return back();
-         }
+         
         $blogs = blog::get();
         return view('admin.blogs.index', compact('blogs'));
     }

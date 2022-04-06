@@ -368,4 +368,11 @@ if (!function_exists('Settings')) {
     {
        return    $Settings = App\Models\Setting::first();
     }
+    }
+
+    if (!function_exists('AboutUs')) {
+    function AboutUs()
+    {
+       return      $Aboutus = App\Models\blog::where('id',1)->first();
+    }
 }

@@ -95,7 +95,7 @@
 <input type="file" placeholder="{{trans('trans.Fivacon')}}" class="form-control" name="Fivacon" /> 
 
                                <br>
-              <img src="{{url('/')}}/{{$Settings->Fivacon}}"  style="width:200px;height:200px">
+              <img src="{{url('/')}}/{{$Settings->Fivacon}}"   >
           </div>
 
                                   <div class="form-group">
@@ -104,22 +104,22 @@
 <input type="file" placeholder="{{trans('trans.logo')}}" class="form-control" name="logo" /> 
 
                                <br>
-              <img src="{{url('/')}}/{{$Settings->logo}}"  style="width:200px;height:200px">
+              <img src="{{url('/')}}/{{$Settings->logo}}" >
           </div>
 
             <div class="form-group">
-                               <label class="control-label">{{trans('trans.logo_footer')}}</label>
+                               <label class="control-label"> logo-gif-loader</label>
 
 <input type="file" placeholder="{{trans('trans.logo_footer')}}" class="form-control" name="logo_footer" /> 
 
                                <br>
-              <img src="{{url('/')}}/{{$Settings->logo_footer}}"  style="width:200px;height:200px">
-          </div>
+              <img src="{{url('/')}}/{{$Settings->logo_footer}}"   >
+          </div >
 
 
      <div class="form-group">
                                     <label class="control-label">{{trans('trans.phone')}}</label>
-                                    <input type="number" placeholder="{{trans('trans.phone')}}" class="form-control"
+                                    <input type="text" placeholder="{{trans('trans.phone')}}" class="form-control"
                                            value="{{$Settings->phone}}" name="phone" required=""/>
                                 </div>
 
@@ -129,6 +129,16 @@
                                            value="{{$Settings->email}}" name="email" required=""/>
                                 </div>
 
+                                  <div class="form-group">
+                                    <label class="control-label">
+                                    Email for inquiries</label>
+                                    <input type="email" placeholder="Email for inquiries" class="form-control"
+                                           value="{{$Settings->inquiriesEmail}}" name="inquiriesEmail" required=""/>
+                                </div>
+
+
+                                
+
                                      <div class="form-group">
                                     <label class="control-label">{{trans('trans.address')}}</label>
                                     <input type="text" placeholder="{{trans('trans.address')}}" class="form-control"
@@ -136,6 +146,11 @@
                                 </div>
 
 
+                                 <div class="form-group">
+                                    <label class="control-label">{{trans('trans.map_link')}}</label>
+                                    <input type="text" placeholder="{{trans('trans.map_link')}}" class="form-control"
+                                           value="{{$Settings->map_link}}" name="map_link" required=""/>
+                                </div>
 
 
 
@@ -145,11 +160,11 @@
                                            value="{{$Settings->facebook_link}}" name="facebook_link" required=""/>
                                 </div>
 
-                                 <div class="form-group">
+                                 <!--div class="form-group">
                                     <label class="control-label">{{trans('trans.twitter_link')}}</label>
                                     <input type="text" placeholder="{{trans('trans.twitter_link')}}" class="form-control"
                                            value="{{$Settings->twitter_link}}" name="twitter_link" required=""/>
-                                </div>
+                                </div -->
 
                                     <div class="form-group">
                                     <label class="control-label">{{trans('trans.linkedin_link')}}</label>
@@ -157,96 +172,54 @@
                                            value="{{$Settings->linkedin_link}}" name="linkedin_link" required=""/>
                                 </div>
 
-                                <div class="form-group">
+                                <!--div class="form-group">
                                     <label class="control-label">{{trans('trans.Whatsapp_link')}}</label>
                                     <input type="text" placeholder="{{trans('trans.Whatsapp_link')}}" class="form-control"
                                            value="{{$Settings->Whatsapp_link}}" name="Whatsapp_link" required=""/>
-                                </div>
+                                </div -->
 
-                                 <div class="form-group">
+                                 <!--div class="form-group">
                                     <label class="control-label">{{trans('trans.insta_link')}}</label>
                                     <input type="text" placeholder="{{trans('trans.insta_link')}}" class="form-control"
                                            value="{{$Settings->insta_link}}" name="insta_link" required=""/>
-                                </div>
+                                </div -->
 
-                                <div class="form-group">
+                                <!--div class="form-group">
                                     <label class="control-label">{{trans('trans.snapchat_link')}}</label>
                                     <input type="text" placeholder="{{trans('trans.snapchat_link')}}" class="form-control"
                                            value="{{$Settings->snapchat_link}}" name="snapchat_link" required=""/>
-                                </div>
+                                </div -->
 
                                 
 
 
 
-                                 <div class="form-group">
+                                 <!--div class="form-group">
                                     <label class="control-label">{{trans('trans.copy_right')}}</label>
                                     <input type="text" placeholder="{{trans('trans.copy_right')}}" class="form-control"
                                            value="{{$Settings->copy_right}}" name="copy_right" required=""/>
-                                </div>
+                                </div -->
 
-                                 <div class="form-group">
-                                    <label class="control-label">{{trans('trans.about_title')}}</label>
+                                    <div class="form-group">
+                                    <label class="control-label">
+Contact Us title
+                                     </label>
                                     <input type="text" placeholder="{{trans('trans.about_title')}}" class="form-control"
                                            value="{{$Settings->about_title}}" name="about_title" required=""/>
                                 </div>
 
                                  <div class="form-group">
-                                    <label class="control-label">{{trans('trans.about_desc')}}</label>
+                                    <label class="control-label">
+                                        Contact Us content
+                                    
+                                </label>
   <textarea class="form-control" name="about_desc" class="form-control about_desc">
                    {{$Settings->about_desc}}
               </textarea>
                                 </div>
 
-
-
-
-    <div class="form-group">
-                               <label class="control-label">{{trans('trans.about_img')}}</label>
-
-<input type="file" placeholder="{{trans('trans.about_img')}}" class="form-control" name="about_img" /> 
-
-                               <br>
-              <img src="{{url('/')}}/{{$Settings->about_img}}"  style="width:200px;height:200px">
-          </div>
-
-
-
-
-
-
-                       <div class="form-group">
-                                    <label class="control-label">{{trans('trans.What_Makes_Us_unique_title')}}</label>
-                                    <input type="text" placeholder="{{trans('trans.What_Makes_Us_unique_title')}}" class="form-control"
-                                           value="{{$Settings->What_Makes_Us_unique_title}}" name="What_Makes_Us_unique_title" required=""/>
-                                </div>   
-
-
-                                <div class="form-group">
-                                    <label class="control-label">{{trans('trans.What_Makes_Us_unique_desc')}}</label>
-  <textarea class="form-control" name="What_Makes_Us_unique_desc" class="form-control What_Makes_Us_unique_desc">
-                   {{$Settings->What_Makes_Us_unique_desc}}
-              </textarea>
-                                </div>   
-
-
-                                  <div class="form-group">
-                               <label class="control-label"> Do you want to activate the blog?</label>
-
-                <select name="Blogstatus" class="form-control" required="">
-                   
-                    <option value="1"  @if($Settings->Blogstatus == 1) selected @endif>
-                    {{trans('trans.yes')}}              
-                    </option>
-
-                     <option value="0"  
-                     @if($Settings->Blogstatus == 0) selected @endif>
-                    {{trans('trans.no')}}              
-                    </option>
-                   
-                    
-                </select>
-          </div>      
+ 
+ 
 
                                     
                                 </div>

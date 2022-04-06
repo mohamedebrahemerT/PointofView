@@ -17,7 +17,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/Departments">{{trans('trans.Department')}}</a>
+                                    <a href="{{url('/')}}/department">{{trans('trans.Department')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -30,24 +30,35 @@
                     <div class="portlet blue-hoki box">
                         <div class="portlet-title">
                             <div class="caption">
-                                <i class="fa fa-cogs"></i>معلومات  القسم </div>
+                                <i class="fa fa-cogs"></i> Scope of research</div>
                                 <div class="actions">
                                      
                                     </div>
                                 </div>
                                 <div class="portlet-body">
                                     <div class="row static-info">
-                                        <div class="col-md-5 name"> الاسم : </div>
+                                        <div class="col-md-5 name">
+                                        Name: </div>
                                         <div class="col-md-7 value">
-                                            {{$Department->name}}
+                                            {{$Department->title}}
                                         </div>
                                     </div>
                                     <div class="row static-info">
                                         <div class="col-md-5 name">
-                                        عدد الكورسات
+                                   desc :{!!$Department->desc!!}
                                      </div>
                                         
                                     </div>
+
+                                     <div class="row static-info">
+                                        <div class="col-md-5 name"> {{trans('trans.img')}} </div>
+                                        <div class="col-md-7 value"> 
+
+                                              <img src="{{url('/')}}/{{$Department->img}}"  style="width:100px;height:100px">
+
+
+                                        </div>
+                                    </div> 
                                      
                                                                 
                                                                 </div>

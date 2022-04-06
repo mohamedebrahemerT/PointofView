@@ -147,7 +147,7 @@ return [
     'slider'=>'slider',
     'percent'=>'نسبه مئويه',
     'show'=>'show',
-    'reply'=>'الرد',
+    'reply'=>' reply',
     'about_ar'=>'من نحن عربي ',
 
     'about_en'=>'من نحن انجليزي ',
@@ -203,7 +203,7 @@ return [
   'street'=>' الشارع ',
 'flat'=>'الشقة',
 'floor'=>' الدور ',
-'address'=>'العنوان',
+'address'=>' address',
 'additional_info'=>' معلومات اضافية',
     'company'=>'
 الشركة',
@@ -221,7 +221,7 @@ return [
     'Back'=>'Back',
 'Submit'=>'Submit',
     'password'=>'Password',
-    'is_replied'=>'هل  تم الرد ',
+    'is_replied'=>'is replied',
     'yes'=>'yes',
 'no'=>'no',
 
@@ -328,4 +328,8 @@ return [
        'Resourcescapabilities'=>'Resources capabilities',
         'Quality'=>'Quality control',
         'SectorsOFexpertise'=>'Sectors OF expertise',
+        'ourteam'=>'Our Team',
+        'jobtitle'=>'job title',
+        'map_link'=>'map link',
+        'carreer'=>'carreer'
 ];

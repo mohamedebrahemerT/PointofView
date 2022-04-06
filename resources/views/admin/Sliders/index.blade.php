@@ -64,6 +64,7 @@
                                 </label>
                             </th>
 
+                            <th> {{trans('trans.title')}}  </th>
                             <th> {{trans('trans.Sliders')}}  </th>
 
 
@@ -82,6 +83,11 @@
                                         <input type="checkbox" class="checkboxes" value="1"/>
                                         <span></span>
                                     </label>
+                                </td>
+
+                                 <td>
+
+                                 {{$Slider  ->title}}
                                 </td>
                                 <td>
 

@@ -11,7 +11,8 @@ class Department extends Model
  protected $table = 'departments';
 	protected $fillable = [
 	'title',
-	'courses_count',
+	'desc',
+'img',
 	 
 	 
 	];

@@ -163,6 +163,6 @@ class subscriptionsController extends Controller
           $subscriptions=subscription::where('id',$id)->first();
                   $subscriptions->delete();
               session()->flash('danger', trans('trans.deleteSuccess'));
-        return   redirect('/subscriptionss');
+        return   redirect('/subscriptions');
     }
 }

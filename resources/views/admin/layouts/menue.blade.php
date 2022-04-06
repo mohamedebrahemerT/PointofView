@@ -42,14 +42,36 @@
 @endphp
 
                       @if(admin()->user()->role("news_show"))
-           @if($Setting->Blogstatus == 1)
                     <li class="nav-item {{  request()->routeIs('news.*') ? 'active' : '' }}">
                         <a href="{{url('/')}}/news" class="nav-link ">
                             <i class="icon-social-dribbble"></i>
                             <span class="title"> {{trans('trans.news')}}</span>
                         </a>
                     </li>
-                     @endif
+ @endif
+
+                      @if(admin()->user()->role("ourteam_show"))
+
+                      <li class="nav-item {{  request()->routeIs('ourteams.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/ourteams" class="nav-link ">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="title"> {{trans('trans.ourteam')}}</span>
+                        </a>
+                    </li>
+ @endif
+
+   @if(admin()->user()->role("carreer_show"))
+         
+                    <li class="nav-item {{  request()->routeIs('carreer.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/carreer" class="nav-link ">
+                            <i class="icon-social-dribbble"></i>
+                            <span class="title"> {{trans('trans.carreer')}}</span>
+                        </a>
+                    </li>
+ @endif
+                  
+
+                     
 
                       @if(admin()->user()->role("values_show"))
      
@@ -75,8 +97,8 @@
            
 
                      @if(admin()->user()->role("Department_show"))
-                    <li class="nav-item {{  request()->routeIs('Departments.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/Departments" class="nav-link ">
+                    <li class="nav-item {{  request()->routeIs('department.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/department" class="nav-link ">
                             <i class="icon-social-dribbble"></i>
                             <span class="title"> {{trans('trans.Department')}}</span>
                         </a>
@@ -232,12 +254,7 @@
                     </li>
                 @endif
                     
-                @else
- 
-
-
-                @endif
-
+                
 
             </ul>
             <!-- END SIDEBAR MENU -->

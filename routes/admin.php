@@ -34,14 +34,24 @@ Route::get('/users/userscourses/{id}', 'UsersController@userscourses') ;
 Route::resource('Sliders', 'SlidersController');
 Route::get('Sliders/{id}/destroy', 'SlidersController@destroy');
 
-Route::resource('Departments', 'DepartmentController');
-Route::get('Departments/{id}/destroy', 'DepartmentController@destroy');
+Route::resource('department', 'DepartmentController');
+Route::get('department/{id}/destroy', 'DepartmentController@destroy');
 
 Route::resource('ACourses', 'CoursesController');
 Route::get('ACourses/{id}/destroy', 'CoursesController@destroy');
 
 Route::resource('news', 'newsController');
 Route::get('news/{id}/destroy', 'newsController@destroy');
+
+Route::resource('carreer', 'carreerController');
+Route::get('carreer/{id}/destroy', 'carreerController@destroy');
+
+
+
+Route::resource('ourteams', 'ourteamController');
+Route::get('ourteams/{id}/destroy', 'ourteamController@destroy');
+
+
 
 Route::resource('values', 'OurValuesController');
 Route::get('values/{id}/destroy', 'OurValuesController@destroy');
@@ -86,6 +96,8 @@ Route::resource('ContactUs', 'ContactUsController');
 
 
 Route::resource('subscriptions', 'subscriptionsController');
+Route::get('subscriptions/{id}/destroy', 'subscriptionsController@destroy');
+
 Route::get('Reports', 'ReportsController@index');
 Route::post('search_user_name', 'ReportsController@search_user_name');
 

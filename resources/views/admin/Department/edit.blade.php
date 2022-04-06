@@ -4,7 +4,23 @@
 
 @section('content')
 
-  
+  @push('js')
+            <script>
+ 
+                
+
+                CKEDITOR.replace( 'desc' , {
+
+        language: 'en',
+
+});
+ 
+
+            </script>
+ 
+
+            
+                      @endpush
  
 
 
@@ -17,7 +33,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/Departments">{{trans('trans.Department')}}</a>
+                                    <a href="{{url('/')}}/department">{{trans('trans.Department')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -42,7 +58,7 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/Departments/{{$Department->id}}" method="POST" enctype="multipart/form-data">
+                  <form role="form" action="{{url('/')}}/department/{{$Department->id}}" method="POST" enctype="multipart/form-data">
  					@csrf
  					{{ method_field('PATCH') }}
 
@@ -54,7 +70,30 @@
               <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"  value="{{$Department->title}}" name="title"  required=""/> 
           </div>
 
-               
+             
+          <div class="form-group">
+                               <label class="control-label">{{trans('trans.desc')}}</label>
+              
+
+              <textarea type="text" 
+                                class="form-control desc"    name="desc"> 
+                            {{$Department->desc}}</textarea> 
+          </div>
+
+ 
+         
+  
+
+          <div class="form-group">
+                               <label class="control-label">{{trans('trans.img')}}</label>
+
+<input type="file"  class="form-control" name="img" /> 
+
+                               <br>
+                               @if($Department->img)
+              <img src="{{url('/')}}/{{$Department->img}}"  style="width:200px;height:200px">
+              @endif
+          </div>  
  
 
  

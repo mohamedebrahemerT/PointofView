@@ -46,20 +46,16 @@ class SettingsController extends Controller
                         'phone'=>'required',
                         'email'=>'required',
                         'address'=>'required',
+                         'map_link'=>'sometimes|nullable',
                         'facebook_link'=>'sometimes|nullable',
                         'twitter_link'=>'sometimes|nullable',
                         'linkedin_link'=>'sometimes|nullable',
-                        'copy_right'=>'required',
-                        'about_title'=>'required',
-                        'about_desc'=>'required',
-                        'about_img'=>'sometimes|nullable',
-                        'What_Makes_Us_unique_title'=>'required',
-                        'What_Makes_Us_unique_desc'=>'required',
-                        'Whatsapp_link'=>'sometimes|nullable',
-                        'insta_link'=>'sometimes|nullable',
-                        'snapchat_link'=>'sometimes|nullable',
-                        'Blogstatus'=>'sometimes|nullable',
-
+                        'copy_right'=>'sometimes|nullable',
+                        'about_title'=>'sometimes|nullable',
+                        'about_desc'=>'sometimes|nullable',
+                        'inquiriesEmail'=>'sometimes|nullable',
+                         
+ 
 
             ]);
 

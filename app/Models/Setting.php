@@ -31,7 +31,9 @@ class Setting extends Model
 	'name',
 'logo_footer',
 'Blogstatus',
-'Fivacon'
+'Fivacon',
+'map_link',
+'inquiriesEmail'
 	 
 	];
 }

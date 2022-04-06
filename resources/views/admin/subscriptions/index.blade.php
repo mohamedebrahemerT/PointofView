@@ -88,21 +88,9 @@
                                                             <ul class="dropdown-menu pull-left" role="menu">
 
 
+                                                              
                                                                 <li>
-                     <a href="{{url('/')}}/subscriptionss/{{$subs->id}}/edit">
-                                                                        <i class="icon-docs"></i>
-                                                    {{trans('trans.edit')}}
-                                                                </a>
-                                                                </li>
-
-                                                                  <li>
-                     <a href="{{url('/')}}/subscriptionss/{{$subs->id}}">
-                                                                        <i class="icon-docs"></i>
-                                                    {{trans('trans.show')}}
-                                                                </a>
-                                                                </li>
-                                                                <li>
-                                              <a href="{{url('/')}}/subscriptionss/{{$subs->id}}/destroy">
+                                              <a href="{{url('/')}}/subscriptions/{{$subs->id}}/destroy">
                                                                         <i class="icon-tag"></i>
                                      {{trans('trans.delete')}}
                                                                          </a>
