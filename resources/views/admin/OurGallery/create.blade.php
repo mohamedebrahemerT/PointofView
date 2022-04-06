@@ -4,7 +4,9 @@
 
 @section('content')
 
-  @push('js')
+  
+ 
+@push('js')
             <script>
  
                 
@@ -21,7 +23,7 @@
 
             
                       @endpush
- 
+  
 
 
                         <!-- END THEME PANEL -->
@@ -33,7 +35,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/Photocategories">{{trans('trans.Photocategories')}}</a>
+                                    <a href="{{url('/')}}/OurGallery">{{trans('trans.OurGallery')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -50,7 +52,7 @@
                                     <div class="portlet-title">
                                         <div class="caption font-dark">
                                             <i class="icon-settings font-dark"></i>
-                                            <span class="caption-subject bold uppercase"> {{trans('trans.edit')}}</span>
+                                            <span class="caption-subject bold uppercase"> {{trans('trans.create')}}</span>
                                         </div>
                                          
                                     </div>
@@ -58,23 +60,45 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/Photocategories/{{$Photocategories->id}}" method="POST" enctype="multipart/form-data">
- 					@csrf
- 					{{ method_field('PATCH') }}
-
- 					<input type="hidden" name="id" value="{{$Photocategories->id}}">
-
-
- 					 <div class="form-group">
+                  <form role="form" action="{{url('/')}}/OurGallery" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    
+                     <div class="form-group">
                                <label class="control-label">{{trans('trans.title')}}</label>
-              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"  value="{{$Photocategories->title}}" name="title"  required=""/> 
+              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"  required=""/> 
+          </div>
+ 
+
+                <div class="form-group">
+                               <label class="control-label">{{trans('trans.img')}}</label>
+              <input type="file" placeholder="{{trans('trans.img')}}" class="form-control"    name="img"  required=""/> 
+          </div> 
+                     
+
+
+  <div class="form-group">
+              <label class="control-label">Photo category</label>
+
+                <select name="photocategories_id" class="form-control">
+                    @foreach(App\Models\Photocategories::get() as $Photocateg)
+                    <option value="{{$Photocateg->id}}">
+                      
+                               {{$Photocateg->title}} 
+                               
+                                 
+                    </option>
+                    @endforeach
+                    
+                </select>
           </div>
 
-              
 
-              <div class="form-group">
-                <button type="submit" class="btn green-meadow">{{trans('trans.save')}}</button>
-              </div >
+        
+                 
+
+          <div class="form-group">
+            <button type="submit" class="btn green-meadow">{{trans('trans.save')}}</button>
+          </div>
  
            
                                                                 

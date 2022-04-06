@@ -216,6 +216,18 @@
                     </li>
                 @endif
 
+                 @if(admin()->user()->role("OurGallery_show"))
+
+                     <li class="nav-item {{  request()->routeIs('OurGallery.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/OurGallery" class="nav-link ">
+                            <i class="icon-diamond"></i>
+                            <span class="title"> {{trans('trans.OurGallery')}}</span>
+                        </a>
+                    </li>
+                @endif
+
+                
+
                       
 @if(admin()->user()->role("admins_show"))
 

@@ -178,103 +178,33 @@ margin-top: -2%;">
             <div class="col-lg-12">
                 <div class="project-menu text-center">
                     <button class="btn btn-primary active" data-filter="*">All</button>
-                    <button data-filter=".business" class="btn btn-primary">Business</button>
-                    <button data-filter=".travel" class="btn btn-primary">Travel</button>
-                    <button data-filter=".financial" class="btn btn-primary">Financial</button>
-                    <button data-filter=".academic" class="btn btn-primary">Academic</button>
+  @foreach(App\Models\Photocategories::get() as $Photocateg)
+                    <button data-filter=".{{$Photocateg->id}}" class="btn btn-primary">{{$Photocateg->title}}</button>
+                    @endforeach
+                  
                 </div>
             </div>
             <div id="projects" class="projects-main row">
-               <div class="col-lg-4 col-sm-6 pro-item portfolio-item financial">
+
+  @foreach(App\Models\OurGallery::inRandomOrder()->take(6)->get() as $OurGallery)
+
+               <div class="col-lg-4 col-sm-6 pro-item portfolio-item {{$OurGallery->photocategories_id}}">
                   <div class="card h-100">
                      <div class="card-img">
-                        <a href="images/portfolio-img-01.jpg" data-fancybox="images">
-                           <img class="card-img-top" src="{{url('/')}}/Forentend/images/portfolio-img-01.jpg" alt="" />
+                        <a href="{{url('/')}}/{{$OurGallery->img}}" data-fancybox="images">
+                           <img class="card-img-top" src="{{url('/')}}/{{$OurGallery->img}}" alt="" />
                            <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
                         </a>
                      </div>
                      <div class="card-body">
                         <h4 class="card-title">
-                           <a href="#">Financial Sustainability</a>
+                           <a href="{{url('/')}}/{{$OurGallery->img}}">{{$OurGallery->title}}</a>
                         </h4>
                      </div>
                   </div>
                </div>
-               <div class="col-lg-4 col-sm-6 pro-item portfolio-item business academic">
-                  <div class="card h-100">
-                     <div class="card-img">
-                        <a href="images/portfolio-img-02.jpg" data-fancybox="images">
-                           <img class="card-img-top" src="{{url('/')}}/Forentend/images/portfolio-img-02.jpg" alt="" />
-                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                        </a>
-                     </div>
-                     <div class="card-body">
-                        <h4 class="card-title">
-                           <a href="#">Financial Sustainability</a>
-                        </h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-sm-6 pro-item portfolio-item travel">
-                  <div class="card h-100">
-                     <div class="card-img">
-                        <a href="images/portfolio-img-03.jpg" data-fancybox="images">
-                           <img class="card-img-top" src="{{url('/')}}/Forentend/images/portfolio-img-03.jpg" alt="" />
-                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                        </a>
-                     </div>
-                     <div class="card-body">
-                        <h4 class="card-title">
-                           <a href="#">Financial Sustainability</a>
-                        </h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-sm-6 pro-item portfolio-item business">
-                  <div class="card h-100">
-                     <div class="card-img">
-                        <a href="images/portfolio-img-04.jpg" data-fancybox="images">
-                           <img class="card-img-top" src="{{url('/')}}/Forentend/images/portfolio-img-04.jpg" alt="" />
-                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                        </a>
-                     </div>
-                     <div class="card-body">
-                        <h4 class="card-title">
-                           <a href="#">Financial Sustainability</a>
-                        </h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-sm-6 pro-item portfolio-item travel">
-                  <div class="card h-100">
-                     <div class="card-img">
-                        <a href="images/portfolio-img-05.jpg" data-fancybox="images">
-                           <img class="card-img-top" src="{{url('/')}}/Forentend/images/portfolio-img-05.jpg" alt="" />
-                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                        </a>
-                     </div>
-                     <div class="card-body">
-                        <h4 class="card-title">
-                           <a href="#">Financial Sustainability</a>
-                        </h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-sm-6 pro-item portfolio-item financial academic">
-                  <div class="card h-100">
-                     <div class="card-img">
-                        <a href="images/portfolio-img-01.jpg" data-fancybox="images">
-                           <img class="card-img-top" src="{{url('/')}}/Forentend/images/portfolio-img-01.jpg" alt="" />
-                           <div class="overlay"><i class="fas fa-arrows-alt"></i></div>
-                        </a>
-                     </div>
-                     <div class="card-body">
-                        <h4 class="card-title">
-                           <a href="#">Financial Sustainability</a>
-                        </h4>
-                     </div>
-                  </div>
-               </div>
+                    @endforeach
+              
             </div>
             <!-- /.row -->
         </div>

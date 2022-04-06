@@ -5,32 +5,32 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Photocategories;
+use App\Models\OurGallery;
  
  use Auth;
 
 
-class PhotocategoriesController extends Controller
+class OurGalleryController extends Controller
 {
 
     public function __construct() {
            
-        $this->middleware('AdminRole:Photocategories_show', [
+        $this->middleware('AdminRole:OurGallery_show', [
             'only' => ['index', 'show'],
         ]);
-        $this->middleware('AdminRole:Photocategories_add', [
+        $this->middleware('AdminRole:OurGallery_add', [
             'only' => ['create', 'store'],
         ]);
-        $this->middleware('AdminRole:Photocategories_edit', [
+        $this->middleware('AdminRole:OurGallery_edit', [
             'only' => ['edit', 'update'],
         ]);
-        $this->middleware('AdminRole:Photocategories_delete', [
+        $this->middleware('AdminRole:OurGallery_delete', [
             'only' => ['destroy', 'multi_delete'],
         ]);
 
 
          $this->middleware('AdminRole:companies_show', [
-            'only' => ['ShowPhotocategories'],
+            'only' => ['ShowOurGallery'],
         ]);
         
     }
@@ -44,9 +44,9 @@ class PhotocategoriesController extends Controller
         //             
  
                         
-                            $Photocategories=Photocategories::get();
+                            $OurGallerys=OurGallery::get();
 
-     return view('admin.Photocategories.index',compact('Photocategories'));
+     return view('admin.OurGallery.index',compact('OurGallerys'));
 
     }
 
@@ -60,7 +60,7 @@ class PhotocategoriesController extends Controller
     public function create()
     {
         //
-     return view('admin.Photocategories.create');
+     return view('admin.OurGallery.create');
 
     }
 
@@ -76,18 +76,27 @@ class PhotocategoriesController extends Controller
         $data = $this->validate(\request(),
             [
                   'title' => 'required',
-               
+                 'photocategories_id' => 'sometimes|nullable',
+                'img' => 'required',
+             
                 
                  
             ]);
 
-                  
+           if ($request->img) {
 
-        $Photocategories=Photocategories::create($data);
+            $imageName = time() . '.' . $request->img->extension();
+            $request->img->move(public_path('/OurGallerys'), $imageName);
+            $data['img'] = 'OurGallerys/'.$imageName;
+        }
+
+                   
+
+        $OurGallery=OurGallery::create($data);
         session()->flash('success', trans('trans.createSuccess'));
  
 
-        return   redirect('/Photocategories');
+        return   redirect('/OurGallery');
     }
 
     /**
@@ -99,8 +108,8 @@ class PhotocategoriesController extends Controller
     public function show($id)
     {
         //
-           $Photocategories=Photocategories::where('id',$id)->first();
-     return view('admin.Photocategories.show',compact('Photocategories'));
+           $OurGallery=OurGallery::where('id',$id)->first();
+     return view('admin.OurGallery.show',compact('OurGallery'));
 
     }
 
@@ -113,10 +122,10 @@ class PhotocategoriesController extends Controller
     public function edit($id)
     {
         //
-           $Photocategories=Photocategories::where('id',$id)->first();
+           $OurGallery=OurGallery::where('id',$id)->first();
             
 
-     return view('admin.Photocategories.edit',compact('Photocategories'));
+     return view('admin.OurGallery.edit',compact('OurGallery'));
 
     }
 
@@ -133,14 +142,23 @@ class PhotocategoriesController extends Controller
 
          $data = $this->validate(\request(),
             [
-                'title' => 'required',
+                 'title' => 'required',
+                 'photocategories_id' => 'sometimes|nullable',
+                'img' => 'sometimes|nullable',
              
-                 
+                
+             
                  
             ]);
 
-                  
-           Photocategories::where('id',$request->id)->update($data);
+                    if ($request->img) 
+                    {
+            $imageName = time() . '.' . $request->img->extension();
+           $request->img->move(public_path('/OurGallerys'), $imageName);
+            $data['img'] = 'OurGallerys/'.$imageName;
+                 } 
+ 
+           OurGallery::where('id',$request->id)->update($data);
 
   
                     
@@ -157,9 +175,9 @@ class PhotocategoriesController extends Controller
     public function destroy($id)
     {
         //
-          $Photocategories=Photocategories::where('id',$id)->first();
-                  $Photocategories->delete();
+          $OurGallery=OurGallery::where('id',$id)->first();
+                  $OurGallery->delete();
               session()->flash('danger', trans('trans.deleteSuccess'));
-        return   redirect('/Photocategories');
+        return   redirect('/OurGallery');
     }
 }

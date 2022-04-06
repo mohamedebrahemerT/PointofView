@@ -20,7 +20,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/Photocategories">{{trans('trans.Photocategories')}}</a>
+                                    <a href="{{url('/')}}/OurGallery">{{trans('trans.OurGallery')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -37,7 +37,7 @@
                                     <div class="portlet-title">
                                         <div class="caption font-dark">
                                             <i class="icon-settings font-dark"></i>
-                                            <span class="caption-subject bold uppercase"> {{trans('trans.Photocategories')}}</span>
+                                            <span class="caption-subject bold uppercase"> {{trans('trans.OurGallery')}}</span>
                                         </div>
                                          
                                     </div>
@@ -46,7 +46,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="btn-group">
-                 <a id="sample_editable_1_new" class="btn sbold green" href="{{url('/')}}/Photocategories/create"> {{trans('trans.Add New')}}
+                 <a id="sample_editable_1_new" class="btn sbold green" href="{{url('/')}}/OurGallery/create"> {{trans('trans.Add New')}}
                                                             <i class="fa fa-plus"></i>
                                                         </a>
                                                     </div>
@@ -59,9 +59,9 @@
                                                 <tr>
                                                     <th> {{trans('trans.id')}}  </th>
                                                     
-                                                    <th> {{trans('trans.title')}}  </th>
+                         <th> {{trans('trans.img')}}  </th>
                                                    
-                                                     
+                                 <th> {{trans('trans.title')}}  </th>
                                                      
                                                      
 
@@ -70,16 +70,22 @@
                                             </thead>
                                             <tbody>
 
-                                            	@foreach($Photocategories as $Dep)
+                                            	@foreach($OurGallerys as $Gallery)
                                                 <tr class="odd gradeX">
 
                                                         <td>
-                                                          {{$Dep->id}} 
+                                                          {{$Gallery->id}} 
+                                                      
+                                                       </td>
+
+                                                        <td>
+                              
+                                    <img src="{{url('/')}}/{{$Gallery->img}}" style="width:50px;height: 50px;">
                                                       
                                                        </td>
                                                      
                                                     <td>
-                                                          {{$Dep->title}} 
+                                                          {{$Gallery->title}} 
                                                       
                                                        </td>
   
@@ -92,14 +98,15 @@
 
                                                                   
                                                                 <li>
-                     <a href="{{url('/')}}/Photocategories/{{$Dep->id}}/edit">
+                     <a href="{{url('/')}}/OurGallery/{{$Gallery->id}}/edit">
                                                                         <i class="icon-docs"></i> 
                                                     {{trans('trans.edit')}}
                                                                 </a>
                                                                 </li>
- 
+
+                                                                
                                                                 <li>
-                                              <a href="{{url('/')}}/Photocategories/{{$Dep->id}}/destroy">
+                                              <a href="{{url('/')}}/OurGallery/{{$Gallery->id}}/destroy">
                                                                         <i class="icon-tag"></i>
                                      {{trans('trans.delete')}}
                                                                          </a>

@@ -26,6 +26,7 @@ return [
 	"ContactUs" => ['create', 'read', 'update'],
 	"subscriptions" => ['create', 'read', 'update', 'delete'],
 	"Photocategories" => ['create', 'read', 'update', 'delete'],
+	"OurGallery" => ['create', 'read', 'update', 'delete'],
 
 	
 	 

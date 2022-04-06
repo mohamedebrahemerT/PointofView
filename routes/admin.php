@@ -37,6 +37,11 @@ Route::get('Sliders/{id}/destroy', 'SlidersController@destroy');
 Route::resource('department', 'DepartmentController');
 Route::get('department/{id}/destroy', 'DepartmentController@destroy');
 
+
+Route::resource('OurGallery', 'OurGalleryController');
+Route::get('OurGallery/{id}/destroy', 'OurGalleryController@destroy');
+
+
 Route::resource('Photocategories', 'PhotocategoriesController');
 Route::get('Photocategories/{id}/destroy', 'PhotocategoriesController@destroy');
 

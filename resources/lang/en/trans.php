@@ -333,4 +333,6 @@ return [
         'map_link'=>'map link',
         'carreer'=>'carreer',
         'Photocategories'=>'Photo categories',
+        'OurGallery'=>'Our Gallery',
+        
 ];
