@@ -52,7 +52,7 @@ margin-top: -4%;">
                              
                              </h4>
                             <p class="card-text">
-                                 {{ $Department->desc}}
+                                 {!! $Department->desc !!}
                             </p>
                             <a href="{{url('/')}}/childScopeofresearch/{{$Department->id}}">
                 <span class="card-header"> read more </span>

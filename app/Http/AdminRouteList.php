@@ -17,7 +17,7 @@ return [
 	"SectorsOFexpertise" => ['create', 'read', 'update', 'delete'],
  
  
-	"users" =>  ['create', 'read', 'update', 'delete'],
+ 
 	"Sliders" => ['create', 'read', 'update', 'delete'],
 	"Department" => ['create', 'read', 'update', 'delete'],
 	"Courses" => ['create', 'read', 'update', 'delete'],
@@ -25,7 +25,10 @@ return [
 		
 	"ContactUs" => ['create', 'read', 'update'],
 	"subscriptions" => ['create', 'read', 'update', 'delete'],
-	"AdminNotifications" => ['create', 'read', 'update', 'delete'],
+	"Photocategories" => ['create', 'read', 'update', 'delete'],
+
+	
+	 
 	"admins" => ['create', 'read', 'update', 'delete'],
 	"AdminGroup" => ['create', 'read', 'update', 'delete'],
 	

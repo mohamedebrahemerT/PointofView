@@ -18,7 +18,7 @@
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="{{url('/')}}/news">{{trans('trans.news')}}</a>
+                <a href="{{url('/')}}/carreers">{{trans('trans.carreer')}}</a>
                 <i class="fa fa-circle"></i>
             </li>
 
@@ -35,7 +35,7 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> {{trans('trans.news')}}</span>
+                        <span class="caption-subject bold uppercase"> {{trans('trans.carreer')}}</span>
                     </div>
 
                 </div>
@@ -44,7 +44,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="btn-group">
-                                    <a href="{{url('/')}}/news/create" id="sample_editable_1_new"
+                                    <a href="{{url('/')}}/carreers/create" id="sample_editable_1_new"
                                        class="btn sbold green"> {{trans('trans.Add New')}}
                                         <i class="fa fa-plus"></i>
                                     </a>
@@ -72,14 +72,14 @@
                         </thead>
                         <tbody>
 
-                        @foreach($blogs as $blog)
+                        @foreach($carreers as $carreer)
                             <tr class="odd gradeX">
-                            <th> {{$blog->id}} </th>
-                            <th> {{$blog->title}} </th>
+                            <th> {{$carreer->id}} </th>
+                            <th> {{$carreer->title}} </th>
                                 
                                 <td>
 
-                                    <img src="{{url('/')}}/{{$blog->img}}" style="width:50px;height: 50px;">
+                                    <img src="{{url('/')}}/{{$carreer->img}}" style="width:50px;height: 50px;">
                                 </td>
 
                                  
@@ -94,23 +94,23 @@
                                         <ul class="dropdown-menu pull-left" role="menu">
 
                                             <li>
-                                                <a href="{{url('/')}}/news/{{$blog->id}}">
+                                                <a href="{{url('/')}}/carreers/{{$carreer->id}}">
                                                     <i class="icon-tag"></i>
                                                     {{trans('trans.show details')}}
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{url('/')}}/news/{{$blog->id}}/edit">
+                                                <a href="{{url('/')}}/carreers/{{$carreer->id}}/edit">
                                                     <i class="icon-docs"></i>
                                                     {{trans('trans.edit')}}
                                                 </a>
                                             </li>
-                                            <!--li>
-                                                <a href="{{url('/')}}/news/{{$blog->id}}/destroy">
+                                            <li>
+                                                <a href="{{url('/')}}/carreers/{{$carreer->id}}/destroy">
                                                     <i class="icon-tag"></i>
                                                     {{trans('trans.delete')}}
                                                 </a>
-                                            </li -->
+                                            </li >
 
 
                                         </ul>

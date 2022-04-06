@@ -49,21 +49,21 @@
                     <!--footer_ul_amrc ends here-->
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                    <h5 class="headin5_amrc col_white_amrc pt2">Pages</h5>
                     <!--headin5_amrc ends here-->
-                    <ul class="footer_ul2_amrc">
-                        <li>
-                            <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                            <p>Lorem Ipsum is simply dummy...<a href="#">https://www.lipsum.com/</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                            <p>Lorem Ipsum is simply dummy...<a href="#">https://www.lipsum.com/</a></p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                            <p>Lorem Ipsum is simply dummy...<a href="#">https://www.lipsum.com/</a></p>
-                        </li>
+                     <ul class="footer_ul_amrc">
+                        <li><a href="{{url('/')}}/team"><i class="fas fa-long-arrow-alt-right"></i>Meet Our Team</a></li>
+
+                         <li><a href="{{url('/')}}/Values"><i class="fas fa-long-arrow-alt-right"></i>Our Values</a></li>
+
+                            <li><a href="{{url('/')}}/devcycle"><i class="fas fa-long-arrow-alt-right"></i> development cycle </a></li>
+
+                             <li><a href="{{url('/')}}/Fieldadministration"><i class="fas fa-long-arrow-alt-right"></i>  Fieldwork administration  </a></li>
+
+                                <li><a href="{{url('/')}}/Rescapabilities"><i class="fas fa-long-arrow-alt-right"></i>   Resources capabilities  </a></li>
+
+                                 <li><a href="{{url('/')}}/Qualitycontrol"><i class="fas fa-long-arrow-alt-right"></i>   Quality control   </a></li>
+                         
                     </ul>
                     <!--footer_ul2_amrc ends here-->
                 </div>

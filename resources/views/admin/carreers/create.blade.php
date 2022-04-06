@@ -31,7 +31,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/news">{{trans('trans.news')}}</a>
+                                    <a href="{{url('/')}}/carreers">{{trans('trans.carreer')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -56,7 +56,7 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/news" method="POST" enctype="multipart/form-data">
+                  <form role="form" action="{{url('/')}}/carreer" method="POST" enctype="multipart/form-data">
                     @csrf
                    
  

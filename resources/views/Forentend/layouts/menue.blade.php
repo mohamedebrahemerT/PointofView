@@ -116,7 +116,7 @@ Quality control
           </li>
 
              <li class="nav-item">
-            <a class="nav-link {{ request()->is('Carreer*') ? 'active' : '' }}" href="{{url('/')}}/Carreer">Carreer</a>
+            <a class="nav-link {{ request()->is('Carreerweb*') ? 'active' : '' }}" href="{{url('/')}}/Carreerweb">Carreer</a>
           </li>
            
           <li class="nav-item">

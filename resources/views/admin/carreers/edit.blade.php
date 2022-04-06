@@ -30,7 +30,7 @@
                                     <i class="fa fa-circle"></i>
                                 </li>
                                 <li>
-                                    <a href="{{url('/')}}/news">{{trans('trans.news')}}</a>
+                                    <a href="{{url('/')}}/carreers">{{trans('trans.carreers')}}</a>
                                     <i class="fa fa-circle"></i>
                                 </li>
                                  
@@ -55,15 +55,15 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/news/{{$blog->id}}" method="POST" enctype="multipart/form-data">
+                  <form role="form" action="{{url('/')}}/carreers/{{$carreer->id}}" method="POST" enctype="multipart/form-data">
  					@csrf
  					{{ method_field('PATCH') }}
 
- 					<input type="hidden" name="id" value="{{$blog->id}}">
+ 					<input type="hidden" name="id" value="{{$carreer->id}}">
 
  <div class="form-group">
                                <label class="control-label">{{trans('trans.title')}}</label>
-              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"  value="{{$blog->title}}"  /> 
+              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"  value="{{$carreer->title}}"  /> 
           </div>
 
           <div class="form-group">
@@ -72,7 +72,7 @@
 
               <textarea type="text" 
                                 class="form-control desc"    name="desc"> 
-                            {{$blog->desc}}</textarea> 
+                            {{$carreer->desc}}</textarea> 
           </div>
 
  
@@ -85,7 +85,7 @@
 <input type="file" placeholder="{{trans('trans.blog')}}" class="form-control" name="img" /> 
 
                                <br>
-              <img src="{{url('/')}}/{{$blog->img}}"  style="width:200px;height:200px">
+              <img src="{{url('/')}}/{{$carreer->img}}"  style="width:200px;height:200px">
           </div>
 
           <div class="form-group">

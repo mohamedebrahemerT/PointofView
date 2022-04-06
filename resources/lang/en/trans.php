@@ -331,5 +331,6 @@ return [
         'ourteam'=>'Our Team',
         'jobtitle'=>'job title',
         'map_link'=>'map link',
-        'carreer'=>'carreer'
+        'carreer'=>'carreer',
+        'Photocategories'=>'Photo categories',
 ];

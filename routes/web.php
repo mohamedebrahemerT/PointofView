@@ -41,7 +41,8 @@ Route::get('/childScopeofresearch/{id}','Servicescontroller@childScopeofresearch
 Route::get('/Services/{id}','Servicescontroller@Service');
 
 Route::get('/Gallery','Gallerycontroller@index');
-Route::get('/Carreer','Carreercontroller@index');
+Route::get('/Carreerweb','Carreercontroller@index');
+Route::get('/Carreerweb/{id}','Carreercontroller@singlecarreer');
 Route::get('/contactus','homeController@contactus');
 Route::post('/subs','homeController@subscriptions');
 Route::post('/contact-form','homeController@contactform');

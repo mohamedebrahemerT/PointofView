@@ -42,9 +42,7 @@
                                                     <div class="tab-content">
                                                         <!-- PERSONAL INFO TAB -->
                                                         <div class="tab-pane active" id="tab_1_1">
-                  <form role="form" action="{{url('/')}}/blogs/{{$blog->id}}" method="POST" enctype="multipart/form-data">
- 					@csrf
- 					{{ method_field('PATCH') }}
+                
 
  					 <div class="row">
 
@@ -61,13 +59,13 @@
                                 </div>
                                 <div class="portlet-body">
                                     <div class="row static-info">
-                                        <div class="col-md-5 name">  {{trans('trans.title')}} : </div>
-                                        <div class="col-md-7 value">{{$blog->title}}</div>
+                                        <div class="col-md-12 name">  {{trans('trans.title')}} : </div>
+                                        <div class="col-md-7 value">{{$carreer->title}}</div>
                                     </div>
                                     <div class="row static-info">
                                         <div class="col-md-5 name">  {{trans('trans.desc')}}</div>
                                         <div class="col-md-7 value"> 
-{!!$blog->desc!!}
+{!!$carreer->desc!!}
                                         </div>
                                     </div>
                                     
@@ -76,7 +74,7 @@
                                         <div class="col-md-5 name"> {{trans('trans.img')}} </div>
                                         <div class="col-md-7 value"> 
 
-                                              <img src="{{url('/')}}/{{$blog->img}}"  style="width:100px;height:100px">
+                                              <img src="{{url('/')}}/{{$carreer->img}}"  style="width:100px;height:100px">
 
 
                                         </div>

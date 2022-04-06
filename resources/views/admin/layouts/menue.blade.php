@@ -62,8 +62,8 @@
 
    @if(admin()->user()->role("carreer_show"))
          
-                    <li class="nav-item {{  request()->routeIs('carreer.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/carreer" class="nav-link ">
+                    <li class="nav-item {{  request()->routeIs('carreers.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/carreers" class="nav-link ">
                             <i class="icon-social-dribbble"></i>
                             <span class="title"> {{trans('trans.carreer')}}</span>
                         </a>
@@ -204,25 +204,17 @@
                     </li>
                      @endif
 
-                     @if(admin()->user()->role("Reports_show"))
-                   
-                    <li class="nav-item {{  request()->routeIs('Reports.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/Reports" class="nav-link ">
-                            <i class="icon-paper-plane"></i>
-                            <span class="title"> {{trans('trans.Reports')}}</span>
+                    
+
+                   @if(admin()->user()->role("Photocategories_show"))
+
+                     <li class="nav-item {{  request()->routeIs('Photocategories.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/Photocategories" class="nav-link ">
+                            <i class="icon-diamond"></i>
+                            <span class="title"> {{trans('trans.Photocategories')}}</span>
                         </a>
                     </li>
-                     @endif
-
-                     @if(admin()->user()->role("AdminNotifications_show"))
-
-                     <li class="nav-item {{  request()->routeIs('AdminNotifications.*') ? 'active' : '' }}">
-                        <a href="{{url('/')}}/AdminNotifications" class="nav-link ">
-                            <i class="icon-paper-plane"></i>
-                            <span class="title"> {{trans('trans.AdminNotifications')}}</span>
-                        </a>
-                    </li>
-                     @endif
+                @endif
 
                       
 @if(admin()->user()->role("admins_show"))

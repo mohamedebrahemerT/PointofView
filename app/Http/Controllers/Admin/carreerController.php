@@ -86,7 +86,7 @@ class carreerController extends Controller
         $carreer = carreer::create($data);
 
         session()->flash('success', trans('trans.createSuccess'));
-        return redirect('/carreer');
+        return redirect('/carreers');
     }
 
     /**
@@ -167,6 +167,6 @@ class carreerController extends Controller
         $carreer = carreer::where('id', $id)->first();
         $carreer->delete();
         session()->flash('danger', trans('trans.deleteSuccess'));
-        return redirect('/carreer');
+        return redirect('/carreers');
     }
 }

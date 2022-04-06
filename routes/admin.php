@@ -37,14 +37,19 @@ Route::get('Sliders/{id}/destroy', 'SlidersController@destroy');
 Route::resource('department', 'DepartmentController');
 Route::get('department/{id}/destroy', 'DepartmentController@destroy');
 
+Route::resource('Photocategories', 'PhotocategoriesController');
+Route::get('Photocategories/{id}/destroy', 'PhotocategoriesController@destroy');
+
+
+
 Route::resource('ACourses', 'CoursesController');
 Route::get('ACourses/{id}/destroy', 'CoursesController@destroy');
 
 Route::resource('news', 'newsController');
 Route::get('news/{id}/destroy', 'newsController@destroy');
 
-Route::resource('carreer', 'carreerController');
-Route::get('carreer/{id}/destroy', 'carreerController@destroy');
+Route::resource('carreers', 'carreerController');
+Route::get('carreers/{id}/destroy', 'carreerController@destroy');
 
 
 

@@ -14,12 +14,20 @@
                     @foreach($Sliders as $key => $slider)
                   
                <div class="carousel-item @if($key == 0)active @endif" style="background-image: url('{{url('/')}}/{{$slider->img}}')">
-                  <a href="{{$slider->url}}">
+                  <a href="{{$slider->url}}" style="text-decoration:none;color: #fff;">
                   <div class="carousel-caption d-none d-md-block">
                      <h3>{{$slider->title}} </h3>
-                      {!! $slider->desc !!}
+                      {!! $slider->desc !!}  
+                        </a>
+                      <a  href="{{$slider->url}}" class="btn btn-primary" id="sendMessageButton" style="background-color: #000;">READ MORE</a>
+                      <br>
+                      <br>
                   </div>
-                            </a>
+
+
+                          
+
+
                </div>
      
                  @endforeach
@@ -159,7 +167,7 @@ margin-top: -4%;">
     <div class="container">
         <!-- Portfolio Section -->
         <div class="portfolio-main">
-            <h2>Our Portfolio</h2>
+            <h2>Our Gallery</h2>
             <hr style="border: 1px solid #fab117;
 width: 142px;
 height: 2px;
