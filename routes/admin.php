@@ -3,12 +3,12 @@
 
 Route::group(['namespace'=>'Admin'],function(){
 
-    Route::group(['middleware' => 'guest'], function () {
+    
 
 Route::get('/admin_login','AdminController@viwlogin');
 Route::get('/admin','AdminController@viwlogin');
 Route::post('/admin_login','AdminController@admin_login');
-     });
+  
 
 // Forget Routes
         Route::post('admin/password/forget', 'Auth\ForgotPasswordController@forget');

@@ -164,16 +164,7 @@ class AdminController extends Controller
         public function viwlogin ()
         {
           
-          if (Auth::guard('admin')->check())
-           {
-              auth('companies')->logout();
-
-
-                $orders=Order::take(10)->OrderBy('id','desc')->get();
-
-             return view('admin.dashboard',compact('orders'));
-              
-          }
+         
             
                $lang = 'en';
         app()->setLocale($lang);
