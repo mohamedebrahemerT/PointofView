@@ -382,7 +382,7 @@ margin-top: -5%;
   font-weight: bold;
   font-size: 20px;
   color: rgba(250,177,23,1) !important;
-  text-transform: capitalize;
+  
 }
 #co-founder {
   left: 848px;
@@ -399,14 +399,14 @@ margin-top: -5%;
   font-weight: bold;
   font-size: 20px;
   color: rgba(237,28,36,1);
-  text-transform: capitalize;
+  
 }
 .about-main h5{
 	font-size: 18px;
 }
 .about-main p{
 	font-size: 15px;
-	text-transform: capitalize;
+	
 }
 .about-main ul{
 	padding-left: 20px;
@@ -453,7 +453,7 @@ margin-top: -5%;
 .portfolio-main .card .card-body .card-title a{
 	font-size: 20px;
 	font-weight: 400;
-	text-transform: capitalize;
+	
 	color: #ffffff;
 	margin: 0;
 }
@@ -537,7 +537,7 @@ margin-top: -5%;
 .post-slide .title a{
     font-size: 15px;
     color: #323232;    
-    text-transform: capitalize;
+    
     transition: all 0.4s ease 0s;
 }
 .post-slide .title a:hover{
@@ -557,7 +557,7 @@ margin-top: -5%;
 .post-slide .post-bar li a{
     font-size: 15px;
     color: #808080;
-    text-transform: capitalize;
+    
 }
 .post-slide .post-bar li a:hover{
     text-decoration: none;
@@ -1216,7 +1216,7 @@ width: 222px;
     font-size: 20px;
     font-weight: 700;
     color: #ffffff;
-    text-transform: capitalize;
+    
     margin: 0;
     transition: all 0.5s ease 0s;
 }
@@ -1229,7 +1229,7 @@ width: 222px;
     font-size: 15px;
     font-style: italic;
     color: #323232;
-    text-transform: capitalize;
+    
     height: 0;
     opacity: 0;
     transform: scale(0);
@@ -1309,7 +1309,7 @@ width: 222px;
 	color: #323232;
 	text-decoration: none;
 	font-size: 22px;
-	text-transform: capitalize;
+	
 }
 .portfolio-item .card .card-body p{
 	margin-bottom: 0px;
@@ -1507,7 +1507,7 @@ width: 222px;
 	position: relative;
 	padding: 10px 30px 10px 60px;
 	font-size: 18px;
-	text-transform: capitalize;
+	
 	width: 100%;
 	text-align: left;
 	border: none;
