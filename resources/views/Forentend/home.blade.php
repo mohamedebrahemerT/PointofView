@@ -63,9 +63,9 @@
             <div>
              
                 <div id="meet_our_leaders">
-                    <a href="{{url('/')}}/team" style="color: rgba(250,177,23,1) !important;text-decoration: none;">
+                    <h2 href="{{url('/')}}/team" style="color: rgba(250,177,23,1) !important;text-decoration: none;font-size: 16px;">
                           <span>Meet our Team</span>
-                    </a>
+                    </h2>
       
 
         <div class="row">
