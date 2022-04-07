@@ -64,7 +64,7 @@
              
                 <div id="meet_our_leaders">
                     <a href="{{url('/')}}/team" style="color: rgba(250,177,23,1) !important;text-decoration: none;">
-                          <span>meet our leaders</span>
+                          <span>Meet our leaders</span>
                     </a>
       
 
