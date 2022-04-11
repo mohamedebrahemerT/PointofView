@@ -13,7 +13,7 @@
 
      <ul id="breadcrumbs-two">
     <li><a href="{{url('/')}}">Home</a></li>
-    <li><a href="{{url('/')}}/aboutus">About Us</a></li>
+    <li><a href="{{url('/')}}/aboutus">{{Settings()->ouridentity}} </a></li>
      
   </ul>
 
