@@ -100,5 +100,7 @@
 <script src="js/jquery.fancybox.min.js"></script>
 
 <script src="{{url('/')}}/Forentend/js/script.js"></script>
+
+@stack('js')
 </body>
 </html>

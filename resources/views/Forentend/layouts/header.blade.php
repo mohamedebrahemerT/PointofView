@@ -105,7 +105,11 @@
 
 
    <style>
-.loader {
+
+    @media (min-width: 1200px) 
+    {
+
+      .loader {
             position: fixed;
             left: 0px;
             top: 0px;
@@ -119,6 +123,41 @@
             left: 40%;
             top: 40%;
         }
+        .slidertitle
+        {
+          font-size: 75px !important;
+  font-weight: 700 !important;
+        }
+
+         .sliderp
+        {
+          font-size: 40px !important;
+  font-weight: 700 !important;
+        }
+    
+   }
+
+   @media (max-width: 576px)
+    {
+
+      .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #ffffffcf;
+        }
+        .loader img{
+            position: relative;
+          
+            top: 20%;
+        }
+
+    }
+
+
 
 
 </style>
@@ -209,6 +248,8 @@
 
    
  </script>
+
+@stack('css')
 
 </head>
 <body style=" font-family: 'Work Sans', sans-serif !important;"> 

@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row">
 
-         <div class="col-lg-11">
+         <div class="col-lg-6">
           <div class="contact-details" style="float: left;">
             <ul>
-              <li>
+              <!--li>
                 <a style="color:#fff;text-decoration: none; font-size: 20px;" href="tel:{{Settings()->phone}}">
                 <i class="fas fa-phone fa-rotate-90"></i>  
 {{-- Settings()->phone --}}</a>
@@ -22,21 +22,43 @@
    <li><i class="fas fa-map-marker-alt"></i>  
 
     {{Settings()->address}} 
-  </li>
+  </li >
 
       
 
-            </ul>
+            </ul -->
           </div>
         </div>
 
-        <div class="col-lg-1">
+        <div class="col-lg-6">
           <div class="social-media" style="float: right;">
             <ul>
+
+                  <li>
+                <a style="color:#fff;text-decoration: none; font-size: 20px;" href="tel:{{Settings()->phone}}">
+                <i class="fas fa-phone fa-rotate-90"></i>  
+{{-- Settings()->phone --}}</a>
+                
+                 </li>
+        <li>
+         <a href="mailto:{{Settings()->email}}" style="color:#fff;text-decoration: none; font-size: 20px;">
+          <i class="fa fa-envelope"></i> 
+ 
+          {{-- Settings()->email --}} 
+        </a>
+        </li>
+   <!--li><i class="fas fa-map-marker-alt"></i>  
+
+    {{Settings()->address}} 
+  </li -->
+
+      
               <li><a href="{{Settings()->facebook_link}}" target="_blank"><i class="fab fa-facebook-f" style="font-size:20px"></i></a></li>
        
             
               <li><a href="{{Settings()->linkedin_link}}" target="_blank"><i class="fab fa-linkedin-in" style="font-size:20px"></i></a></li>
+
+
           
             </ul>
           </div>

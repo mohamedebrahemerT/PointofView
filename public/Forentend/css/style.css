@@ -1871,9 +1871,14 @@ margin-top: -25%;
 
 }
 
+  @media (min-width: 1200px) 
+    {
+
+
 div.relative {
   position: relative;
-  
+   
+
 } 
 
 div.absolute {
@@ -1883,6 +1888,28 @@ right: 29px;
  
  
 }
+
+    }
+
+     @media (max-width: 576px)
+    {
+    	
+div.relative {
+  position: relative;
+    margin-top: 4%;
+
+} 
+
+div.absolute {
+ position: absolute;
+top: -20px;
+right: 29px;
+ 
+ 
+}
+
+    }
+
 .breadcrumb-item a
 {
 	color: #fff;

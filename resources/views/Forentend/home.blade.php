@@ -1,50 +1,73 @@
 @extends('Forentend.index')
 @section('content')
+ 
+  
+  @push('js')
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <header class="slider-main">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
 
-            <div class="carousel-inner" role="listbox">
-               <!-- Slide One - Set the background image for this slide in the line below -->
+  <style type="text/css">
+      .carousel-caption {
+  right: 20%;
+  left: 20%;
+  padding-bottom: 30px;
+  top:30%;
+}
+  </style>
+ @endpush
+
+
+ <br>
+ 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
                     @foreach($Sliders as $key => $slider)
-                  
-               <div class="carousel-item @if($key == 0)active @endif" style="background-image: url('{{url('/')}}/{{$slider->img}}')">
-                  <a href="{{$slider->url}}" style="text-decoration:none;color: #fff;">
-                  <div class="carousel-caption d-none d-md-block">
-                     <h3>{{$slider->title}} </h3>
-                      {!! $slider->desc !!}  
-                        </a>
-                      <a  href="{{$slider->url}}" class="btn btn-primary" id="sendMessageButton" style="background-color: #000;">READ MORE</a>
-                      <br>
-                      <br>
-                  </div>
 
-
-                          
-
-
-               </div>
-     
+      <li data-target="#myCarousel" data-slide-to="{{$key}}" class=" @if($key == 0)active @endif"></li>
                  @endforeach
-            
-               
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </header>
     
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+                    @foreach($Sliders as $key => $slider)
+
+      <div class="item @if($key == 0)active @endif">
+        <img src="{{$slider->img}}" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+              <a href="{{$slider->url}}" style="text-decoration:none;color: #fff;">
+          <h1  class="slidertitle">{{$slider->title}} </h1>
+          <span  class="sliderp"> {!! $slider->desc !!}  </span>
+      </a>
+
+        <a  href="{{$slider->url}}" class="btn btn-primary" id="sendMessageButton" style="background-color: #000;">READ MORE</a>
+        </div>
+      </div>
+
+                 @endforeach
+     
+     
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+ 
+
+
+ 
     
     <!--div class="container">        
        
@@ -316,7 +339,5 @@ margin-top: -4%;">
 
 
 
-  
- 
 @endsection
 
