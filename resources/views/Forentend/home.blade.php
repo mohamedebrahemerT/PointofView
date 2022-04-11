@@ -31,6 +31,16 @@
   
   }
 
+  @media (max-width: 576px) 
+{
+    
+.asdasdasd
+{
+   margin-top: 11%;
+}
+  
+  }
+
 
   </style>
  @endpush
