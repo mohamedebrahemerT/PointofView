@@ -16,6 +16,16 @@
   padding-bottom: 30px;
   top:30%;
 }
+
+.menu-area {
+ 
+  margin-top: -4% !important;
+}
+
+.asdasdasd
+{
+    margin-top: 7%;
+}
   </style>
  @endpush
 

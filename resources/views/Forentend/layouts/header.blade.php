@@ -131,7 +131,7 @@
 
          .sliderp
         {
-          font-size: 40px !important;
+          font-size: 50px !important;
   font-weight: 700 !important;
         }
     
