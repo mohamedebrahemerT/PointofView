@@ -17,7 +17,9 @@
   top:30%;
 }
 
-.menu-area {
+@media (min-width: 1200px) 
+{
+    .menu-area {
  
   margin-top: -4% !important;
 }
@@ -26,6 +28,10 @@
 {
     margin-top: 7%;
 }
+  
+  }
+
+
   </style>
  @endpush
 
