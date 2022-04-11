@@ -57,7 +57,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="{{ Request::segment(1) === '' ? 'active' : null }}">
+                        <li class="{{ Request::is('/') ? 'active' : '' }}">
                           <a href="{{url('/')}}/">Home
                            <span class="sr-only">(current)</span></a>
                          </li>
