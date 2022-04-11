@@ -45,99 +45,64 @@
       </div>
     </div>
   </div>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light top-nav">
-        <div class="container">
-            <a class="navbar-brand" href="{{url('/')}}/">
+     <div id="menu_area" class="menu-area">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-light navbar-expand-lg mainmenu">
+               <a class="navbar-brand" href="{{url('/')}}/">
            <img src="{{url('/')}}/{{Settings()->logo}}"   >
             </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fas fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link  {{ request()->is('/*') ? 'active' : '' }}  " href="{{url('/')}}/">Home</a>
-          </li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="{{ Request::segment(1) === '' ? 'active' : null }}">
+                          <a href="{{url('/')}}/">Home
+                           <span class="sr-only">(current)</span></a>
+                         </li>
 
-          
-          <li class="nav-item">
-            <a class="nav-link {{ request()->is('aboutus*') ? 'active' : '' }}" href="{{url('/')}}/aboutus">{{Settings()->ouridentity}}</a>
-          </li>
-
-         
-
-            <!--li class="nav-item dropdown">
-            <a class="nav-link {{ request()->is('OurTeam*') ? 'active' : '' }}" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages <i class="fas fa-sort-down"></i></a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
- 
-            
-
-       <a class="dropdown-item" href="{{url('/')}}/team">Our Team</a>
-
-     <a class="dropdown-item" href="{{url('/')}}/Values">Our Values</a>
-
-     <a class="dropdown-item" href="{{url('/')}}/devcycle">development cycle</a>
-
-      <a class="dropdown-item" href="{{url('/')}}/Fieldadministration">
-Fieldwork administration
-</a>
-
- <a class="dropdown-item" href="{{url('/')}}/Rescapabilities">
-Resourcescapabilities
-</a>
-
- <a class="dropdown-item" href="{{url('/')}}/Qualitycontrol">
-Quality control
-</a>
+                         <li class="{{ Request::segment(1) === 'aboutus' ? 'active' : null }}"><a href="{{url('/')}}/aboutus">{{Settings()->ouridentity}}</a></li>
 
 
 
-
-           
-            </div>
-          </li -->
-
-         <li class="nav-item dropdown">
-            <a class="nav-link {{ request()->is('Services*') ? 'active' : '' }}" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         {{Settings()->OurDimensions}}   <i class="fas fa-sort-down"></i></a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-   @foreach(App\Models\Department::orderBy('order','ASC')->get() as $Department)
-              <a class="dropdown-item" href="{{url('/')}}/childScopeofresearch/{{$Department->id}}">
-                  {{ $Department->title}}
-              </a>
+                        <li class="dropdown {{ Request::segment(1) === 'Services' ? 'active' : null }}"  >
+                            <a class="dropdown-toggle" href="{{url('/')}}/Services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Settings()->OurDimensions}} </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              @foreach(App\Models\Department::orderBy('order','ASC')->get() as $Department)
+                            <li class="dropdown">
+                                <a   href="{{url('/')}}/childScopeofresearch/{{$Department->id}}" id="navbarDropdown"   aria-expanded="false"> {{ $Department->title}}</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      @foreach(App\Models\Course::where('department_id',$Department->id)->get() as $child)
+                                <li><a href="{{url('/')}}/Services/{{$child->id}}"> {{ $child->title}}</a></li>
                @endforeach
-            
+                               
+                                </ul>
+                            </li>
+               @endforeach
 
-       <a class="dropdown-item" href="{{url('/')}}/Services">See All</a>
-    
+                    <li><a href="{{url('/')}}/Services">See All</a></li>
 
-            <li class="nav-item">
-            <a class="nav-link {{ request()->is('Carreerweb*') ? 'active' : '' }}" href="{{url('/')}}/Carreerweb">{{Settings()->Carreers}}</a>
-          </li>
+                            </ul>
+                        </li>
 
-          <li class="nav-item">
-            <a class="nav-link {{ request()->is('team*') ? 'active' : '' }}" href="{{url('/')}}/team">{{Settings()->POVTeam}}</a>
-          </li>
+                          <li  class="{{ Request::segment(1) === 'Carreerweb' ? 'active' : null }}"><a href="{{url('/')}}/Carreerweb">{{Settings()->Carreers}}</a></li>
 
+                             <li  class="{{ Request::segment(1) === 'team' ? 'active' : null }}"><a href="{{url('/')}}/team">{{Settings()->POVTeam}}</a></li>
  @if(Settings()->Blogstatus == 1) 
 
- <li class="nav-item">
-            <a class="nav-link {{ request()->is('Gallery*') ? 'active' : '' }}" href="{{url('/')}}/Gallery">{{Settings()->Gallery}}</a>
-          </li> 
-
+                                <li class="{{ Request::segment(1) === 'Gallery' ? 'active' : null }}"><a href="{{url('/')}}/Gallery">{{Settings()->Gallery}}</a></li>
  @endif
-           
-
-           
-           
-          <li class="nav-item">
-            <a class="nav-link {{ request()->is('contactus*') ? 'active' : '' }}" href="{{url('/')}}/contactus">{{Settings()->Contactus}}</a>
-          </li>
-
-          
-        </ul>
-            </div>
+                                  <li  class="{{ Request::segment(1) === 'contactus' ? 'active' : null }}"><a href="{{url('/')}}/contactus">{{Settings()->Contactus}}</a></li>
+                     
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </div>
+</div>
+ 
+ 
+
+    
      
