@@ -164,6 +164,7 @@ class AdminController extends Controller
         public function viwlogin ()
         {
           
+              auth('admin')->logout();
          
             
                $lang = 'en';
