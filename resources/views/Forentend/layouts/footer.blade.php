@@ -11,18 +11,18 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col">
                     <h5 class="headin5_amrc col_white_amrc pt2">
-                       {{ Aboutus()->title}}
+                    Social Media
                 
-                </h5>
+                </h5 -->
                     <!--headin5_amrc-->
-                    <p class="mb10">
+                    <!--p class="mb10">
                           
 
                 {!! Str::limit(Aboutus()->desc, 120) !!}
   <a href="{{url('/')}}/aboutus">
                 <span class="card-header"> read more </span>
                 </a>
-                    </p>
+                    </p -->
                   
                     <ul class="footer-social">
                         <li><a class="facebook hb-xs-margin" href="{{Settings()->facebook_link}}" target="_blank"><span class="hb hb-xs spin hb-facebook"><i class="fab fa-facebook-f"></i></span></a></li>
@@ -38,31 +38,21 @@
                     <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
                     <!--headin5_amrc-->
                     <ul class="footer_ul_amrc">
-                        <li><a href="{{url('/')}}/"><i class="fas fa-long-arrow-alt-right"></i>home</a></li>
-                        <li><a href="{{url('/')}}/aboutus"><i class="fas fa-long-arrow-alt-right"></i> about us </a></li>
+                        <li><a href="{{url('/')}}/"><i class="fas fa-long-arrow-alt-right"></i>Home</a></li>
+                        <li><a href="{{url('/')}}/aboutus"><i class="fas fa-long-arrow-alt-right"></i> our identity </a></li>
                       
-                        <li><a href="{{url('/')}}/Services"><i class="fas fa-long-arrow-alt-right"></i> scope of research </a></li>
-                        <li><a href="{{url('/')}}/team"><i class="fas fa-long-arrow-alt-right"></i> Our Team </a></li>
-                        <li><a href="{{url('/')}}/Gallery"><i class="fas fa-long-arrow-alt-right"></i> Gallery </a></li>
-                          <li><a href="{{url('/')}}/contactus"><i class="fas fa-long-arrow-alt-right"></i> contact us  </a></li>
+                        <li><a href="{{url('/')}}/Services"><i class="fas fa-long-arrow-alt-right"></i>   Our Dimensions  </a></li>
+                        
                     </ul>
                     <!--footer_ul_amrc ends here-->
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Pages</h5>
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
                     <!--headin5_amrc ends here-->
                      <ul class="footer_ul_amrc">
-                        <li><a href="{{url('/')}}/team"><i class="fas fa-long-arrow-alt-right"></i>Meet Our Team</a></li>
-
-                         <li><a href="{{url('/')}}/Values"><i class="fas fa-long-arrow-alt-right"></i>Our Values</a></li>
-
-                            <li><a href="{{url('/')}}/devcycle"><i class="fas fa-long-arrow-alt-right"></i> development cycle </a></li>
-
-                             <li><a href="{{url('/')}}/Fieldadministration"><i class="fas fa-long-arrow-alt-right"></i>  Fieldwork administration  </a></li>
-
-                                <li><a href="{{url('/')}}/Rescapabilities"><i class="fas fa-long-arrow-alt-right"></i>   Resources capabilities  </a></li>
-
-                                 <li><a href="{{url('/')}}/Qualitycontrol"><i class="fas fa-long-arrow-alt-right"></i>   Quality control   </a></li>
+                      <li><a href="{{url('/')}}/Carreerweb"><i class="fas fa-long-arrow-alt-right"></i>Carreer</a></li>
+                        <li><a href="{{url('/')}}/team"><i class="fas fa-long-arrow-alt-right"></i> POV Team </a></li>
+                          <li><a href="{{url('/')}}/contactus"><i class="fas fa-long-arrow-alt-right"></i> contact us  </a></li>
                          
                     </ul>
                     <!--footer_ul2_amrc ends here-->
@@ -103,8 +93,12 @@
 <script src="{{url('/')}}/Forentend/js/isotope.pkgd.min.js"></script>
 <script src="{{url('/')}}/Forentend/js/filter.js"></script>
 <script src="{{url('/')}}/Forentend/js/jquery.appear.js"></script>
+
 <script src="{{url('/')}}/Forentend/js/owl.carousel.min.js"></script>
+<script src="{{url('/')}}/Forentend/js/owl2.carousel.min.js"></script>
+
 <script src="js/jquery.fancybox.min.js"></script>
+
 <script src="{{url('/')}}/Forentend/js/script.js"></script>
 </body>
 </html>

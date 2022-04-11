@@ -5,15 +5,16 @@
  @endpush
 
  <div class="relative">
-    <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg" style="width:1920px; height: 383px;">
+     <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg"  class="img-fluid">
   <div class="absolute">
-       <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="{{url('/')}}">Home</a>
-                    </li>
-                      
-                    <li class="breadcrumb-item active">{{$Service->title}}</li>
-                </ol>
+
+  	 <ul id="breadcrumbs-two">
+    <li><a href="{{url('/')}}">Home</a></li>
+    <li><a href="">{{$Service->title}}</a></li>
+     
+  </ul>
+
+     
   </div>
 </div>
 <hr class="breadcrumbhr" >
@@ -22,21 +23,17 @@
 		<div class="container">
 			<!-- Portfolio Item Row -->
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-6">
 					<img class="img-fluid" src="{{url('/')}}/{{$Service->img}}" alt="" />
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<h3 class="my-3">{{ $Service->title}} </h3>
 				 
 
 				{!! Str::limit($Service->desc, 600) !!}
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<p class="mt-3"> 	 {!! $Service->desc !!}   </p>
-				</div>
-			</div>
+		 
 			
 			<!-- /.row -->
 			<div class="related-projects">
@@ -63,8 +60,7 @@
 		</div>
 		<!-- /.container -->
 	</div>
+ @include('Forentend.SectorsOFexpertise.ourpartners')
    @include('Forentend.SectorsOFexpertise.SectorsOFexpertise')
-	
-
  
 @endsection

@@ -24,32 +24,83 @@
   <!-- Fontawesome CSS -->
   <link href="{{url('/')}}/Forentend/css/all.css" rel="stylesheet">
   <!-- Owl Carousel CSS -->
+
   <link href="{{url('/')}}/Forentend/css/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="{{url('/')}}/Forentend/css/owl.carousel2.min.css" rel="stylesheet">
+
+ 
   <!-- Owl Carousel CSS -->
   <link href="{{url('/')}}/Forentend/css/jquery.fancybox.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="{{url('/')}}/Forentend/css/style.css" rel="stylesheet">
 
   <style type="text/css">
-    .breadcrumb-item + .breadcrumb-item::before {
-  display: inline-block;
-  padding-right: .5rem;
-  color: #6c757d;
-  content: ">";
-  color: #fff;
-}
+   #breadcrumbs-two{
+    overflow: hidden;
+    width: 100%;
+    list-style: none;
+  }
 
-.breadcrumb {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: .75rem 1rem;
-  margin-bottom: 1rem;
-  list-style: none;
-  background-color: rgba(250,177,23,1);
-  
-}
+  #breadcrumbs-two li{
+    float: left;
+    margin: 0 .5em 0 1em;
+  }
+
+  #breadcrumbs-two a{
+    background: #ddd;
+    padding: .7em 1em;
+    float: left;
+    text-decoration: none;
+    color: #444;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    position: relative;
+  }
+
+  #breadcrumbs-two a:hover{
+    background: #fff;
+  }
+
+  #breadcrumbs-two a::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-width: 1.5em 0 1.5em 1em;
+    border-style: solid;
+    border-color: #ddd #ddd #ddd transparent;
+    left: -1em;
+  }
+
+  #breadcrumbs-two a:hover::before{
+    border-color:rgba(250,177,23,1);
+  }
+
+  #breadcrumbs-two a::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+    border-left: 1em solid #ddd;
+    right: -1em;
+  }
+
+  #breadcrumbs-two a:hover::after{
+    border-left-color: rgba(250,177,23,1);
+  }
+
+  #breadcrumbs-two .current,
+  #breadcrumbs-two .current:hover{
+    font-weight: bold;
+    background: none;
+  }
+
+  #breadcrumbs-two .current::after,
+  #breadcrumbs-two .current::before{
+    content: normal;
+  }
   </style>
 
 
@@ -79,8 +130,8 @@
 
 </script>
 
-
+ 
 </head>
-<body>
+<body style=" font-family: 'Work Sans', sans-serif !important;"> 
 <div class="wrapper-main">
 <div class="loader" ><img src="{{Settings()->logo_footer}}"></div>

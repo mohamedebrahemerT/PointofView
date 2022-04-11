@@ -80,7 +80,7 @@
   
 
           <div class="form-group">
-                               <label class="control-label">{{trans('trans.img')}}</label>
+                               <label class="control-label">{{trans('trans.img')}} - Width:1110 px and Height:440 px</label>
 
 <input type="file" placeholder="{{trans('trans.blog')}}" class="form-control" name="img" /> 
 

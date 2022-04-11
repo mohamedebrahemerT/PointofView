@@ -5,15 +5,17 @@
  @endpush
 
  <div class="relative">
-    <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg" style="width:1920px; height: 383px;">
+    <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg"  class="img-fluid">
   <div class="absolute">
-       <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="{{url('/')}}">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active"> {{$Department->title}}
-</li>
-                </ol>
+
+     <ul id="breadcrumbs-two">
+    <li><a href="{{url('/')}}">Home</a></li>
+    <li><a href="">{{$Department->title}}</a></li>
+     
+  </ul>
+
+
+     
   </div>
 </div>
 <hr class="breadcrumbhr" >
@@ -34,7 +36,7 @@ background-color: #fab117;
 text-align: left;
 margin-left: 0%;
 margin-top: -4%;">
-<p>{{$Department->desc}} </p>
+<!--p>{!! $Department->desc !!} </p -->
 
             <!-- Services Section -->
             <div class="row">
@@ -49,14 +51,14 @@ margin-top: -4%;">
                         <div class="card-body">
                             <h4 class="card-header">   
                             	{{ $child->title}} </h4>
-                            <p class="card-text">
+                            <!--p class="card-text">
                 {!! Str::limit($child->desc, 100) !!}
 
                             	 
-                            </p>
-                            <a href="{{url('/')}}/Services/{{$child->id}}"> 
+                            </p -->
+                            <!--a href="{{url('/')}}/Services/{{$child->id}}"> 
                               <span class="card-header"> read more </span>
-                              </a>
+                              </a -->
                         </div>
                     </div>
                </div>
@@ -72,7 +74,6 @@ margin-top: -4%;">
         </div>
     </div>
 	
-      @include('Forentend.SectorsOFexpertise.SectorsOFexpertise')
-
- 
+   @include('Forentend.SectorsOFexpertise.ourpartners')
+   @include('Forentend.SectorsOFexpertise.SectorsOFexpertise')
 @endsection

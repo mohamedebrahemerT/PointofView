@@ -2,117 +2,165 @@
 @section('content')
 
  @push('js')
+
  @endpush
 
+
+
  <div class="relative">
-    <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg" style="width:1920px; height: 383px;">
+    <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg"  class="img-fluid">
   <div class="absolute">
-       <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="{{url('/')}}">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active"> About Us </li>
-                </ol>
+
+     <ul id="breadcrumbs-two">
+    <li><a href="{{url('/')}}">Home</a></li>
+    <li><a href="{{url('/')}}/aboutus">About Us</a></li>
+     
+  </ul>
+
+       
   </div>
 </div>
 <hr class="breadcrumbhr" >
 
-  
+
+
+  <!-- Page Content -->
     <div class="container">
-        <!-- About Content -->
-        <div class="about-main">
+
+  <h1 class="py-4"> {{Settings()->ouridentity}} </h1>
+
+            <hr style="border: 1px solid #fab117;
+width: 225px;
+height: 2px;
+background-color: #fab117;
+text-align: left;
+margin-left: 0%;
+margin-top: -3%;">
+        <div class="pricing-box">
+        <!-- Content Row -->
             <div class="row">
-                <div class="col-lg-6">
-                    <img class="img-fluid rounded mb-4" src="{{url('/')}}/{{$Aboutus->img}}" alt="" />
-                </div>
-                <div class="col-lg-6">
-                    <h2>{{$Aboutus->title}}</h2>
-                       <hr class="new5">
-                       {!! $Aboutus->desc !!}
-                       
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-    </div>
-    <div class="about-inner">
-        <div class="container">
-
-            
-            <div class="row mb-4">
-                 
-                <div class="col-lg-6">
-                    <div class="left-ab">
-                        <h3 style="  color: #fab117">{{$OurMission->title}}</h3>
-                         {!! $OurMission->desc !!}
-                       
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="right-ab">
-                        <img class="img-fluid rounded mb-4" src="{{url('/')}}/{{$OurMission->img}}" alt="" />
-                    </div>
-                </div>
-               
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="right-ab">
-                        <img class="img-fluid rounded mb-4" src="{{url('/')}}/{{$OurVision->img}}" alt="" />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="left-ab">
-                        <h3 style="  color: #fab117">{{$OurVision->title}}</h3>
-                       {!! $OurVision->desc !!}
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <!-- Team Members -->
-        <div class="team-members-box">  
-            <h2>Meet Our Team</h2>
-                <hr style="  border: 1px solid #fab117;
-  width: 240px;
-  height: 2px;
-  background-color: #fab117;
-  text-align: left;
-  margin-left: 0%;
-  margin-top: -2%;
-">
-            <div class="row">
-
-                @foreach($OurTeams as $OurTeam)
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <div class="our-team">
-                            <img class="img-fluid" src="{{url('/')}}/{{$OurTeam->img}}" alt="" />
-                            <div class="team-content">
-                                <h3 class="title">{{$OurTeam->name}}</h3>
-                                <span class="post">{{$OurTeam->jobtitle}}</span>
-                                <ul class="social">
-                                    <li><a href="mailto:{{$OurTeam->email}}"><i class="fa fa-envelope"></i></a></li>
-                                    
-                                    <li><a  target="_blank" href="{{$OurTeam->linkedin_link}}"><i class="fab fa-linkedin" ></i></a></li>
-                                </ul>
-                            </div>
+                <div class="col-lg-12 mb-12">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$Aboutus->img}}) no-repeat center;">
+                        <div class="card-header">
+                            <div id="grad1"></div>
+                <h2 style="color:#fff">{{$Aboutus->title}}</h2>
+                       <hr  style="border: 1px solid #fff;
+width: 129px;
+height: 2px;
+background-color: #fab117;
+text-align: left;">
+                       <span  style="margin-left: 30%">{!! $Aboutus->desc !!}</span>
+                            
+                           
                         </div>
+                        
                     </div>
                 </div>
-                 @endforeach 
+ 
+              
             </div>
-            <!-- /.row -->
+        <!-- /.row -->
+        </div>
+
+           <div class="pricing-box">
+        <!-- Content Row -->
+            <div class="row">
+                <div class="col-lg-12 mb-12">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurMission->img}}) no-repeat center;">
+                        <div class="card-header">
+                            <div id="grad1"></div>
+                              <h6>Satispction</h6>
+                <h2 style="color:#fff">{{$OurMission->title}}</h2>
+                       <hr  style="border: 1px solid #fff;
+width: 129px;
+height: 2px;
+background-color: #fab117;
+text-align: left;">
+                       <span  style="margin-left: 30%">{!! $OurMission->desc !!}</span>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+ 
+              
+            </div>
+        <!-- /.row -->
+        </div>
+
+         <div class="pricing-box">
+        <!-- Content Row -->
+            <div class="row">
+                <div class="col-lg-12 mb-12">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurVision->img}}) no-repeat center;">
+                        <div class="card-header">
+                            <div id="grad1"></div>
+                            <h6>Partnership</h6>
+                <h2 style="color:#fff">{{$OurVision->title}}</h2>
+                       <hr  style="border: 1px solid #fff;
+width: 129px;
+height: 2px;
+background-color: #fab117;
+text-align: left;">
+                       <span  style="margin-left: 30%">{!! $OurVision->desc !!}</span>
+                            
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+ 
+              
+            </div>
+        <!-- /.row -->
+        </div>
+
+       
+
+
+          <div class="pricing-box">
+        <!-- Content Row -->
+            <div class="row">
+                <div class="col-lg-12 mb-12">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurValue->img}}) no-repeat center;">
+                        <div class="card-header">
+                            <div id="grad1"></div>
+                              
+                <h2 style="color:#fff"> What We offer</h2>
+                       <hr  style="border: 1px solid #fff;
+width: 129px;
+height: 2px;
+background-color: #fab117;
+text-align: left;">
+
+                        @foreach($OurValues as $OurValue)
+         
+          <span>
+          
+           <h4 style="color:rgba(250,177,23,1);"> {{$OurValue->title}}</h4> 
+            {!! $OurValue->desc !!}
+        </span>
+                            
+                        @endforeach
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+ 
+              
+            </div>
+        <!-- /.row -->
         </div>
     </div>
-    
+    <!-- /.container -->
+ 
+
+  
+  
+ @include('Forentend.SectorsOFexpertise.ourpartners')
    @include('Forentend.SectorsOFexpertise.SectorsOFexpertise')
-   
-   
 
 @endsection
 

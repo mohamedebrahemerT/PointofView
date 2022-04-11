@@ -33,7 +33,14 @@ class Setting extends Model
 'Blogstatus',
 'Fivacon',
 'map_link',
-'inquiriesEmail'
+'inquiriesEmail',
+
+'ouridentity',
+'OurDimensions' ,
+'Carreers',
+'POVTeam',
+'Gallery',
+'Contactus',
 	 
 	];
 }

@@ -13,7 +13,8 @@ class Servicescontroller extends Controller
     public function index( )
     {
         // code...
-          $Departments = Department::take(4)->get();
+         
+         $Departments = Department::orderBy('order','ASC')->take(4)->get();
 
         return view('Forentend.Services.Services',compact('Departments'));
 

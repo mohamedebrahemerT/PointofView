@@ -6,15 +6,17 @@
          <div class="col-lg-11">
           <div class="contact-details" style="float: left;">
             <ul>
-              <li><i class="fas fa-phone fa-rotate-90"></i>  
-<a style="color:#fff;text-decoration: none;" href="tel:{{Settings()->phone}}">{{Settings()->phone}}</a>
+              <li>
+                <a style="color:#fff;text-decoration: none; font-size: 20px;" href="tel:{{Settings()->phone}}">
+                <i class="fas fa-phone fa-rotate-90"></i>  
+{{-- Settings()->phone --}}</a>
                 
                  </li>
         <li>
-         
+         <a href="mailto:{{Settings()->email}}" style="color:#fff;text-decoration: none; font-size: 20px;">
           <i class="fa fa-envelope"></i> 
- <a href="mailto:{{Settings()->email}}" style="color:#fff;text-decoration: none;">
-          {{Settings()->email}} 
+ 
+          {{-- Settings()->email --}} 
         </a>
         </li>
    <li><i class="fas fa-map-marker-alt"></i>  
@@ -60,12 +62,12 @@
 
           
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('aboutus*') ? 'active' : '' }}" href="{{url('/')}}/aboutus">About us</a>
+            <a class="nav-link {{ request()->is('aboutus*') ? 'active' : '' }}" href="{{url('/')}}/aboutus">{{Settings()->ouridentity}}</a>
           </li>
 
          
 
-            <li class="nav-item dropdown">
+            <!--li class="nav-item dropdown">
             <a class="nav-link {{ request()->is('OurTeam*') ? 'active' : '' }}" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages <i class="fas fa-sort-down"></i></a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
  
@@ -94,12 +96,13 @@ Quality control
 
            
             </div>
-          </li>
+          </li -->
 
          <li class="nav-item dropdown">
-            <a class="nav-link {{ request()->is('Services*') ? 'active' : '' }}" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-sort-down"></i></a>
+            <a class="nav-link {{ request()->is('Services*') ? 'active' : '' }}" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         {{Settings()->OurDimensions}}   <i class="fas fa-sort-down"></i></a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-   @foreach(App\Models\Department::get() as $Department)
+   @foreach(App\Models\Department::orderBy('order','ASC')->get() as $Department)
               <a class="dropdown-item" href="{{url('/')}}/childScopeofresearch/{{$Department->id}}">
                   {{ $Department->title}}
               </a>
@@ -107,21 +110,32 @@ Quality control
             
 
        <a class="dropdown-item" href="{{url('/')}}/Services">See All</a>
+    
+
+            <li class="nav-item">
+            <a class="nav-link {{ request()->is('Carreerweb*') ? 'active' : '' }}" href="{{url('/')}}/Carreerweb">{{Settings()->Carreers}}</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {{ request()->is('team*') ? 'active' : '' }}" href="{{url('/')}}/team">{{Settings()->POVTeam}}</a>
+          </li>
+
+ @if(Settings()->Blogstatus == 1) 
+
+ <li class="nav-item">
+            <a class="nav-link {{ request()->is('Gallery*') ? 'active' : '' }}" href="{{url('/')}}/Gallery">{{Settings()->Gallery}}</a>
+          </li> 
+
+ @endif
            
-            </div>
-          </li>
 
-           <li class="nav-item">
-            <a class="nav-link {{ request()->is('Gallery*') ? 'active' : '' }}" href="{{url('/')}}/Gallery">Gallery</a>
-          </li>
-
-             <li class="nav-item">
-            <a class="nav-link {{ request()->is('Carreerweb*') ? 'active' : '' }}" href="{{url('/')}}/Carreerweb">Carreer</a>
-          </li>
+           
            
           <li class="nav-item">
-            <a class="nav-link {{ request()->is('contactus*') ? 'active' : '' }}" href="{{url('/')}}/contactus">Contact us</a>
+            <a class="nav-link {{ request()->is('contactus*') ? 'active' : '' }}" href="{{url('/')}}/contactus">{{Settings()->Contactus}}</a>
           </li>
+
+          
         </ul>
             </div>
         </div>

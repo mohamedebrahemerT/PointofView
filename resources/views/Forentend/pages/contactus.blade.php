@@ -8,12 +8,11 @@
             <iframe src="{{Settings()->map_link}}" width="1920" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    
   <div class="absolute">
-       <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active">Contact Us</li>
-                </ol>
+      <ul id="breadcrumbs-two">
+    <li><a href="{{url('/')}}">Home</a></li>
+    <li><a href="">Contact Us   </a></li>
+     
+  </ul>
   </div>
 </div>
 
@@ -68,7 +67,7 @@ margin-top: -4%;">
                 <div class="col-md-6">
                   <div class="Rectangle-115">
                   
-                        <h3>get in touch</h3>
+                        <h3>Drop us a line</h3>
                   <form  action="{{url('/')}}/contact-form" method="post" name="sentMessage" id="contactForm" novalidate>
                         <div class="control-group form-group">
                             @csrf

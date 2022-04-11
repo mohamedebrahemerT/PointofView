@@ -5,26 +5,21 @@
  @endpush
 
  <div class="relative">
-    <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg" style="width:1920px; height: 383px;">
+     <img src="{{url('/')}}/Forentend/images/all-title-bg.jpg"  class="img-fluid">
   <div class="absolute">
-       <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="{{url('/')}}">Home</a>
-                    </li>
-                    <li class="breadcrumb-item active"> Carreer</li>
-                </ol>
+        <ul id="breadcrumbs-two">
+    <li><a href="{{url('/')}}">Home</a></li>
+    <li><a href=""> {{Settings()->Carreers}}   </a></li>
+     
+  </ul>
   </div>
 </div>
 <hr class="breadcrumbhr" >
     
-    <!-- Page Content -->
-    <div class="container">
-        <!-- Image Header -->
-        <img class="img-fluid rounded mb-4" src="images/services-big.jpg" alt="" />
-    </div>
+   
    <div class="services-bar">
         <div class="container">
-            <h1 class="py-4">Carreers </h1>
+            <h1 class="py-4">{{Settings()->Carreers}} </h1>
 
             <hr style="border: 1px solid #fab117;
 width: 225px;
@@ -73,5 +68,6 @@ margin-top: -4%;">
     </div>
 
 
+ @include('Forentend.SectorsOFexpertise.ourpartners')
    @include('Forentend.SectorsOFexpertise.SectorsOFexpertise')
 @endsection

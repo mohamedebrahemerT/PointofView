@@ -25,6 +25,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Slider;
 use App\Models\OurValues;
 use App\Models\OurTeam;
+use App\Models\SectorsOFexpertise;
+use App\Models\ourpartners;
  
       
 
@@ -33,6 +35,8 @@ class homeController extends Controller
     //
     public function index()
     {
+
+        
           $Sliders = Slider::take(5)->get();
          $Aboutus = blog::where('id',1)->first();
           $Departments = Department::take(4)->get();

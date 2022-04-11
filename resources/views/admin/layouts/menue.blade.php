@@ -148,6 +148,15 @@
                     </li>
                      @endif
 
+                     @if(admin()->user()->role("ourpartners_show"))
+                    <li class="nav-item {{  request()->routeIs('our_partners.*') ? 'active' : '' }}">
+                        <a href="{{url('/')}}/our_partners" class="nav-link ">
+                            <i class="icon-user"></i>
+                            <span class="title"> {{trans('trans.ourpartners')}}</span>
+                        </a>
+                    </li>
+                     @endif
+
                       @if(admin()->user()->role("SectorsOFexpertise_show"))
                     <li class="nav-item {{  request()->routeIs('Sectors_OF_expertise.*') ? 'active' : '' }}">
                         <a href="{{url('/')}}/Sectors_OF_expertise" class="nav-link ">

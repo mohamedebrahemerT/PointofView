@@ -37,6 +37,12 @@ Route::get('Sliders/{id}/destroy', 'SlidersController@destroy');
 Route::resource('department', 'DepartmentController');
 Route::get('department/{id}/destroy', 'DepartmentController@destroy');
 
+Route::get('department_arrange', 'DepartmentController@arrange');
+
+    Route::post('post-sortable','DepartmentController@sortable');
+
+
+
 
 Route::resource('OurGallery', 'OurGalleryController');
 Route::get('OurGallery/{id}/destroy', 'OurGalleryController@destroy');
@@ -84,6 +90,9 @@ Route::get('quality_control/{id}/destroy', 'QualityController@destroy');
 
  Route::resource('Sectors_OF_expertise', 'SectorsOFexpertiseController');
 Route::get('Sectors_OF_expertise/{id}/destroy', 'SectorsOFexpertiseController@destroy');
+
+ Route::resource('our_partners', 'ourpartnersController');
+Route::get('our_partners/{id}/destroy', 'ourpartnersController@destroy');
 
 Route::resource('Certificate', 'CertificatesController');
 Route::get('Certificate/{id}/destroy', 'CertificatesController@destroy');

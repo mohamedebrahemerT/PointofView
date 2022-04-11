@@ -13,6 +13,7 @@ class Department extends Model
 	'title',
 	'desc',
 'img',
+'order'
 	 
 	 
 	];

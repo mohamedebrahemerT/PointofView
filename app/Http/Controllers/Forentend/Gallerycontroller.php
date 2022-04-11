@@ -10,7 +10,13 @@ class Gallerycontroller extends Controller
     //
     public function index()
     {
-        // code...
+         if(Settings()->Blogstatus == 0) 
+
+            {
+               return back();
+            }
+
+
         return view('Forentend.Gallery.Gallery');
 
     }

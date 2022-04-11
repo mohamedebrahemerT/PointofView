@@ -1,7 +1,7 @@
   <div class="customers-box"> 
         <div class="container">
             <!-- Our Customers -->
-            <h2>Sectors OF expertise</h2>
+            <h2>Sectors of expertise</h2>
                   <hr style="border: 1px solid #fab117;
 width: 218px;
 height: 2px;

@@ -42,9 +42,9 @@ class DepartmentController extends Controller
     public function index( )
     {
         //             
- 
-                        
-                            $Department=Department::get();
+         $Department = Department::orderBy('order','ASC')->get();
+
+                          
 
      return view('admin.Department.index',compact('Department'));
 
@@ -177,4 +177,41 @@ class DepartmentController extends Controller
               session()->flash('danger', trans('trans.deleteSuccess'));
         return   redirect('/department');
     }
+
+        public function arrange()
+
+    {
+          $Departments = Department::orderBy('order','ASC')->get();
+         return view ('Admin.Department.arrange',compact('Departments'));
+    }
+
+        public function sortable(Request $request)
+
+    {
+
+        $Departments = Department::all();
+
+
+        foreach ($Departments as $Department) {
+
+            foreach ($request->order as $order) {
+
+                if ($order['id'] == $Department->id) {
+
+                    $Department->update(['order' => $order['position']]);
+
+                }
+
+            }
+
+        }
+
+        
+
+        return response('Update Successfully.', 200);
+
+    }
+
+
+
 }

@@ -45,9 +45,9 @@
         </div>
     </header>
     
-    <!-- Page Content -->
-    <div class="container">        
-        <!-- About Section -->
+    
+    <!--div class="container">        
+       
         <div class="about-main">
             <div class="row">
 
@@ -63,7 +63,9 @@
             <div>
              
                 <div id="meet_our_leaders">
-                    <h2 href="{{url('/')}}/team" style="color: rgba(250,177,23,1) !important;text-decoration: none;font-size: 16px;">
+                    <h2 href="{{url('/')}}/team" style="color: rgba(250,177,23,1) !important;text-decoration: none;font-size: 16px;
+ font-family: 'Work Sans', sans-serif;
+                    ">
                           <span>Meet our Team</span>
                     </h2>
       
@@ -115,11 +117,11 @@
                </div>
               
             </div>
-            <!-- /.row -->
+           
         </div>
-    </div>  
+    </div -->  
     
-    <div class="services-bar">
+    <!--div class="services-bar">
         <div class="container">
             <h1 class="py-4">Scope Of Research </h1>
 
@@ -131,7 +133,7 @@ text-align: left;
 margin-left: 0%;
 margin-top: -4%;">
 
-            <!-- Services Section -->
+             
             <div class="row">
                @foreach($Departments as $Department)
                <div class="col-lg-3 mb-3">
@@ -160,12 +162,12 @@ margin-top: -4%;">
                @endforeach
               
             </div>
-            <!-- /.row -->
+           
         </div>
-    </div>
+    </div -->
         
-    <div class="container">
-        <!-- Portfolio Section -->
+    <!--div class="container">
+       
         <div class="portfolio-main">
             <h2>Our Gallery</h2>
             <hr style="border: 1px solid #fab117;
@@ -206,11 +208,11 @@ margin-top: -2%;">
                     @endforeach
               
             </div>
-            <!-- /.row -->
+          
         </div>
-    </div>
+    </div -->
     
-    <div class="blog-slide">
+    <!--div class="blog-slide">
         <div class="container">
             <h2>Our Values</h2>
                 <hr style="border: 1px solid #fab117;
@@ -250,9 +252,10 @@ margin-top: -2%;">
                 </div>
             </div>
         </div>
-    </div>
-        
+    </div -->
+    @include('Forentend.SectorsOFexpertise.ourpartners')
    @include('Forentend.SectorsOFexpertise.SectorsOFexpertise')
+ 
     
        <div class="container">
          <div class="row">
@@ -278,7 +281,7 @@ margin-top: -4%;">
                 <div class="col-md-6">
                   <div class="Rectangle-11">
                   
-                        <h3>get in touch</h3>
+                        <h3>Drop us a line</h3>
                     <form  action="{{url('/')}}/contact-form" method="post" name="sentMessage" id="contactForm" novalidate>
                         <div class="control-group form-group">
                             @csrf
@@ -313,8 +316,7 @@ margin-top: -4%;">
 
 
 
-    @push('js')
-    @endpush
+  
  
 @endsection
 

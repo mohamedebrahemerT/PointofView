@@ -81,7 +81,7 @@
 
 
 
-  <div class="form-group">
+  <div class="form-group col-md-3">
                                     <label class="control-label">Web site name</label>
                                     <input type="text" placeholder="{{trans('trans.name')}}" class="form-control"
                                            value="{{$Settings->name}}" name="name" required=""/>
@@ -89,47 +89,50 @@
 
                                 
 
-                                  <div class="form-group">
-                               <label class="control-label">Fivacon</label>
+                                  <div class="form-group col-md-3">
+                               <label class="control-label">Fivacon-  </label>
 
 <input type="file" placeholder="{{trans('trans.Fivacon')}}" class="form-control" name="Fivacon" /> 
 
                                <br>
               <img src="{{url('/')}}/{{$Settings->Fivacon}}"   >
+              - Width:50 px and Height:50 px 
           </div>
 
-                                  <div class="form-group">
-                               <label class="control-label">top site logo</label>
+                                  <div class="form-group col-md-3">
+                               <label class="control-label">top site logo  </label>
 
 <input type="file" placeholder="{{trans('trans.logo')}}" class="form-control" name="logo" /> 
 
                                <br>
               <img src="{{url('/')}}/{{$Settings->logo}}" >
+              - Width:237 px and Height:72 px 
           </div>
 
-            <div class="form-group">
+            <div class="form-group col-md-3">
                                <label class="control-label"> logo-gif-loader</label>
 
 <input type="file" placeholder="{{trans('trans.logo_footer')}}" class="form-control" name="logo_footer" /> 
 
                                <br>
               <img src="{{url('/')}}/{{$Settings->logo_footer}}"   >
+              - Width:237 px and Height:72 px 
           </div >
 
 
-     <div class="form-group">
+     <div class="form-group col-md-3">
                                     <label class="control-label">{{trans('trans.phone')}}</label>
                                     <input type="text" placeholder="{{trans('trans.phone')}}" class="form-control"
                                            value="{{$Settings->phone}}" name="phone" required=""/>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group col-md-3">
                                     <label class="control-label">{{trans('trans.email')}}</label>
                                     <input type="email" placeholder="{{trans('trans.email')}}" class="form-control"
                                            value="{{$Settings->email}}" name="email" required=""/>
                                 </div>
 
-                                  <div class="form-group">
+                                  <div class="form-group col-md-3">
                                     <label class="control-label">
                                     Email for inquiries</label>
                                     <input type="email" placeholder="Email for inquiries" class="form-control"
@@ -139,14 +142,14 @@
 
                                 
 
-                                     <div class="form-group">
+                                     <div class="form-group col-md-3">
                                     <label class="control-label">{{trans('trans.address')}}</label>
                                     <input type="text" placeholder="{{trans('trans.address')}}" class="form-control"
                                            value="{{$Settings->address}}" name="address" required=""/>
                                 </div>
 
 
-                                 <div class="form-group">
+                                 <div class="form-group col-md-3">
                                     <label class="control-label">{{trans('trans.map_link')}}</label>
                                     <input type="text" placeholder="{{trans('trans.map_link')}}" class="form-control"
                                            value="{{$Settings->map_link}}" name="map_link" required=""/>
@@ -154,7 +157,7 @@
 
 
 
-                                 <div class="form-group">
+                                 <div class="form-group col-md-3">
                                     <label class="control-label">{{trans('trans.facebook_link')}}</label>
                                     <input type="text" placeholder="{{trans('trans.facebook_link')}}" class="form-control"
                                            value="{{$Settings->facebook_link}}" name="facebook_link" required=""/>
@@ -166,7 +169,7 @@
                                            value="{{$Settings->twitter_link}}" name="twitter_link" required=""/>
                                 </div -->
 
-                                    <div class="form-group">
+                                    <div class="form-group col-md-3">
                                     <label class="control-label">{{trans('trans.linkedin_link')}}</label>
                                     <input type="text" placeholder="{{trans('trans.linkedin_link')}}" class="form-control"
                                            value="{{$Settings->linkedin_link}}" name="linkedin_link" required=""/>
@@ -200,7 +203,7 @@
                                            value="{{$Settings->copy_right}}" name="copy_right" required=""/>
                                 </div -->
 
-                                    <div class="form-group">
+                                    <div class="form-group col-md-3">
                                     <label class="control-label">
 Contact Us title
                                      </label>
@@ -208,7 +211,7 @@ Contact Us title
                                            value="{{$Settings->about_title}}" name="about_title" required=""/>
                                 </div>
 
-                                 <div class="form-group">
+                                 <div class="form-group col-md-12">
                                     <label class="control-label">
                                         Contact Us content
                                     
@@ -224,8 +227,74 @@ Contact Us title
                                     
                                 </div>
 
+                                 <div class="form-group col-md-4">
+                                    <label class="control-label">
+{{$Settings->ouridentity}}
+                                     </label>
+                                    <input type="text" placeholder="{{$Settings->ouridentity}}" class="form-control"
+                                           value="{{$Settings->ouridentity}}" name="ouridentity" required=""/>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label class="control-label">
+{{$Settings->OurDimensions}}
+                                     </label>
+                                    <input type="text" placeholder="{{$Settings->OurDimensions}}" class="form-control"
+                                           value="{{$Settings->OurDimensions}}" name="OurDimensions" required=""/>
+                                </div>
+
+                                 <div class="form-group col-md-4">
+                                    <label class="control-label">
+{{$Settings->Carreers}}
+                                     </label>
+                                    <input type="text" placeholder="{{$Settings->Carreers}}" class="form-control"
+                                           value="{{$Settings->Carreers}}" name="Carreers" required=""/>
+                                </div>
+
+                                 <div class="form-group col-md-4">
+                                    <label class="control-label">
+{{$Settings->POVTeam}}
+                                     </label>
+                                    <input type="text" placeholder="{{$Settings->POVTeam}}" class="form-control"
+                                           value="{{$Settings->POVTeam}}" name="POVTeam" required=""/>
+                                </div>
+
+                                 <div class="form-group col-md-4">
+                                    <label class="control-label">
+{{$Settings->Gallery}}
+                                     </label>
+                                    <input type="text" placeholder="{{$Settings->Gallery}}" class="form-control"
+                                           value="{{$Settings->Gallery}}" name="Gallery" required=""/>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label class="control-label">
+{{$Settings->Contactus}}
+                                     </label>
+                                    <input type="text" placeholder="{{$Settings->Contactus}}" class="form-control"
+                                           value="{{$Settings->Contactus}}" name="Contactus" required=""/>
+                                </div>
+
+
                                
  
+                                  <div class="form-group">
+                               <label class="control-label">Do you want to view Gallery </label>
+
+                <select name="Blogstatus" class="form-control" required="">
+                   
+                    <option value="1"  @if($Settings->Blogstatus == 1) selected @endif>
+                    {{trans('trans.yes')}}              
+                    </option>
+
+                     <option value="0"  
+                     @if($Settings->Blogstatus == 0) selected @endif>
+                    {{trans('trans.no')}}              
+                    </option>
+                   
+                    
+                </select>
+          </div>  
                            
                                 
                               

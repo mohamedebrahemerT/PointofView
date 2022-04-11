@@ -12,7 +12,7 @@
 
                 CKEDITOR.replace( 'desc' , {
 
-        language: 'ar',
+        language: 'en',
 
 });
  
@@ -121,7 +121,7 @@
   
 
           <div class="form-group">
-                               <label class="control-label">{{trans('trans.img')}}</label>
+                               <label class="control-label">{{trans('trans.img')}}- Width:480 px and Height:380 px</label>
 
 <input type="file" placeholder="{{trans('trans.img')}}" class="form-control" name="img" /> 
 

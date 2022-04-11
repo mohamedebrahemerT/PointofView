@@ -107,7 +107,7 @@ button.btn-secondary:hover{
 	background-color: #ffffff !important;
 }
 .navbar-expand-lg.top-nav .navbar-nav .nav-link{
-	padding: 10px 15px;
+	padding: 10px 8px;
 	color: #323232;
 	font-size: 14px;
 	font-weight: 500;
@@ -1873,8 +1873,7 @@ margin-top: -25%;
 
 div.relative {
   position: relative;
-  height: 383px;
-   top: 12px;
+  
 } 
 
 div.absolute {

@@ -82,7 +82,7 @@
 
 
                 <div class="form-group">
-                               <label class="control-label">{{trans('trans.slider')}}</label>
+                               <label class="control-label">{{trans('trans.slider')}} - Width:1920 px and Height:1080 px  </label>
               <input type="file" placeholder="{{trans('trans.slider')}}" class="form-control"    name="img"  required=""/> 
           </div>
 

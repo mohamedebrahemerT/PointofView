@@ -15,6 +15,7 @@ return [
 	"Resourcescapabilities" => ['create', 'read', 'update', 'delete'],
 	"Quality" => ['create', 'read', 'update', 'delete'],
 	"SectorsOFexpertise" => ['create', 'read', 'update', 'delete'],
+	"ourpartners" => ['create', 'read', 'update', 'delete'],
  
  
  
