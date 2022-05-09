@@ -3,6 +3,7 @@
     <div class="container">
       <div class="row">
 
+       
          <div class="col-lg-6">
           <div class="contact-details" style="float: left;">
             <ul>
@@ -30,7 +31,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
+         <div class="col-lg-6">
           <div class="social-media" style="float: right;">
             <ul>
 
@@ -63,16 +64,17 @@
             </ul>
           </div>
         </div>
+
        
       </div>
     </div>
   </div>
      <div id="menu_area" class="menu-area">
     <div class="container">
-        <div class="row">
+        <div class="row ssdcccfsdfsdf">
             <nav class="navbar navbar-light navbar-expand-lg mainmenu">
                <a class="navbar-brand" href="{{url('/')}}/">
-           <img src="{{url('/')}}/{{Settings()->logo}}"   >
+           <img src="{{url('/')}}/{{Settings()->logo}}"  class="asdasdasdff" >
             </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

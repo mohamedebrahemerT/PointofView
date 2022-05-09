@@ -19,9 +19,9 @@
 
 @media (min-width: 1200px) 
 {
-    .menu-area {
+    .ssdcccfsdfsdf{
  
-  margin-top: -4% !important;
+  margin-top: -36px;
 }
 
 .asdasdasd
@@ -38,6 +38,13 @@
 {
    margin-top: 11%;
 }
+
+ .ssdcccfsdfsdf{
+ 
+ margin-bottom: 25px;
+}
+
+
   
   }
 
@@ -45,8 +52,6 @@
   </style>
  @endpush
 
-
- <br>
  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
