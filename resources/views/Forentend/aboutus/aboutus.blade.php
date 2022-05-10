@@ -63,8 +63,10 @@
                         
                     </div>
                 </div>
- 
-              
+<div class="container ">
+        <div class="col-md-12 text-center">
+            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+        </div>              
             </div>
         <!-- /.row -->
         </div>
@@ -93,7 +95,11 @@ text-align: left;">
                         
                     </div>
                 </div>
- 
+ <div class="container ">
+        <div class="col-md-12 text-center">
+            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+        </div>              
+            </div>
               
             </div>
         <!-- /.row -->
@@ -122,7 +128,11 @@ text-align: left;">
                         
                     </div>
                 </div>
- 
+ <div class="container ">
+        <div class="col-md-12 text-center">
+            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+        </div>              
+            </div>
               
             </div>
         <!-- /.row -->
@@ -163,7 +173,11 @@ text-align: left;">
                         
                     </div>
                 </div>
- 
+ <div class="container ">
+        <div class="col-md-12 text-center">
+            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+        </div>              
+            </div>
               
             </div>
         <!-- /.row -->
