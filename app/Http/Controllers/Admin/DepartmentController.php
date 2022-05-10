@@ -182,7 +182,7 @@ class DepartmentController extends Controller
 
     {
           $Departments = Department::orderBy('order','ASC')->get();
-         return view ('Admin.Department.arrange',compact('Departments'));
+         return view ('admin.Department.arrange',compact('Departments'));
     }
 
         public function sortable(Request $request)
