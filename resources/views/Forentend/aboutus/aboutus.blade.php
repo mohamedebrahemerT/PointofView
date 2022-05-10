@@ -57,17 +57,18 @@
   margin-top: 0%;
 ">
                        <span  style="margin-left: 30%">{!! $Aboutus->desc !!}</span>
-                            
+                           <div class="col-md-12 text-center">
+            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+        </div>     
                            
                         </div>
                         
                     </div>
+                    
                 </div>
-<div class="container ">
-        <div class="col-md-12 text-center">
-            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
-        </div>              
-            </div>
+
+                  
+            
         <!-- /.row -->
         </div>
 
@@ -89,17 +90,15 @@ height: 2px;
 background-color: #fab117;
 text-align: left;">
                        <span  style="margin-left: 30%">{!! $OurMission->desc !!}</span>
-                            
+                             <div class="col-md-12 text-center">
+            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+        </div>   
                            
                         </div>
                         
                     </div>
                 </div>
- <div class="container ">
-        <div class="col-md-12 text-center">
-            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
-        </div>              
-            </div>
+ 
               
             </div>
         <!-- /.row -->
@@ -122,17 +121,15 @@ height: 2px;
 background-color: #fab117;
 text-align: left;">
                        <span  style="margin-left: 30%">{!! $OurVision->desc !!}</span>
-                            
+                             <div class="col-md-12 text-center">
+            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+        </div>   
                            
                         </div>
                         
                     </div>
                 </div>
- <div class="container ">
-        <div class="col-md-12 text-center">
-            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
-        </div>              
-            </div>
+ 
               
             </div>
         <!-- /.row -->
@@ -173,11 +170,7 @@ text-align: left;">
                         
                     </div>
                 </div>
- <div class="container ">
-        <div class="col-md-12 text-center">
-            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
-        </div>              
-            </div>
+ 
               
             </div>
         <!-- /.row -->

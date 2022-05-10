@@ -335,6 +335,6 @@ return [
         'Photocategories'=>'Photo categories',
         'OurGallery'=>'Our Gallery',
         'department_arrange'=>'department arrange',
-        'ourpartners'=>'Our Partners',
+        'ourpartners'=>'Our Clients',
         
 ];

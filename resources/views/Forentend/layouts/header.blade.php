@@ -278,4 +278,5 @@
   font-weight: 400;
   font-style: normal;"> 
 <div class="wrapper-main">
-<div class="loader" ><img src="{{Settings()->logo_footer}}"></div>
+<div class="loader" ><img src="{{Settings()->logo_footer}}">
+</div>
