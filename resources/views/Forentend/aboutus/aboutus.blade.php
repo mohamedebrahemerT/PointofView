@@ -58,7 +58,7 @@
 ">
                        <span  style="margin-left: 30%">{!! $Aboutus->desc !!}</span>
                            <div class="col-md-12 text-center">
-            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+      <img src="{{url('/')}}/Forentend/GIF-loading-POV.gif" style="text-align: center;width: 150px;height: `150px;margin-top: -3%;">
         </div>     
                            
                         </div>
@@ -91,7 +91,7 @@ background-color: #fab117;
 text-align: left;">
                        <span  style="margin-left: 30%">{!! $OurMission->desc !!}</span>
                              <div class="col-md-12 text-center">
-            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+           <img src="{{url('/')}}/Forentend/GIF-loading-POV.gif" style="text-align: center;width: 150px;height: `150px;">
         </div>   
                            
                         </div>
@@ -122,7 +122,7 @@ background-color: #fab117;
 text-align: left;">
                        <span  style="margin-left: 30%">{!! $OurVision->desc !!}</span>
                              <div class="col-md-12 text-center">
-            <img src="{{Settings()->logo_footer}}" style="text-align: center;">
+           <img src="{{url('/')}}/Forentend/GIF-loading-POV.gif" style="text-align: center;width: 150px;height: `150px;margin-top: -3%;">
         </div>   
                            
                         </div>
