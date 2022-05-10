@@ -272,8 +272,10 @@
     
   }
 </style>
-
+  <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
 </head>
-<body style=" font-family: 'Work Sans', sans-serif !important;"> 
+<body style="font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;"> 
 <div class="wrapper-main">
 <div class="loader" ><img src="{{Settings()->logo_footer}}"></div>
