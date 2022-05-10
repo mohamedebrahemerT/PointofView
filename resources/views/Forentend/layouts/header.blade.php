@@ -274,7 +274,7 @@
 </style>
   <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
 </head>
-<body style="font-family: century-gothic, sans-serif;
+<body style="font-family: century-gothic, sans-serif !important;
   font-weight: 400;
   font-style: normal;"> 
 <div class="wrapper-main">
