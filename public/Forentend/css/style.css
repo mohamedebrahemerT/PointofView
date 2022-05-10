@@ -1585,14 +1585,19 @@ width: 222px;
 .bg-01{
 	background: url(../images/pricing-bg-01.jpg) no-repeat center;
 	background-size: cover;
+	background-color: #000;
 }
 .bg-02{
 	background: url(../images/pricing-bg-02.jpg) no-repeat center;
 	background-size: cover;
+	background-color: #000;
+
 }
 .bg-03{
 	background: url(../images/pricing-bg-03.jpg) no-repeat center;
 	background-size: cover;
+	background-color: #000;
+
 }
 .pricing-box .card:hover .card-header{
 	background: none;
