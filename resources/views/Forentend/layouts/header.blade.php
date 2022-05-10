@@ -251,6 +251,28 @@
 
 @stack('css')
 
+<style type="text/css">
+  .owl-prev {
+        //&::before { content: "\f104"; }
+    }
+    .owl-next {
+        //&::before { content: "\f105"; }
+    }
+
+    .owl-buttons
+    {
+      display: flex;
+    }
+
+</style>
+
+<style type="text/css">
+  .owl-buttons
+  {
+    
+  }
+</style>
+
 </head>
 <body style=" font-family: 'Work Sans', sans-serif !important;"> 
 <div class="wrapper-main">

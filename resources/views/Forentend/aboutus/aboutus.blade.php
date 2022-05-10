@@ -50,7 +50,10 @@ margin-top: -3%;">
         <!-- Content Row -->
             <div class="row">
                 <div class="col-lg-12 mb-12">
-                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$Aboutus->img}}) no-repeat center; border: 5px solid #fab117;">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$Aboutus->img}}) no-repeat center; border: 5px solid #fab117;
+background-size: 1101px 399px !important;
+
+                    ">
                         <div class="card-header">
                             <div id="grad1"></div>
                 <h2 style="color:#fff">{{$Aboutus->title}}</h2>
@@ -78,7 +81,10 @@ margin-top: -3%;">
         <!-- Content Row -->
             <div class="row">
                 <div class="col-lg-12 mb-12">
-                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurMission->img}}) no-repeat center; border: 5px solid #fab117;">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurMission->img}}) no-repeat center; border: 5px solid #fab117;
+background-size: 1101px 399px !important;
+
+                    ">
                         <div class="card-header">
                             <div id="grad1"></div>
                               <h3>Satispction</h3>
@@ -105,7 +111,9 @@ text-align: left;">
         <!-- Content Row -->
             <div class="row">
                 <div class="col-lg-12 mb-12">
-                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurVision->img}}) no-repeat center;border: 5px solid #fab117;">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurVision->img}}) no-repeat center;border: 5px solid #fab117;
+                   background-size: 1101px 399px !important;
+ ">
                         <div class="card-header">
                             <div id="grad1"></div>
                             <h3>Partnership</h3>
@@ -135,7 +143,10 @@ text-align: left;">
         <!-- Content Row -->
             <div class="row">
                 <div class="col-lg-12 mb-12">
-                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurValue->img}}) no-repeat center;border: 5px solid #fab117;">
+                    <div class="card h-100 bg-01" style="background: url({{url('/')}}/{{$OurValue->img}}) no-repeat center;border: 5px solid #fab117;
+                    background-size: 1101px 399px  !important;
+
+                    ">
                         <div class="card-header">
                             <div id="grad1"></div>
                               

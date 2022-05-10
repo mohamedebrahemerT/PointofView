@@ -91,7 +91,9 @@
 
 
                         <li class="dropdown {{ Request::segment(1) === 'Services' ? 'active' : null }}"  >
-                            <a class="dropdown-toggle" href="{{url('/')}}/Services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Settings()->OurDimensions}} </a>
+
+                            <a   href="{{url('/')}}/Services" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">{{Settings()->OurDimensions}} </a>
+
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                               @foreach(App\Models\Department::orderBy('order','ASC')->get() as $Department)
                             <li class="dropdown">
@@ -105,7 +107,7 @@
                             </li>
                @endforeach
 
-                    <li><a href="{{url('/')}}/Services">See All</a></li>
+                    
 
                             </ul>
                         </li>

@@ -46,19 +46,25 @@ margin-top: -4%;">
                <div class="col-lg-4 mb-4">
                     <div class="card h-100">
                         <div class="card-img">
+                            <a href="{{url('/')}}/Services/{{$child->id}}"> 
+
                             <img class="img-fluid" src="{{url('/')}}/{{$child->img}}" alt="" />
+                              </a >
+
                         </div>
                         <div class="card-body">
-                            <h4 class="card-header">   
-                            	{{ $child->title}} </h4>
+                            <h4 class="card-header">  
+                             
+                            	{{ $child->title}} 
+                            </h4>
                             <!--p class="card-text">
                 {!! Str::limit($child->desc, 100) !!}
 
                             	 
                             </p -->
-                            <!--a href="{{url('/')}}/Services/{{$child->id}}"> 
+                            <a href="{{url('/')}}/Services/{{$child->id}}"> 
                               <span class="card-header"> read more </span>
-                              </a -->
+                              </a >
                         </div>
                     </div>
                </div>
