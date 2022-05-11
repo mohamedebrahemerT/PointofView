@@ -180,9 +180,7 @@ text-align: left;">
  
 
   
-  
- @include('Forentend.SectorsOFexpertise.ourpartners')
-   @include('Forentend.SectorsOFexpertise.SectorsOFexpertise')
+ 
 
 @endsection
 
