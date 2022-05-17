@@ -33,7 +33,7 @@
 <hr class="breadcrumbhr" >
 
 
-  <h1 class="py-4" style="margin-left: 80px;"> {{Settings()->ouridentity}} </h1>
+  <h1 class="py-4 vfdhgfh" style="margin-left: 80px;"> {{Settings()->ouridentity}} </h1>
   <!-- Page Content -->
   <br>
     <div class=" " style="background-color:#000">
@@ -48,14 +48,8 @@
                     <div style="text-align:center;"   >
                         <div class="card-header">
                             <div id="grad1"></div>
-                <h2 style="color:#fff">{{$Aboutus->title}}</h2>
-                       <hr style="  
-  width: 178px;
-  height: 2px;
-  background-color: #fab117;
-   
-  margin-top: 0%;
-">
+                <h2 class="vfdhgfh" style="color:#fff">{{$Aboutus->title}}</h2>
+                       
                        <span  style="margin-left: 30%">{!! $Aboutus->desc !!}</span>
                            <div class="col-md-12 text-center">
       <img src="{{url('/')}}/Forentend/GIF-loading-POV.gif" style="text-align: center;width: 150px;height: `150px;margin-top: -3%;">
@@ -82,13 +76,9 @@ background-size: 1101px 399px !important;
                     ">
                         <div class="card-header">
                             <div id="grad1"></div>
-                              <h3>Satispction</h3>
-                <h2 style="color:#fff">{{$OurMission->title}}</h2>
-                       <hr  style="
-width: 129px;
-height: 2px;
-background-color: #fab117;
-text-align: left;">
+                              <h3 class="vfdhgfh">Satispction</h3>
+                <h2 class="vfdhgfh" style="color:#fff">{{$OurMission->title}}</h2>
+                      
                        <span  style="margin-left: 30%">{!! $OurMission->desc !!}</span>
                              <div class="col-md-12 text-center">
            <img src="{{url('/')}}/Forentend/GIF-loading-POV.gif" style="text-align: center;width: 150px;height: `150px;">
@@ -113,13 +103,9 @@ text-align: left;">
  ">
                         <div class="card-header">
                             <div id="grad1"></div>
-                            <h3>Partnership</h3>
-                <h2 style="color:#fff">{{$OurVision->title}}</h2>
-                       <hr  style="
-width: 129px;
-height: 2px;
-background-color: #fab117;
-text-align: left;">
+                            <h3 class="vfdhgfh">Partnership</h3>
+                <h2 class="vfdhgfh" style="color:#fff">{{$OurVision->title}}</h2>
+                      
                        <span  style="margin-left: 30%">{!! $OurVision->desc !!}</span>
                              <div class="col-md-12 text-center">
            <img src="{{url('/')}}/Forentend/GIF-loading-POV.gif" style="text-align: center;width: 150px;height: `150px;margin-top: -3%;">
@@ -149,12 +135,8 @@ text-align: left;">
                         <div class="card-header">
                             <div id="grad1"></div>
                               
-                <h2 style="color:#fff"> What We offer</h2>
-                       <hr  style="
-width: 129px;
-height: 2px;
-background-color: #fab117;
-text-align: left;">
+                <h2 class="vfdhgfh" style="color:#fff"> What We offer</h2>
+                       
 
                         @foreach($OurValues as $OurValue)
          

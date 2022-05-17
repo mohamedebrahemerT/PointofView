@@ -27,15 +27,8 @@
     <div class="container">
         <!-- Team Members -->
         <div class="team-members-box">  
-            <h2>Meet Our Team</h2>
-                <hr style="  border: 1px solid #fab117;
-  width: 240px;
-  height: 2px;
-  background-color: #fab117;
-  text-align: left;
-  margin-left: 0%;
-  margin-top: -2%;
-">
+            <h2 class="vfdhgfh">Meet Our Team</h2>
+                
             <div class="row">
 
                 @foreach($OurTeams as $OurTeam)

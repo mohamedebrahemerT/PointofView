@@ -22,15 +22,9 @@
    
    <div class="services-bar">
         <div class="container">
-            <h1 class="py-4"> {{Settings()->OurDimensions}} </h1>
+            <h1 class="py-4 vfdhgfh"> {{Settings()->OurDimensions}} </h1>
 
-            <hr style="border: 1px solid #fab117;
-width: 225px;
-height: 2px;
-background-color: #fab117;
-text-align: left;
-margin-left: 0%;
-margin-top: -4%;">
+            
 
             <!-- Services Section -->
             <div class="row">

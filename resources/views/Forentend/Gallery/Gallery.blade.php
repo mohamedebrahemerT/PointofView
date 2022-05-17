@@ -20,14 +20,8 @@
    <div class="container">
         <!-- Portfolio Section -->
         <div class="portfolio-main">
-            <h2>Our Gallery</h2>
-            <hr style="border: 1px solid #fab117;
-width: 142px;
-height: 2px;
-background-color: #fab117;
-text-align: left;
-margin-left: 0%;
-margin-top: -2%;">
+            <h2 class="vfdhgfh">Our Gallery</h2>
+            
             <div class="col-lg-12">
                 <div class="project-menu text-center">
                     <button class="btn btn-primary active" data-filter="*">All</button>

@@ -26,15 +26,9 @@
                  <div class="col-md-6">
                   
 
-                    <h5 class="py-4">{{Settings()->about_title}}</h5>
+                    <h5 class="py-4 vfdhgfh">{{Settings()->about_title}}</h5>
 
-            <hr style="border: 1px solid #fab117;
-width: 80px;
-height: 2px;
-background-color: #fab117;
-text-align: left;
-margin-left: 0%;
-margin-top: -4%;">
+            
 
                     <p style="color: #505050">
                           {!! Settings()->about_desc !!}

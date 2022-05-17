@@ -27,15 +27,9 @@
 	</div>
   <div class="services-bar">
         <div class="container">
-            <h1 class="py-4">{{$Department->title}}</h1>
+            <h1 class="py-4 vfdhgfh">{{$Department->title}}</h1>
 
-            <hr style="border: 1px solid #fab117;
-width: 225px;
-height: 2px;
-background-color: #fab117;
-text-align: left;
-margin-left: 0%;
-margin-top: -4%;">
+            
 <!--p>{!! $Department->desc !!} </p -->
 
             <!-- Services Section -->
