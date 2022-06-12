@@ -112,9 +112,12 @@ Quality control
        <a class="dropdown-item" href="{{url('/')}}/Services">See All</a>
     
 
+ @if(Settings()->Carreersstatus == 1) 
+
             <li class="nav-item">
             <a class="nav-link {{ request()->is('Carreerweb*') ? 'active' : '' }}" href="{{url('/')}}/Carreerweb">{{Settings()->Carreers}}</a>
           </li>
+ @endif
 
           <li class="nav-item">
             <a class="nav-link {{ request()->is('team*') ? 'active' : '' }}" href="{{url('/')}}/team">{{Settings()->POVTeam}}</a>

@@ -8,7 +8,11 @@
  @push('js')
             <script>
  
-                
+                    CKEDITOR.replace( 'title' , {
+
+        language: 'en',
+
+});
 
                 CKEDITOR.replace( 'desc' , {
 
@@ -61,9 +65,14 @@
 
  					<input type="hidden" name="id" value="{{$OurValues->id}}">
 
- <div class="form-group">
+ 
+           <div class="form-group">
                                <label class="control-label">{{trans('trans.title')}}</label>
-              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"  value="{{$OurValues->title}}"  /> 
+              
+
+              <textarea type="text" 
+                                class="form-control title"    name="title"> 
+                            {{$OurValues->title}}</textarea> 
           </div>
 
           <div class="form-group">

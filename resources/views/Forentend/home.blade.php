@@ -72,10 +72,15 @@
         <div class="carousel-caption">
               <a href="{{$slider->url}}" style="text-decoration:none;color: #fff;">
           <h1  class="slidertitle">{{$slider->title}} </h1>
-          <span  class="sliderp"> {!! $slider->desc !!}  </span>
+          <span  class="sliderp"> 
+            <span style="font-size: 20px;">
+                {!! $slider->desc !!}  
+                </span>
+            </span>
       </a>
-
-        <a  href="{{$slider->url}}" class="btn btn-primary" id="sendMessageButton" style="background-color: #000;">READ MORE</a>
+          @if($slider->READ_MORE_visible == '1')  
+        <a  href="{{$slider->url}}" class="btn btn-primary" id="sendMessageButton" style="background-color: #000;">{{$slider->READ_MORE_text}}</a >
+        @endif
         </div>
       </div>
 

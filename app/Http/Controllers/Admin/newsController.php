@@ -64,13 +64,15 @@ class newsController extends Controller
 
 
  
-        //
-        //return Request();
+        
+       //return Request();
         $data = $this->validate(\request(),
             [
                 'title' => 'sometimes|nullable',
                 'desc' => 'sometimes|nullable',
                 'url' => 'sometimes|nullable',
+                'maintitle' => 'sometimes|nullable',
+
                 'img' => 'required',
 
 
@@ -134,6 +136,8 @@ class newsController extends Controller
         $data = $this->validate(\request(),
             [
                 'title' => 'sometimes|nullable',
+                'maintitle' => 'sometimes|nullable',
+                
                 'desc' => 'sometimes|nullable',
                 'url' => 'sometimes|nullable',
                 'img' => 'sometimes|nullable',

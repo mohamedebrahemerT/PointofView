@@ -14,6 +14,9 @@ class Slider extends Model
 	'desc',
 	'img',
 	'url',
+	'READ_MORE_text',
+'READ_MORE_visible',
+'order'
 	 
 	];
    

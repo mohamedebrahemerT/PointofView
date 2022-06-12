@@ -62,13 +62,15 @@ class SlidersController extends Controller
 
 
  
-        //
-        //return Request();
+         
+         //return Request();
         $data = $this->validate(\request(),
             [
                 'title' => 'sometimes|nullable',
                 'desc' => 'sometimes|nullable',
                 'url' => 'sometimes|nullable',
+                'READ_MORE_text' => 'sometimes|nullable',
+                'READ_MORE_visible' => 'sometimes|nullable',
                 'img' => 'required|dimensions:max_width=1920,max_height=1080',
 
 
@@ -134,6 +136,8 @@ class SlidersController extends Controller
                 'title' => 'sometimes|nullable',
                 'desc' => 'sometimes|nullable',
                 'url' => 'sometimes|nullable',
+                 'READ_MORE_text' => 'sometimes|nullable',
+                'READ_MORE_visible' => 'sometimes|nullable',
                 'img' => 'sometimes|nullable|dimensions:max_width=1920,max_height=1080',
 
 
@@ -166,5 +170,41 @@ class SlidersController extends Controller
         $Slider->delete();
         session()->flash('danger', trans('trans.deleteSuccess'));
         return redirect('/Sliders');
+    }
+
+      public function arrange()
+
+    {
+          $Sliders = Slider::orderBy('order','ASC')->get();
+         return view ('admin.Sliders.arrange',compact('Sliders'));
+    }
+
+    public function sortable(Request $request)
+
+    {
+
+        $Sliders = Slider::all();
+
+
+        foreach ($Sliders as $Slider) 
+        {
+
+            foreach ($request->order as $order) {
+
+                if ($order['id'] == $Slider->id) 
+                {
+
+                    $Slider->update(['order' => $order['position']]);
+
+                }
+
+            }
+
+        }
+
+        
+
+        return response('Update Successfully.', 200);
+
     }
 }

@@ -55,6 +55,7 @@ class SettingsController extends Controller
                         'about_desc'=>'sometimes|nullable',
                         'inquiriesEmail'=>'sometimes|nullable',
                         'Blogstatus'=>'sometimes|nullable',
+                        'Carreersstatus'=>'sometimes|nullable',
                         'ouridentity'=>'sometimes|nullable',
                         'OurDimensions'=>'sometimes|nullable',
                         'Carreers'=>'sometimes|nullable',

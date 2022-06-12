@@ -50,7 +50,11 @@
                     <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
                     <!--headin5_amrc ends here-->
                      <ul class="footer_ul_amrc">
+ @if(Settings()->Carreersstatus == 1) 
+
                       <li><a href="{{url('/')}}/Carreerweb"><i class="fas fa-long-arrow-alt-right"></i>Carreer</a></li>
+ @endif
+                      
                         <li><a href="{{url('/')}}/team"><i class="fas fa-long-arrow-alt-right"></i> POV Team </a></li>
                           <li><a href="{{url('/')}}/contactus"><i class="fas fa-long-arrow-alt-right"></i> contact us  </a></li>
                          

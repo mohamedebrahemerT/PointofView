@@ -42,6 +42,9 @@ Route::get('department_arrange', 'DepartmentController@arrange');
     Route::post('post-sortable','DepartmentController@sortable');
 
 
+Route::get('Slider_arrange', 'SlidersController@arrange');
+    Route::post('post-sortable_Slider','SlidersController@sortable');
+
 
 
 Route::resource('OurGallery', 'OurGalleryController');

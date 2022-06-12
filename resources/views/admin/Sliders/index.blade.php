@@ -49,6 +49,13 @@
                                         <i class="fa fa-plus"></i>
                                     </a>
                                 </div>
+
+                                 <div class="btn-group">
+                 <a id="sample_editable_1_new" class="btn sbold green" href="{{url('/')}}/Slider_arrange"> arrange
+                                                             
+                                                        </a>
+                                                    </div>
+                                                    
                             </div>
 
                         </div>

@@ -41,6 +41,7 @@ class Setting extends Model
 'POVTeam',
 'Gallery',
 'Contactus',
+'Carreersstatus'
 	 
 	];
 }

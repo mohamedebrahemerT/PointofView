@@ -37,7 +37,7 @@ class homeController extends Controller
     {
 
         
-          $Sliders = Slider::take(5)->get();
+           $Sliders = Slider::orderBy('order','ASC')->take(5)->get();
          $Aboutus = blog::where('id',1)->first();
           $Departments = Department::take(4)->get();
           $OurValues = OurValues::take(10)->get();

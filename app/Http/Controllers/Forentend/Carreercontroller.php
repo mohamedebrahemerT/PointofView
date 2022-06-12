@@ -5,12 +5,18 @@ namespace App\Http\Controllers\Forentend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
  use App\Models\carreer;
+ use App\Models\Setting;
+ 
 class Carreercontroller extends Controller
 {
     //
      public function index()
     {
-        // code...
+        $Settings = Setting::first();
+         if ($Settings->Carreersstatus == 0)
+          {
+             return back();
+         }
   $carreers = carreer::get();
         return view('Forentend.Carreer.Carreer',compact('carreers'));
 

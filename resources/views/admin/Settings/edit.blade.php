@@ -278,8 +278,9 @@ Contact Us title
 
                                
  
-                                  <div class="form-group">
-                               <label class="control-label">Do you want to view Gallery </label>
+                             <div class="row">
+                                     <div class="form-group col-md-6">
+                               <label class="control-label">Do you want to view Gallery ?</label>
 
                 <select name="Blogstatus" class="form-control" required="">
                    
@@ -295,6 +296,27 @@ Contact Us title
                     
                 </select>
           </div>  
+
+
+                                  <div class="form-group col-md-6">
+                               <label class="control-label">Do you want to view Carreers ?</label>
+
+                <select name="Carreersstatus" class="form-control" required="">
+                   
+                    <option value="1"  @if($Settings->Carreersstatus == 1) selected @endif>
+                    {{trans('trans.yes')}}              
+                    </option>
+
+                     <option value="0"  
+                     @if($Settings->Carreersstatus == 0) selected @endif>
+                    {{trans('trans.no')}}              
+                    </option>
+                   
+                    
+                </select>
+          </div> 
+                                 
+                             </div>
                            
                                 
                               

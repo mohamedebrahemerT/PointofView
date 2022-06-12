@@ -75,7 +75,7 @@
                         @foreach($blogs as $blog)
                             <tr class="odd gradeX">
                             <th> {{$blog->id}} </th>
-                            <th> {{$blog->title}} </th>
+                            <th> {!! $blog->title !!} </th>
                                 
                                 <td>
 

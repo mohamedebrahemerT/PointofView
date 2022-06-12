@@ -40,7 +40,7 @@
 
                 </div>
                 <div class="portlet-body">
-                    <div class="table-toolbar">
+                    <!--div class="table-toolbar">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="btn-group">
@@ -52,7 +52,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div -->
                     <table class="table table-striped table-bordered table-hover table-checkable order-column"
                            id="sample_1">
                         <thead>
@@ -75,7 +75,7 @@
                         @foreach($OurValuess as $OurValue)
                             <tr class="odd gradeX">
                             <th> {{$OurValue->id}} </th>
-                            <th> {{$OurValue->title}} </th>
+                            <th> {!! $OurValue->title !!} </th>
                                 
                                 <td>
 
@@ -105,12 +105,12 @@
                                                     {{trans('trans.edit')}}
                                                 </a>
                                             </li>
-                                            <li>
+                                            <!--li>
                                                 <a href="{{url('/')}}/values/{{$OurValue->id}}/destroy">
                                                     <i class="icon-tag"></i>
                                                     {{trans('trans.delete')}}
                                                 </a>
-                                            </li>
+                                            </li -->
 
 
                                         </ul>

@@ -112,7 +112,11 @@
                             </ul>
                         </li>
 
+ @if(Settings()->Carreersstatus == 1) 
+
                           <li  class="{{ Request::segment(1) === 'Carreerweb' ? 'active' : null }}"><a href="{{url('/')}}/Carreerweb">{{Settings()->Carreers}}</a></li>
+
+ @endif
 
                              <li  class="{{ Request::segment(1) === 'team' ? 'active' : null }}"><a href="{{url('/')}}/team">{{Settings()->POVTeam}}</a></li>
  @if(Settings()->Blogstatus == 1) 

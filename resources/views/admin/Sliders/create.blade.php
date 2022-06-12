@@ -87,6 +87,31 @@
           </div>
 
 
+          <div class="form-group">
+           <label class="control-label">READ MORE text</label>
+              <input type="text" placeholder="READ MORE text" class="form-control"    name="READ_MORE_text"   /> 
+          </div>
+
+              <div class="form-group">
+                               <label class="control-label">Do you want to view READ MORE text </label>
+
+                <select name="READ_MORE_visible" class="form-control" required="">
+                   
+                    <option value="1"  @if(old('READ_MORE_visible') == 1) selected @endif>
+                    {{trans('trans.yes')}}              
+                    </option>
+
+                     <option value="0"  
+                     @if(old('READ_MORE_visible') == 0) selected @endif>
+                    {{trans('trans.no')}}              
+                    </option>
+                   
+                    
+                </select>
+          </div>  
+                   
+
+
                   
 
           <div class="form-group">

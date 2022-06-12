@@ -13,6 +13,7 @@ class blog extends Model
 	'title',
 	'desc',
 	'img',
+	'maintitle'
 	 
 	 
 	];

@@ -25,7 +25,10 @@
 
             <!-- Services Section -->
             <div class="row">
-               @foreach($carreers as $Carreer)
+
+                @if($carreers->count() > 0 )
+
+                @foreach($carreers as $Carreer)
                <div class="col-lg-4 mb-4">
                     <div class="card h-100">
                         <div class="card-img">
@@ -53,6 +56,12 @@
                     </div>
                </div>
                @endforeach
+
+                @else
+            <h1 class="py-4 vfdhgfh"> Unfortunately, there are no carriers available </h1>
+
+                @endif
+               
               
             </div>
             <!-- /.row -->

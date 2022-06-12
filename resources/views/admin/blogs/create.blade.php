@@ -9,6 +9,12 @@
  
                 
 
+                  CKEDITOR.replace( 'title' , {
+
+        language: 'en',
+
+});
+
                 CKEDITOR.replace( 'desc' , {
 
         language: 'en',
@@ -59,12 +65,22 @@
                   <form role="form" action="{{url('/')}}/news" method="POST" enctype="multipart/form-data">
                     @csrf
                    
+   <div class="form-group">
+                               <label class="control-label">main title</label>
+              <input type="text" placeholder="main title" class="form-control"    name="maintitle"   /> 
+          </div>
+
  
 
- <div class="form-group">
+           <div class="form-group">
                                <label class="control-label">{{trans('trans.title')}}</label>
-              <input type="text" placeholder="{{trans('trans.title')}}" class="form-control"    name="title"   /> 
+                               <textarea type="text" 
+                                class="form-control title"    name="title"> </textarea>
+               
           </div>
+
+
+          
 
           <div class="form-group">
                                <label class="control-label">{{trans('trans.desc')}}</label>
