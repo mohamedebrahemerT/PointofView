@@ -278,7 +278,7 @@
     text-decoration: underline;
     text-decoration-color: #fab117;
 text-decoration-thickness: 7px;
-text-underline-offset: 25px;
+text-underline-offset: 13px;
   }
   .ssdcccfsdfsdf
   {
