@@ -95,7 +95,7 @@
 <input type="file" placeholder="{{trans('trans.Fivacon')}}" class="form-control" name="Fivacon" /> 
 
                                <br>
-              <img src="{{url('/')}}/{{$Settings->Fivacon}}"   >
+              <img src="{{url('/')}}/{{$Settings->Fivacon}}"  style="width:50px;height:50px" >
               - Width:50 px and Height:50 px 
           </div>
 
